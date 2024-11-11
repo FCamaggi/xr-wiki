@@ -63,6 +63,11 @@ const DocumentationLayout = () => {
 
   // Manejar cambio de página
   const handlePageChange = (slug) => {
+    // Hacer scroll al inicio
+    window.scrollTo({
+      top: 0,
+    });
+
     setActivePage(slug);
     setIsMobileNavOpen(false);
   };

@@ -11,7 +11,7 @@ const useTableOfContents = (content) => {
             const lines = content.split('\n');
             const headingsData = [];
             let inCodeBlock = false;
-            let previousHeadings = {}; // Track del último heading por nivel
+            let previousHeadings = {};
 
             lines.forEach((line, index) => {
                 // Detectar bloques de código
