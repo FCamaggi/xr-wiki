@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para el contenido markdown */
+.prose {
+  max-width: 100ch;
+  color: #374151;
+}
+
+.prose pre {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+}
+
+.prose code {
+  color: #ef4444;
+  background-color: #f3f4f6;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+/* Estilos para diagramas mermaid */
+.mermaid {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las cajas de admonition */
+.admonition {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Estilos para las tablas */
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.prose table td,
+.prose table th {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 1rem;
+}
+
+.prose table th {
+  background-color: #f9fafb;
+}

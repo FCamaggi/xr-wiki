@@ -1,0 +1,90 @@
+.markdown-content {
+  @apply max-w-none;
+}
+
+/* Headings */
+.markdown-content h1 {
+  @apply text-4xl font-bold text-slate-900 mb-8 pb-2 border-b;
+}
+
+.markdown-content h2 {
+  @apply text-2xl font-semibold text-slate-800 mt-12 mb-4;
+}
+
+.markdown-content h3 {
+  @apply text-xl font-medium text-slate-800 mt-8 mb-3;
+}
+
+.markdown-content h4 {
+  @apply text-lg font-medium text-slate-700 mt-6 mb-2;
+}
+
+/* Paragraphs and lists */
+.markdown-content p {
+  @apply text-slate-600 leading-relaxed mb-4;
+}
+
+.markdown-content ul {
+  @apply list-disc pl-6 mb-4 text-slate-600;
+}
+
+.markdown-content ol {
+  @apply list-decimal pl-6 mb-4 text-slate-600;
+}
+
+.markdown-content li {
+  @apply mb-2;
+}
+
+/* Code blocks */
+.markdown-content pre {
+  @apply p-4 rounded-lg bg-slate-900 text-slate-50 overflow-x-auto mb-4;
+}
+
+.markdown-content code {
+  @apply font-mono text-sm;
+}
+
+.markdown-content :not(pre) > code {
+  @apply bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded font-mono text-sm;
+}
+
+/* Blockquotes */
+.markdown-content blockquote {
+  @apply border-l-4 border-slate-200 pl-4 italic my-6 text-slate-600;
+}
+
+/* Tables */
+.markdown-content table {
+  @apply w-full border-collapse my-6;
+}
+
+.markdown-content th {
+  @apply bg-slate-50 border border-slate-200 px-4 py-2 text-left font-semibold text-slate-700;
+}
+
+.markdown-content td {
+  @apply border border-slate-200 px-4 py-2 text-slate-600;
+}
+
+/* Admonitions (notas especiales) */
+.markdown-content .admonition {
+  @apply rounded-lg p-4 my-6;
+}
+
+.markdown-content .admonition-note {
+  @apply bg-blue-50 border-l-4 border-blue-500;
+}
+
+.markdown-content .admonition-warning {
+  @apply bg-yellow-50 border-l-4 border-yellow-500;
+}
+
+.markdown-content .admonition-tip {
+  @apply bg-green-50 border-l-4 border-green-500;
+}
+
+/* Links */
+.markdown-content a {
+  @apply text-blue-600 hover:text-blue-700 underline;
+}

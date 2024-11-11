@@ -1,0 +1,50 @@
+/* Estilos base para admonitions */
+.admonition {
+  @apply rounded-lg p-4 my-6 border-l-4;
+}
+
+.admonition-title {
+  @apply font-semibold text-sm uppercase mb-2 flex items-center gap-2;
+}
+
+/* Variantes de admonitions */
+.admonition.note {
+  @apply bg-blue-50 border-blue-500;
+}
+
+.admonition.note .admonition-title {
+  @apply text-blue-700;
+}
+
+.admonition.warning {
+  @apply bg-yellow-50 border-yellow-500;
+}
+
+.admonition.warning .admonition-title {
+  @apply text-yellow-700;
+}
+
+.admonition.tip {
+  @apply bg-green-50 border-green-500;
+}
+
+.admonition.tip .admonition-title {
+  @apply text-green-700;
+}
+
+.admonition.example {
+  @apply bg-purple-50 border-purple-500;
+}
+
+.admonition.example .admonition-title {
+  @apply text-purple-700;
+}
+
+/* Estilos para contenido dentro de admonitions */
+.admonition p:last-child {
+  @apply mb-0;
+}
+
+.admonition code {
+  @apply bg-white bg-opacity-50;
+}
