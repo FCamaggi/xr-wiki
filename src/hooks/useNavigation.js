@@ -14,32 +14,38 @@ const useNavigation = () => {
                 setLoading(true);
                 const contents = {
                     course: [
-                        {
+                        ...Array.from({ length: 18 }, (_, i) => ({
+                            slug: `Clase-${i}${getSlugCoursesSuffix(i)}`,
+                            title: `Clase ${i + 1}${getTitleCoursesSuffix(i)}`,
+                            order: i
+                        })).sort((a, b) => a.order - b.order)
+                        , {
                             slug: '1-fundamentos-del-testing',
-                            title: 'Fundamentos del Testing',
-                            order: 1
+                            title: '1. Fundamentos del Testing',
+                            order: 18
                         },
                         {
                             slug: '2-análisis-estático',
-                            title: 'Análisis Estático',
-                            order: 2
+                            title: '2. Análisis Estático',
+                            order: 19
                         },
                         {
                             slug: '3-fuzzing-y-testing-dinámico',
-                            title: 'Fuzzing y Testing Dinámico',
-                            order: 3
+                            title: '3. Fuzzing y Testing Dinámico',
+                            order: 20
                         },
                         {
                             slug: '4-localización-de-fallas',
-                            title: 'Localización de Fallas',
-                            order: 4
+                            title: '4. Localización de Fallas',
+                            order: 21
                         },
                         {
                             slug: '5-análisis-de-rendimiento',
-                            title: 'Análisis de Rendimiento',
-                            order: 5
+                            title: '5. Análisis de Rendimiento',
+                            order: 22
                         }
-                    ],
+                    ]
+                    ,
                     practice: [
                         {
                             // Nombre exacto del archivo
@@ -120,5 +126,54 @@ function getTitleSuffix(number) {
     };
     return suffixes[number] || '';
 }
+
+function getSlugCoursesSuffix(number) {
+    const suffixes = {
+        0: '---Introducción-al-curso',
+        1: '---Unit-Testing',
+        2: '---Coverage',
+        3: '---Mutation-Based-Fuzzing',
+        4: '---Search-Based-Fuzzing',
+        5: '---Mutation-Analysis',
+        6: '---Decision-Tables-&-State-Transitioning',
+        7: '---Boundary-Analysis-&-Equivalence-Partitioning',
+        8: '---Code-Smells-&-Basic-Static-Rules',
+        9: '---Static-Analysis',
+        10: '---transformaciones',
+        11: '---transformaciones-avanzadas',
+        12: '---Fault-location-fauxpy',
+        13: '---Taint-Analysis',
+        14: '---concolic-fuzzing',
+        15: '---symbolic-fuzzing',
+        16: '---instrumentation-profiling',
+        17: '---Testing-and-SoftwareDevelopment-Cycle-API-Testing'
+    };
+    return suffixes[number] || '';
+}
+
+function getTitleCoursesSuffix(number) {
+    const suffixes = {
+        0: ': Introducción al curso',
+        1: ': Unit Testing',
+        2: ': Coverage',
+        3: ': Mutation Based Fuzzing',
+        4: ': Search Based Fuzzing',
+        5: ': Mutation Analysis',
+        6: ': Decision Tables & State Transitioning',
+        7: ': Boundary Analysis & Equivalence Partitioning',
+        8: ': Code Smells & Basic Static Rules',
+        9: ': Static Analysis',
+        10: ': Transformaciones',
+        11: ': Transformaciones Avanzadas',
+        12: ': Fault Location Fauxpy',
+        13: ': Taint Analysis',
+        14: ': Concolic Fuzzing',
+        15: ': Symbolic Fuzzing',
+        16: ': Instrumentation Profiling',
+        17: ': Testing and Software Development Cycle API Testing'
+    };
+    return suffixes[number] || '';
+}
+
 
 export default useNavigation;
