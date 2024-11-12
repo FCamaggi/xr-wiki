@@ -172,7 +172,7 @@ Como puede ver la tabla del estudiante A está incompleta (le faltan 2 test), en
 
 ## 🔍 Solución
 
-Los tests T3 y T4 del estudiante B son los más apropiados para completar la tabla del estudiante A.
+Los tests T2 y T4 del estudiante B son los más apropiados para completar la tabla del estudiante A.
 
 **Justificación:**
 
@@ -181,8 +181,8 @@ Los tests T3 y T4 del estudiante B son los más apropiados para completar la tab
    - Un caso donde Speed > 50 y School Zone son True (T1)
    - Un caso donde Speed > 50 y School Zone son False (T2)
 
-2. Los tests T3 y T4 del estudiante B aportan:
-   - T3: Speed > 50 (66) y School Zone = True
+2. Los tests T2 y T4 del estudiante B aportan:
+   - T2: Speed <= 50 (44) y School Zone = True
    - T4: Speed > 50 (77) y School Zone = False
 
 ## 📚 Explicación
@@ -201,7 +201,7 @@ Los tests T3 y T4 del estudiante B son los más apropiados para completar la tab
 > T2: F,F → F,F
 >
 > Tabla B:
-> T3: T,T → F,T (complementa T1)
+> T2: F,T → F,F (nueva combinación)
 > T4: T,F → T,F (nueva combinación)
 > ```
 

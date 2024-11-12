@@ -212,12 +212,12 @@ Ayude a kokito a crear un test que permita eliminar este último mutante.
    El mutante cambia la multiplicación (\*) por una suma (+) en la línea 4:
 
 - Original: `math.sqrt(dx*dx + dy*dy)`
-- Mutante: `math.sqrt(dx+dx + dy+dy)`
+- Mutante: `math.sqrt(dx+dx + dy*dy)`
 
 Para los casos de prueba actuales:
 
-- test_1: `distance(0,2)` → Original: √(0*0 + 2*2) = 2 | Mutante: √(0+0 + 2+2) = 2
-- test_2: `distance(2,3)` → Original: √(2*2 + 3*3) = 3.60555 | Mutante: √(2+2 + 3+3) = 3.60555
+- test_1: `distance(0,2)` → Original: √(0*0 + 2*2) = 2 | Mutante: √(0+0 + 2\*2) = 2
+- test_2: `distance(2,3)` → Original: √(2*2 + 3*3) = 3.60555 | Mutante: √(2+2 + 3\*3) = 3.60555
 
 2. **Test para matar el mutante:**
 
@@ -233,7 +233,7 @@ def test_3(self):
 
    - Con input (3,0):
      - Original: √(3*3 + 0*0) = √9 = 3
-     - Mutante: √(3+3 + 0+0) = √6 ≈ 2.45
+     - Mutante: √(3+3 + 0\*0) = √6 ≈ 2.45
    - El test detecta la diferencia entre multiplicación y suma
 
 2. **¿Cómo seleccionar el caso de prueba?**
