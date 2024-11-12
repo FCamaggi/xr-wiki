@@ -95,9 +95,16 @@ const DocumentationLayout = () => {
       >
         <div className="h-full overflow-y-auto p-6">
           <div className="mb-8 sticky top-0 bg-white z-10 pb-4">
-            <h1 className="text-2xl font-bold text-slate-900">Testing Guide</h1>
+            <h1 className="text-2xl font-bold text-slate-900">Testing Wiki</h1>
             <p className="text-sm text-slate-500 mt-1">
               Documentación y práctica
+            </p>
+            <p className="text-sm text-slate-500 mt-1">
+              Creado con{' '}
+              <span role="img" aria-label="heart">
+                ❤️
+              </span>{' '}
+              por Fabrizio Camaggi
             </p>
           </div>
 
