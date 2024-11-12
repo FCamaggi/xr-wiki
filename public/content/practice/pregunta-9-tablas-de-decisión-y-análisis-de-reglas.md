@@ -58,7 +58,7 @@ Original:
 
 Simplificada:
 
-| A   | B   | Acción |
+| A   | B   | Acción |                        |
 | --- | --- | ------ | ---------------------- |
 | T   | \*  | X      | (\* = cualquier valor) |
 
