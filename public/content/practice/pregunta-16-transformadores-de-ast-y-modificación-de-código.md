@@ -143,6 +143,35 @@ class CommonTransformations:
 ## 📋 Enunciado
 
 Analice el siguiente código.
+
+```python
+class ATransformer(NodeTransformer):
+    def __init__(self):
+         super().__init__()
+         self.current_class = None
+    def visit_ClassDef(self, node: ClassDef):
+        self.current_class = node
+        result = NodeTransformer.generic_visit(self, node)
+        self.current_class = None
+        return result
+    def visit_FunctionDef(self, node):
+        transformedNode = NodeTransformer.generic_visit(self,node)
+        array = []
+        for nodeArg in transformedNode.args.args:
+            array.append(nodeArg.arg)
+            if self.current_class != None:
+                if len(array) > 0 :
+                    if array[0] != 'self':
+                        transformedNode.args.args.insert(0,arg(arg='self'))
+                    else:
+                        transformedNode.args.args.insert(0,arg(arg='self'))
+        return transformedNode
+class XCommand(RewriterCommand):
+    def apply(self, ast):
+            new_tree = fix_missing_locations(ATransformer().visit(ast))
+            return new_tree
+```
+
 (a) Explique qué hace el transformador de código
 (b) Escriba un programa de ejemplo que se transforme utilizando esta regla
 (c) Escriba un ejemplo de código antes y después de la transformación.
