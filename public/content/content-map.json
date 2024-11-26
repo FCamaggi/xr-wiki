@@ -8,5 +8,60 @@
     }
   ],
   "cases": [],
-  "tests": []
+  "tests": [
+    {
+      "slug": "Criterio de Correccion I2-2017 ",
+      "title": "Criterio de Correccion I2 2017 ",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Criterio de Corrección Interrogación 2 - 2023",
+      "title": "Criterio de Corrección Interrogación 2   2023",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Examen (Enunciado y Pauta) - 2022",
+      "title": "Examen (Enunciado y Pauta)   2022",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Examen 2018-1",
+      "title": "Examen 2018 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Gop-i2",
+      "title": "Gop i2",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I1 - GOP",
+      "title": "I1   GOP",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Interrogacion 1 - 2023 pauta",
+      "title": "Interrogacion 1   2023 pauta",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Interrogación 2 - 2017",
+      "title": "Interrogación 2   2017",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Resumen LA META",
+      "title": "Resumen LA META",
+      "order": 0,
+      "isPdf": true
+    }
+  ]
 }
