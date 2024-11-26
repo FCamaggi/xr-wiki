@@ -5,26 +5,25 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import MermaidDiagram from './MermaidDiagram';
 import Admonition from './Admonition';
-import useMarkdown from '../hooks/useMarkdown';
 import '../styles/markdown.css';
 
-const MarkdownContent = ({ slug, content }) => {
-  const { loading, error } = useMarkdown(slug);
-  console.log('MarkdownContent rendering with slug:', slug);
-  console.log('Content loaded:', content?.substring(0, 200));
-
-  if (loading) {
+const MarkdownContent = ({ content, currentPage }) => {
+  if (!currentPage) {
     return (
-      <div className="flex justify-center items-center min-h-[200px]">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-900" />
+      <div className="text-center text-slate-500">
+        <p>Selecciona una página para comenzar</p>
       </div>
     );
   }
 
-  if (error) {
+  if (currentPage.isPdf) {
     return (
-      <div className="text-red-500 p-4 rounded-lg bg-red-50 border border-red-200">
-        Error: {error}
+      <div className="w-full h-screen">
+        <iframe
+          src={`/content/tests/${currentPage.slug}.pdf`}
+          className="w-full h-full"
+          title={currentPage.title}
+        />
       </div>
     );
   }

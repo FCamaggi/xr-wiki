@@ -1,11 +1,12 @@
 {
-  "name": "testing-guide",
+  "name": "gop-guide",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "generate-content-map": "node scripts/generate-content-map.js",
+    "dev": "npm run generate-content-map && vite",
+    "build": "npm run generate-content-map && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
