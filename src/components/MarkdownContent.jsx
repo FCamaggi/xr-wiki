@@ -5,7 +5,6 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import MermaidDiagram from './MermaidDiagram';
 import Admonition from './Admonition';
-import PDFViewer from './PDFViewer';
 import '../styles/markdown.css';
 
 const MarkdownContent = ({ content, currentPage }) => {
