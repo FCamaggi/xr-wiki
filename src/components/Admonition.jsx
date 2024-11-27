@@ -47,16 +47,16 @@ const Admonition = ({ children, type = 'note', title }) => {
   const style = styles[type] || styles.note;
 
   return (
-    <div className={`rounded-lg p-4 my-6 border-l-4 ${style.container}`}>
+    <div className={`rounded-lg p-4 my-6 border-l-4${style.container}`}>
       <div className="flex items-center gap-2 mb-2">
         <span className={style.icon}>
           <AdmonitionIcon type={type} />
         </span>
-        <h5 className={`font-semibold text-sm uppercase ${style.title}`}>
+        <h5 className={`font-semibold text-sm uppercase${style.title}`}>
           {title || type}
         </h5>
       </div>
-      <div className={`prose prose-sm max-w-none ${style.content}`}>
+      <div className={`prose prose-sm max-w-none${style.content}`}>
         {children}
       </div>
     </div>

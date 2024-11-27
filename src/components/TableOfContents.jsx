@@ -33,11 +33,11 @@ const TableOfContents = ({ content, activeHeading }) => {
           py-1 px-3
           rounded-md
           transition-colors
-          ${
-            activeHeading === heading.id
-              ? 'bg-slate-100 text-slate-900'
-              : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-          }
+         ${
+           activeHeading === heading.id
+             ? 'bg-slate-100 text-slate-900'
+             : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+         }
         `}
         style={{ paddingLeft: `${depth * 0.75 + 0.75}rem` }}
       >

@@ -1,9 +1,93 @@
 {
   "classes": [
     {
-      "slug": "clase-2-administracion-proyectos",
-      "title": "Clase 2: administracion proyectos",
+      "slug": "clase-02-Administracion-Proyectos",
+      "title": "Clase 02: Administracion Proyectos",
       "order": 2,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-03-Diseño-de-Procesos",
+      "title": "Clase 03: Diseño de Procesos",
+      "order": 3,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-04-Diseño-de-Bienes-y-Servicios",
+      "title": "Clase 04: Diseño de Bienes y Servicios",
+      "order": 4,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-06-Introduccion-a-la-Gestión-de-la-Cadena-de-Abastecimiento",
+      "title": "Clase 06: Introduccion a la Gestión de la Cadena de Abastecimiento",
+      "order": 6,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-12-Sistemas-PULL",
+      "title": "Clase 12: Sistemas PULL",
+      "order": 12,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-13-Inventarios-I",
+      "title": "Clase 13: Inventarios I",
+      "order": 13,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-14-Inventarios-II",
+      "title": "Clase 14: Inventarios II",
+      "order": 14,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-16-Pronosticos(+clase17)",
+      "title": "Clase 16: Pronosticos(+clase17)",
+      "order": 16,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-18-Revenue-Management",
+      "title": "Clase 18: Revenue Management",
+      "order": 18,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-20-Scheduling-Waiting",
+      "title": "Clase 20: Scheduling Waiting",
+      "order": 20,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-22-Planif-Agregada",
+      "title": "Clase 22: Planif Agregada",
+      "order": 22,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-24-Planif-Corto-Plazo-MRP-ERP",
+      "title": "Clase 24: Planif Corto Plazo MRP ERP",
+      "order": 24,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-25-Manejo-de-Calidad-Total",
+      "title": "Clase 25: Manejo de Calidad Total",
+      "order": 25,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-27-Control-Estadistico-de-Procesos",
+      "title": "Clase 27: Control Estadistico de Procesos",
+      "order": 27,
+      "isPdf": false
+    },
+    {
+      "slug": "clase-28-Calidad-de-Servicio",
+      "title": "Clase 28: Calidad de Servicio",
+      "order": 28,
       "isPdf": false
     }
   ],

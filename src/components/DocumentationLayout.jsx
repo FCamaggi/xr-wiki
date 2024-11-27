@@ -70,7 +70,7 @@ const DocumentationLayout = () => {
         className={`
         fixed inset-0 z-40 
         transform transition-transform duration-200 ease-in-out
-        ${isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'}
+       ${isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:relative lg:block
         bg-white border-r border-slate-200
         lg:sticky lg:top-0 lg:h-screen

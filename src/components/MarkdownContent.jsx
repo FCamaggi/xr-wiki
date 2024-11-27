@@ -49,7 +49,7 @@ const MarkdownContent = ({ content, currentPage }) => {
       const text = firstChild.props?.children?.[0];
       if (typeof text !== 'string') return <blockquote>{children}</blockquote>;
 
-      const match = text.match(/^\[!(\w+)\]/);
+      const match = text.match(/^$$!(\w+)$$/);
       if (!match) return <blockquote>{children}</blockquote>;
 
       const type = match[1].toLowerCase();
@@ -59,7 +59,7 @@ const MarkdownContent = ({ content, currentPage }) => {
         if (index === 0) {
           // Remover el [!type] del primer elemento
           const newContent = child.props.children[0].replace(
-            /^\[!\w+\]\s*/,
+            /^$$!\w+$$\s*/,
             ''
           );
           return React.cloneElement(child, {

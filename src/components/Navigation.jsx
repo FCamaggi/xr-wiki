@@ -55,18 +55,18 @@ const Navigation = ({
               w-full text-left px-4 py-2.5 rounded-lg
               transition-all duration-200 ease-in-out
               group flex items-center gap-3
-              ${
-                activePage?.slug === item.slug
-                  ? 'bg-slate-100 text-slate-900 font-medium'
-                  : 'text-slate-600 hover:bg-slate-50'
-              }
+             ${
+               activePage?.slug === item.slug
+                 ? 'bg-slate-100 text-slate-900 font-medium'
+                 : 'text-slate-600 hover:bg-slate-50'
+             }
             `}
           >
             <ChevronRight
               size={16}
               className={`
                 transition-transform duration-200
-                ${activePage?.slug === item.slug ? 'rotate-90' : ''}
+               ${activePage?.slug === item.slug ? 'rotate-90' : ''}
                 text-slate-400 group-hover:text-slate-600
               `}
             />
