@@ -5,6 +5,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import MermaidDiagram from './MermaidDiagram';
 import Admonition from './Admonition';
+import PDFViewer from './PDFViewer';
 import '../styles/markdown.css';
 
 const MarkdownContent = ({ content, currentPage }) => {
@@ -19,11 +20,7 @@ const MarkdownContent = ({ content, currentPage }) => {
   if (currentPage.isPdf) {
     return (
       <div className="w-full h-screen">
-        <iframe
-          src={`/content/tests/${currentPage.slug}.pdf`}
-          className="w-full h-full"
-          title={currentPage.title}
-        />
+        <PDFViewer url={`/content/tests/${currentPage.slug}.pdf`} />
       </div>
     );
   }
