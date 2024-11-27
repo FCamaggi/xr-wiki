@@ -93,7 +93,11 @@ $$
 
 Donde:
 
-- $R$ = Nivel de reorden - $d$ = Tasa de demanda - $L$ = Tiempo de reposición - $Z$ = Valor Z correspondiente al nivel de servicio deseado - $\sigma_L$ = Desviación estándar de la demanda durante el tiempo de reposición
+- $R$ = Nivel de reorden
+- $d$ = Tasa de demanda
+- $L$ = Tiempo de reposición
+- $Z$ = Valor Z correspondiente al nivel de servicio deseado
+- $\sigma_L$ = Desviación estándar de la demanda durante el tiempo de reposición
 
 ## 5. Conclusión
 
