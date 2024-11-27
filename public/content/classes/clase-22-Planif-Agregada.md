@@ -1,103 +1,152 @@
 # Clase 22: Planificación Agregada
 
-## Introducción a la Planificación Agregada
+## 🎯 Introducción
 
-La **planificación agregada** es un proceso crucial en la gestión de operaciones que busca equilibrar la oferta y la demanda a medio plazo. [Su objetivo es determinar la cantidad óptima de producción y el uso de recursos, como la mano de obra y el inventario, para satisfacer la demanda esperada.](https://atlas.org/api/v1/files?documentId=b75b22e2-3a53-41ef-9e4b-5fd2ac4e21ca)
+La planificación agregada es como dirigir una orquesta empresarial donde debemos coordinar múltiples elementos (producción, inventario, fuerza laboral) para crear una sinfonía operativa perfecta. Así como un director debe decidir cuántos músicos necesita y cómo distribuir los ensayos, las empresas deben determinar cómo utilizar sus recursos para satisfacer la demanda de manera eficiente.
 
-### Analogía
+### ¿Qué es la Planificación Agregada?
 
-Imagina que eres el gerente de un restaurante. Debes planificar cuántos platos preparar cada día, considerando las reservas y la demanda esperada. Si preparas demasiados, podrías desperdiciar comida; si preparas muy pocos, podrías perder clientes. La planificación agregada funciona de manera similar, ayudando a las empresas a encontrar el equilibrio adecuado.
+La planificación agregada es un proceso de toma de decisiones que especifica la combinación óptima de:
 
-## 1. Objetivos de la Planificación Agregada
+- Nivel de recursos humanos
+- Tasa de producción
+- Niveles de inventario
 
-Los principales objetivos de la planificación agregada son:
+> 💡 Dato importante: La planificación agregada trabaja en un horizonte de mediano plazo (6 a 18 meses) y considera grupos de productos o categorías amplias.
 
-- **Satisfacer la demanda**: Asegurarse de que los productos estén disponibles cuando los clientes los necesiten.
-- **Minimizar costos**: Reducir los costos asociados con la producción, el inventario y la mano de obra.
-- **Optimizar el uso de recursos**: Utilizar de manera eficiente los recursos disponibles, como la fuerza laboral y la capacidad de producción.
+## 📊 Conceptos Principales
 
-## 2. Estrategias de Planificación Agregada
+### Jerarquía de Decisiones de Producción
 
-### 2.1. Estrategia de Nivel
+```mermaid
+graph TD
+    A[Pronósticos de Demanda] --> B[Planificación Agregada]
+    B --> C[Programación Maestra de Producción MPS]
+    C --> D[Planificación de Requerimientos de Materiales MRP]
+    D --> E[Programación de Operaciones]
+```
 
-La estrategia de nivel implica mantener una producción constante y utilizar inventarios para absorber las fluctuaciones en la demanda. Esto significa que la empresa produce la misma cantidad de productos cada período, independientemente de la demanda.
+### Opciones Basadas en la Demanda
 
-#### Ejemplo
+1. **Inventario de Productos Terminados**
 
-Un fabricante de juguetes puede producir 1,000 unidades al mes, almacenando el exceso para meses de alta demanda, como diciembre.
+   - Permite absorber fluctuaciones en la demanda
+   - Actúa como amortiguador entre producción y demanda
 
-### 2.2. Estrategia de Ajuste (Chase)
+2. **Faltante**
 
-La estrategia de ajuste busca sincronizar la producción con la demanda real, ajustando la fuerza laboral y la producción según sea necesario. Esto puede implicar contratar o despedir trabajadores.
+   - Implica retraso en despacho
+   - Puede afectar la satisfacción del cliente
 
-#### Ejemplo
+3. **Ajuste vía Precios**
+   - Desplaza demanda a períodos no peak
+   - Utiliza publicidad y promociones como herramientas
 
-Una empresa de ropa puede aumentar su producción en primavera, cuando la demanda de ropa nueva es alta, y reducirla en invierno.
+### Opciones Basadas en la Capacidad
 
-## 3. Consideraciones en la Planificación Agregada
+1. **Sobretiempo**
 
-### 3.1. Costos a Considerar
+   - Opción de corto plazo
+   - Requiere pago de bonos por horas extras
 
-Al desarrollar un plan agregado, es importante tener en cuenta varios costos, incluyendo:
+2. **Bajotiempo**
 
-- **Costos de inventario**: Gastos asociados con almacenar productos.
-- **Costos de faltante**: Pérdidas por no tener productos disponibles.
-- **Costos de sobretiempo**: Gastos adicionales por horas extras de trabajo.
-- **Costos de subcontratación**: Gastos por contratar a terceros para cumplir con la demanda.
+   - Opción de corto plazo
+   - Implica reducción de tasa de producción
 
-### 3.2. Factores a Evaluar
+3. **Subcontratación**
 
-Algunas preguntas clave que deben considerarse son:
+   - Opción de mediano plazo
+   - Permite mantener flexibilidad
 
-- ¿Deberíamos usar inventarios para absorber cambios en la demanda?
-- ¿Deberíamos ajustar la fuerza laboral según la demanda?
-- ¿Es mejor utilizar precios para influir en la demanda?
+4. **Contratación y Despido**
+   - Opción de largo plazo
+   - Modifica tamaño de fuerza laboral
 
-## 4. Fórmulas Relevantes
+## 💻 Estrategias de Planificación
 
-### 4.1. Cálculo de la Tasa de Producción
+### Plan de Nivel (Level)
 
-La tasa de producción se puede calcular como:
+```mermaid
+graph LR
+    A[Fuerza Laboral Constante] --> B[Producción Similar por Período]
+    B --> C[Usa Inventario como Buffer]
+    C --> D[Absorbe Fluctuaciones]
+```
 
-$$
-TP = \frac{D + I - F}{T}
-$$
+Ventajas:
 
-Donde:
+- Flujo constante de operaciones
+- Mejor moral del personal
+- Mayor estabilidad
 
-- $TP$ = Tasa de producción
-- $D$ = Demanda esperada
-- $I$ = Inventario inicial
-- $F$ = Inventario final deseado
-- $T$ = Tiempo disponible
+### Plan de Ajuste (Chase)
 
-### 4.2. Cálculo de Costos Totales
+```mermaid
+graph LR
+    A[Ajuste a Demanda] --> B[Minimiza Inventario]
+    B --> C[Sincroniza Producción]
+    C --> D[Fluctúa Fuerza Laboral]
+```
 
-Los costos totales en la planificación agregada se pueden calcular como:
+## 📈 Modelo Matemático Básico
 
-$$
-CT = CI + CF + CS + CO
-$$
+Para T períodos, m productos y n centros de trabajo:
 
-Donde:
+$Min \sum_{t=1}^{T} (\sum_{j=1}^{m} (c_{jt}x_{jt} + I_{jt}h_j) + \sum_{i=1}^{n} y_{it}f_i)$
 
-- $CT$ = Costos totales
-- $CI$ = Costos de inventario
-- $CF$ = Costos de faltante
-- $CS$ = Costos de sobretiempo
-- $CO$ = Costos de subcontratación
+Sujeto a:
 
-## 5. Conclusión
+- $\sum_{j=1}^{m} a_{ij}x_{jt} \leq b_{it} + y_{it} \forall i,t$
+- $I_{jt} = I_{j,t-1} + x_{jt} - d_{jt} \forall j,t$
+- $x_{jt}, I_{jt}, y_{it} \geq 0 \forall j,t,i$
 
-La planificación agregada es esencial para la gestión eficiente de operaciones. Al equilibrar la oferta y la demanda, las empresas pueden maximizar su eficiencia y minimizar costos. Utilizando estrategias adecuadas y considerando los costos involucrados, las organizaciones pueden adaptarse mejor a las fluctuaciones del mercado.
+## 🎓 Ejercicio Práctico
 
-## 6. Resumen de Fórmulas
+[Ejemplo con los datos numéricos mostrados en las diapositivas 16 y 18]
 
-- **Tasa de Producción**:
-  $$
-  TP = \frac{D + I - F}{T}
-  $$
-- **Costos Totales**:
-  $$
-  CT = CI + CF + CS + CO
-  $$
+## 🔑 Consejos Clave
+
+1. Evaluar el plan agregado desde múltiples perspectivas:
+
+   - Operaciones
+   - Recursos Humanos
+   - Marketing
+   - Finanzas
+
+2. Considerar criterios no financieros:
+
+   - Capacidad operacional
+   - Moral del personal
+   - Satisfacción del cliente
+
+3. Balancear costos versus flexibilidad
+
+## 📝 Conclusión
+
+La planificación agregada es una herramienta fundamental para equilibrar recursos y demanda en el mediano plazo. El éxito radica en elegir la estrategia adecuada según el contexto empresarial y mantener un balance entre costos, capacidad y servicio al cliente.
+
+## 📚 Fórmulas Relevantes
+
+### Variables
+
+- $x_{jt}$: Producción del producto j en t
+- $I_{jt}$: Inventario del producto j en t
+- $y_{it}$: Horas contratadas de sobretiempo
+
+### Parámetros
+
+- $d_{jt}$: Demanda por producto j en período t
+- $f_i$: Costo de hora de sobretiempo en centro i
+- $h_j$: Costo de inventario para producto j
+- $b_{it}$: Horas totales disponibles
+- $a_{ij}$: Tiempo requerido del centro i para producto j
+- $c_{jt}$: Costo unitario de fabricación
+
+## 🔍 Recursos Adicionales
+
+- Modelos de programación matemática aplicados en:
+  - CTI
+  - Sodimac
+  - Tottus
+  - D&S-Walmart

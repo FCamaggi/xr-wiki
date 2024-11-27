@@ -1,113 +1,149 @@
 # Clase 25: Manejo de Calidad Total
 
-## Introducción al Manejo de Calidad Total
+## 🎯 Introducción
 
-El **Manejo de Calidad Total** (TQM, por sus siglas en inglés) es una filosofía de gestión que busca mejorar la calidad de los productos y servicios a través de la participación de todos los miembros de una organización. TQM se centra en la satisfacción del cliente y en la mejora continua de los procesos.
+El manejo de calidad total es como la dirección de una orquesta sinfónica, donde cada músico, instrumento y nota debe funcionar en perfecta armonía para crear una experiencia excepcional. Al igual que un director de orquesta coordina múltiples elementos para lograr una interpretación perfecta, el TQM coordina todos los aspectos de una organización para alcanzar la excelencia.
 
-### Analogía
+### ¿Qué es la Calidad?
 
-Imagina que estás cocinando un platillo. Para que salga perfecto, necesitas asegurarte de que todos los ingredientes sean de buena calidad, que sigas la receta al pie de la letra y que todos en la cocina trabajen juntos. De manera similar, TQM se asegura de que cada parte de la organización contribuya a la calidad del producto final.
+La calidad puede definirse desde múltiples perspectivas:
 
-## 1. Principios del Manejo de Calidad Total
+- Cumplimiento de especificaciones: Como un rompecabezas donde cada pieza debe encajar perfectamente según el diseño
+- Propósito de uso: El producto cumple efectivamente la función para la que fue creado
+- Valor por precio pagado: La utilidad justifica la inversión realizada
+- Servicio post-venta: El respaldo después de la compra
+- Criterio psicológico: La percepción subjetiva de excelencia
 
-### 1.1. Enfoque en el Cliente
+> 💡 Dato importante: La calidad no es un departamento, es una filosofía que debe permear toda la organización.
 
-El primer principio de TQM es mantener un enfoque constante en el cliente. Esto significa identificar y satisfacer las necesidades y expectativas de los clientes.
+## 📊 Conceptos Principales
 
-#### Ejemplo
+### Manufactura vs. Servicios
 
-Una empresa de telefonía móvil puede realizar encuestas para entender qué características valoran más sus clientes, como la duración de la batería o la calidad de la señal.
+```mermaid
+graph TB
+    A[Calidad] --> B[Manufactura]
+    A --> C[Servicios]
+    B --> D[Características Tangibles]
+    D --> E[Especificaciones]
+    D --> F[Desempeño]
+    D --> G[Confiabilidad]
+    C --> H[Factores Perceptivos]
+    H --> I[Cortesía]
+    H --> J[Amabilidad]
+    H --> K[Atmósfera]
+```
 
-### 1.2. Mejora Continua (Kaizen)
+### Evolución del Concepto de Calidad
 
-La mejora continua es un concepto clave en TQM. Se refiere a la búsqueda constante de formas de mejorar los procesos, productos y servicios.
+```mermaid
+timeline
+    title Evolución de la Calidad
+    Early 1900s : Inspección
+    1940s : Muestreo Estadístico
+    1960s : Enfoque Organizacional
+    1980s+ : Calidad Impulsada por Cliente : TQM
+```
 
-#### Ejemplo
+### Filosofía TQM
 
-Una fábrica puede implementar un programa de sugerencias donde los empleados propongan ideas para mejorar la eficiencia en la producción.
+1. Mantener el enfoque en el cliente
+2. Mejoramiento continuo (kaizen)
+3. Calidad en la fuente
+4. Empoderamiento de empleados
+5. Enfoque en clientes internos y externos
 
-## 2. Herramientas de TQM
+## 💻 Herramientas de Control de Calidad
 
-### 2.1. Ciclo PDCA (Plan-Do-Check-Act)
+1. Diagramas causa-efecto (Ishikawa)
+2. Diagramas de flujo
+3. Listas de chequeo
+4. Diagramas de control
+5. Diagramas de puntos
+6. Diagramas de Pareto
+7. Histogramas
 
-El ciclo PDCA es una herramienta fundamental en TQM que ayuda a implementar mejoras de manera sistemática.
+### Costos de Calidad
 
-- **Plan (Planificar)**: Identificar un problema y planificar una solución.
-- **Do (Hacer)**: Implementar la solución.
-- **Check (Verificar)**: Evaluar los resultados de la implementación.
-- **Act (Actuar)**: Tomar medidas basadas en los resultados para mejorar el proceso.
+```mermaid
+graph LR
+    A[Costos de Calidad] --> B[Preventivos]
+    A --> C[Búsqueda]
+    A --> D[Falla Interna]
+    A --> E[Falla Externa]
+    B --> F[Entrenamiento/Diseño]
+    C --> G[Inspecciones/Pruebas]
+    D --> H[Desperdicios/Retrabajo]
+    E --> I[Garantías/Devoluciones]
+```
 
-### 2.2. Diagramas de Causa y Efecto
+## 📈 Aplicaciones Prácticas
 
-Los diagramas de causa y efecto, también conocidos como diagramas de espina de pescado, ayudan a identificar las causas de un problema específico.
+### Ejemplo 1: Control de Calidad en Manufactura Automotriz
 
-#### Ejemplo
+- Implementación de sistemas QS 9000
+- Medición de defectos por cada 100 vehículos
+- Control de horas-hombre por vehículo
 
-Si una empresa tiene un alto número de devoluciones de productos, puede usar un diagrama de causa y efecto para analizar factores como la calidad del material, el proceso de producción y el diseño del producto.
+### Ejemplo 2: Servicio al Cliente en Banca
 
-## 3. Costos de Calidad
+- Medición de tiempos de espera
+- Evaluación de satisfacción del cliente
+- Seguimiento de resolución de reclamos
 
-Los costos de calidad se dividen en cuatro categorías:
+## 🎓 Ejercicio Práctico
 
-### 3.1. Costos Preventivos
+Análisis de Costos de Calidad:
 
-Son los costos incurridos para prevenir que ocurran problemas de calidad. Esto incluye la capacitación de empleados y la mejora de procesos.
+1. Identificar costos preventivos actuales
+2. Calcular costos de fallas
+3. Determinar punto óptimo de inversión en calidad
 
-### 3.2. Costos de Evaluación
+## 🔑 Consejos Clave
 
-Son los costos asociados con la inspección y evaluación de productos para asegurar que cumplen con los estándares de calidad.
+1. La calidad debe ser construida en el proceso, no inspeccionada después
+2. El mejoramiento continuo es un ciclo sin fin
+3. El compromiso debe venir desde la alta dirección
+4. La prevención es más económica que la corrección
 
-### 3.3. Costos de Falla Interna
+## 📝 Conclusión
 
-Son los costos relacionados con la corrección de problemas de calidad antes de que el producto llegue al cliente, como el retrabajo y la pérdida de material.
+El TQM es una filosofía integral que requiere el compromiso de toda la organización. Al igual que una orquesta necesita que todos sus miembros estén sincronizados, el TQM necesita que todos los elementos de la organización trabajen en armonía hacia la excelencia.
 
-### 3.4. Costos de Falla Externa
+## 📚 Estándares y Certificaciones
 
-Son los costos que surgen cuando un producto defectuoso llega al cliente, incluyendo devoluciones y reparaciones.
+1. ISO 9001:2015
 
-## 4. Fórmulas Relevantes
+   - Estándares internacionales de calidad
+   - Certificación periódica
+   - Aplicable a múltiples industrias
 
-### 4.1. Costo Total de Calidad
+2. ISO 14001:2004
 
-El costo total de calidad se puede calcular como:
+   - Enfoque en gestión ambiental
+   - Medición de impacto ambiental
+   - Responsabilidad corporativa
 
-$$
-CTC = CP + CE + CF_{I} + CF_{E}
-$$
+3. Malcolm Baldrige National Quality Award
+   - Premio nacional de calidad en EEUU
+   - Evalúa excelencia organizacional
+   - Categorías múltiples de evaluación
 
-Donde:
+## 🔍 Gurús de la Calidad
 
-- $CTC$ = Costo total de calidad
-- $CP$ = Costos preventivos
-- $CE$ = Costos de evaluación
-- $CF_{I}$ = Costos de falla interna
-- $CF_{E}$ = Costos de falla externa
+1. W. Edwards Deming (1900-1993)
 
-### 4.2. Tasa de Defectos
+   - Ciclo PDCA
+   - 14 principios gerenciales
+   - Control estadístico de procesos
 
-La tasa de defectos se puede calcular como:
+2. Joseph Juran (1904-2008)
 
-$$
-TD = \frac{D}{P} \times 100
-$$
+   - Trilogía de la calidad
+   - Enfoque en costos de calidad
+   - Calidad como propósito de uso
 
-Donde:
-
-- $TD$ = Tasa de defectos
-- $D$ = Número de defectos
-- $P$ = Número total de productos producidos
-
-## 5. Conclusión
-
-El Manejo de Calidad Total es una estrategia integral que busca mejorar la calidad en todos los aspectos de una organización. [Al enfocarse en el cliente, fomentar la mejora continua y utilizar herramientas efectivas, las empresas pueden aumentar su competitividad y satisfacción del cliente.](https://atlas.org/api/v1/files?documentId=3a5b770b-295f-4a8f-99a3-e4e7e945dc23)
-
-## 6. Resumen de Fórmulas
-
-- **Costo Total de Calidad**:
-  $$
-  CTC = CP + CE + CF_{I} + CF_{E}
-  $$
-- **Tasa de Defectos**:
-  $$
-  TD = \frac{D}{P} \times 100
-  $$
+3. Phillip Crosby (1926-2001)
+   - Concepto de "cero defectos"
+   - "La calidad es gratis"
+   - Énfasis en prevención

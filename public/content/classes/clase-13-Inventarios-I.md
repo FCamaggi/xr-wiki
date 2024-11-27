@@ -1,98 +1,137 @@
 # Clase 13: Control de Inventarios I
 
-## Introducción al Control de Inventarios
+## 🎯 Introducción
 
-El control de inventarios es como ser el capitán de un barco: necesitas saber exactamente qué hay a bordo para navegar con éxito. [Un buen control de inventarios asegura que una organización tenga los recursos necesarios para operar sin interrupciones, evitando tanto el exceso como la falta de stock.](https://atlas.org/api/v1/files?documentId=e0a5ee8b-5f19-41e7-ae65-130602dfa5af)
+El control de inventarios es como mantener una despensa bien organizada: necesitamos saber qué tenemos, cuándo debemos comprar más y cuánto comprar para no desperdiciar recursos ni quedarnos sin lo necesario. En el contexto empresarial, este proceso es fundamental para mantener las operaciones funcionando eficientemente mientras se optimizan los costos.
 
-## 1. ¿Qué es un Inventario?
+### ¿Qué es un Sistema de Inventario?
 
-Un inventario es el almacenamiento de cualquier ítem o recurso utilizado en una organización. Esto incluye materias primas, productos terminados, componentes y suministros.
+Un sistema de inventario es un conjunto de políticas y controles que monitorean y determinan:
 
-### Analogía
+- Los niveles de inventario que debemos mantener
+- El momento adecuado para reponer el stock
+- La cantidad óptima a ordenar
 
-Imagina un chef que necesita ingredientes para preparar un platillo. Si no tiene suficientes ingredientes (inventario), no podrá servir el platillo (producto final). Por otro lado, si tiene demasiados ingredientes que no usará, estará desperdiciando recursos.
+> 💡 Dato importante: El inventario no solo incluye productos terminados, sino también materias primas, componentes, suministros y trabajo en proceso.
 
-## 2. Objetivos de los Inventarios
+## 📊 Conceptos Principales
 
-Los inventarios tienen varios objetivos clave:
+### Medidas Fundamentales del Inventario
 
-- **Enfrentar la variabilidad en la demanda**: Permiten a las empresas adaptarse a cambios inesperados en la demanda de los clientes.
-- **Protegerse de quiebres**: Mantener un nivel adecuado de inventario ayuda a evitar la falta de productos.
-- **Aprovechar economías de escala**: Comprar en grandes cantidades puede reducir costos.
+1. **Valor del Inventario Agregado Promedio**
 
-### Ejemplo Real
+   - El promedio del valor total de todos los ítems mantenidos en inventario
+   - $ValorInventario = \frac{\sum{ValorItem_i}}{n}$
 
-Un minorista de electrónica puede mantener un inventario de productos populares durante las temporadas altas, como las fiestas, para satisfacer la demanda creciente y evitar quiebres.
+2. **Semanas de Inventario**
 
-## 3. Cómo se Mide el Inventario
+   - Valor del inventario agregado promedio dividido por el costo de bienes vendidos por semana
+   - $SemanasInventario = \frac{ValorInventario}{CostoBienesVendidosSemanal}$
 
-Existen varias métricas para evaluar el rendimiento del inventario:
+3. **Rotación de Inventario**
+   - Costo de bienes vendidos por año dividido por el valor del inventario agregado promedio
+   - $RotacionInventario = \frac{CostoBienesVendidosAnual}{ValorInventario}$
 
-### 3.1. Valor del Inventario Agregado Promedio
+### Análisis ABC de Inventarios
 
-Este es el promedio del valor total de todos los ítems mantenidos en inventario.
+```mermaid
+graph TD
+    A[Clase A: 80% valor - 15% items]
+    B[Clase B: 15% valor - 30% items]
+    C[Clase C: 5% valor - 55% items]
+    A --> B
+    B --> C
+```
 
-### 3.2. Semanas de Inventario
+El principio de Pareto aplicado a inventarios demuestra que:
 
-Se calcula como:
+- Clase A: Items críticos que requieren mayor control
+- Clase B: Items de importancia moderada
+- Clase C: Items de menor valor pero mayor volumen
 
-$$
-\text{Semanas de Inventario} = \frac{\text{Valor del Inventario Agregado Promedio}}{\text{Costo de Bienes Vendidos por Semana}}
-$$
+### Modelo EOQ (Economic Order Quantity)
 
-### 3.3. Rotación de Inventario
+El modelo EOQ determina la cantidad óptima a ordenar minimizando los costos totales:
 
-La rotación de inventario se mide como:
+$$ Q\_{opt} = \sqrt{\frac{2DS}{H}} $$
 
-$$
-\text{Rotación de Inventario} = \frac{\text{Costo de Bienes Vendidos por Año}}{\text{Valor del Inventario Agregado Promedio}}
-$$
+Donde:
 
-### Ejemplo de Cálculo
+- D = Demanda anual
+- S = Costo de poner una orden
+- H = Costo anual de almacenaje por unidad
 
-Si una empresa tiene un valor de inventario promedio de \$100,000 y un costo de bienes vendidos de \$500,000 al año, la rotación de inventario sería:
+## 💻 Herramientas y Recursos
 
-$$
-\text{Rotación de Inventario} = \frac{500,000}{100,000} = 5
-$$
+### Fórmulas Esenciales
 
-Esto significa que el inventario se vende y se repone cinco veces al año.
+1. **Punto de Reorden**
+   $$ R = \bar{d}L $$
 
-## 4. Análisis ABC de Inventarios
+   - $\bar{d}$ = Demanda promedio diaria
+   - L = Tiempo de retraso en reposición
 
-El análisis ABC es una técnica que clasifica los ítems de inventario en tres categorías (A, B y C) según su importancia:
+2. **Costo Total Anual**
+   $$ TC = DC + \frac{D}{Q}S + \frac{Q}{2}H $$
 
-- **Clase A**: Ítems de alto valor que representan una pequeña parte del inventario.
-- **Clase B**: Ítems de valor medio.
-- **Clase C**: Ítems de bajo valor que representan la mayor parte del inventario.
+## 📈 Aplicaciones Prácticas
 
-### Analogía
+### Ejemplo de EOQ
 
-Piensa en un armario de ropa: las prendas que usas con más frecuencia (Clase A) son solo una pequeña parte de tu armario, mientras que la mayoría de las prendas (Clase C) son menos utilizadas.
+Datos:
 
-## 5. Costos Involucrados en el Inventario
+- Demanda anual = 1,000 unidades
+- Costo por orden = $10
+- Costo de almacenaje = $2.50/unidad/año
+- Tiempo de reposición = 7 días
 
-Los costos de mantener un inventario incluyen:
+Solución:
 
-- **Costos de mantenimiento**: Almacenaje, seguros, obsolescencia.
-- **Costos de preparación**: Preparación de órdenes y monitoreo.
-- **Costos por demanda insatisfecha**: Ventas perdidas debido a la falta de inventario.
+1. Calcular EOQ:
+   $$ Q\_{opt} = \sqrt{\frac{2(1,000)(10)}{2.50}} = 89.44 \approx 90 \text{ unidades} $$
 
-### Ejemplo de Costos
+2. Calcular punto de reorden:
+   - Demanda diaria = 1,000/365 = 2.74 unidades/día
+   - R = 2.74 × 7 = 19.18 ≈ 20 unidades
 
-Una empresa que mantiene un inventario de productos electrónicos puede incurrir en costos de almacenamiento y seguros, además de perder ventas si no tiene suficientes unidades de un producto popular.
+## 🔑 Consejos Clave
 
-## 6. Conclusión
+1. **Priorización ABC**
 
-El control de inventarios es esencial para la eficiencia operativa de cualquier organización. Al implementar técnicas como el análisis ABC y medir indicadores clave, las empresas pueden optimizar su gestión de inventarios, reducir costos y mejorar la satisfacción del cliente.
+   - Enfoque mayor control en items clase A
+   - Establece diferentes niveles de monitoreo según la clase
 
-## 7. Fórmulas Relevantes
+2. **Optimización de Costos**
 
-- **Semanas de Inventario**:
-  $$
-   \text{Semanas de Inventario} = \frac{\text{Valor del Inventario Agregado Promedio}}{\text{Costo de Bienes Vendidos por Semana}}
-  $$
-- **Rotación de Inventario**:
-  $$
-   \text{Rotación de Inventario} = \frac{\text{Costo de Bienes Vendidos por Año}}{\text{Valor del Inventario Agregado Promedio}}
-  $$
+   - El objetivo no es maximizar la rotación sino optimizar la rentabilidad
+   - Considera el balance entre costos de ordenar y almacenar
+
+3. **Monitoreo Continuo**
+   - Mantén sistemas actualizados
+   - Revisa periódicamente los parámetros del modelo
+
+## 📝 Conclusión
+
+El control efectivo de inventarios requiere un balance entre disponibilidad de productos y costos operativos. Los modelos matemáticos como EOQ proporcionan una base sólida para la toma de decisiones, pero deben complementarse con juicio empresarial y consideraciones prácticas.
+
+## 📚 Fórmulas Relevantes
+
+### Métricas Básicas
+
+- GMROI (Gross Margin Return on Investment)
+  $$ GMROI = \frac{Margen(\$)}{Inventario(\$)} = Mg(\%) \times \text{Rotación} $$
+
+### Modelo EOQ
+
+- Cantidad Óptima de Orden
+  $$ Q\_{opt} = \sqrt{\frac{2DS}{H}} $$
+- Punto de Reorden
+  $$ R = \bar{d}L $$
+- Costo Total
+  $$ TC = DC + \frac{D}{Q}S + \frac{Q}{2}H $$
+
+## 🔍 Recursos Adicionales
+
+- Simuladores de EOQ online
+- Planillas de cálculo para análisis ABC
+- Software de gestión de inventarios

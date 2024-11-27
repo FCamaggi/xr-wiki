@@ -1,109 +1,126 @@
 # Clase 27: Control Estadístico de Procesos
 
-## Introducción al Control Estadístico de Procesos
+## 🎯 Introducción
 
-El **Control Estadístico de Procesos** (SPC, por sus siglas en inglés) es una metodología que utiliza herramientas estadísticas para monitorear y controlar un proceso. Su objetivo es asegurar que el proceso opere de manera eficiente, produciendo productos de calidad y minimizando la variación.
+El Control Estadístico de Procesos (SPC) es como tener un termómetro que mide constantemente la "salud" de nuestros procesos productivos. Así como un médico utiliza diferentes medidas para evaluar el estado de un paciente, el SPC nos proporciona herramientas estadísticas para monitorear y mejorar la calidad de nuestros procesos.
 
-### Analogía
+### ¿Qué es el Control Estadístico de Procesos?
 
-Imagina que estás horneando un pastel. Para asegurarte de que salga bien, necesitas controlar la temperatura del horno y el tiempo de cocción. Si no lo haces, el pastel puede quemarse o no cocinarse adecuadamente. De manera similar, el SPC ayuda a las empresas a controlar sus procesos para evitar defectos en los productos.
+El SPC es un conjunto de herramientas estadísticas que nos ayudan a:
 
-## 1. Principios del Control Estadístico de Procesos
+- Monitorear el comportamiento de los procesos
+- Detectar variaciones anormales
+- Mantener la calidad del producto dentro de límites aceptables
 
-### 1.1. Variación en los Procesos
+> 💡 El SPC es parte fundamental del TQM (Total Quality Management) y se enfoca en prevenir defectos en lugar de detectarlos.
 
-Todos los procesos tienen variación, que puede ser clasificada en dos tipos:
+## 📊 Conceptos Principales
 
-- **Variación Natural**: Es la variación que ocurre de manera inherente en el proceso. Por ejemplo, pequeñas diferencias en el tamaño de las piezas producidas.
-- **Variación Especial**: Es la variación que se debe a causas externas o inusuales. Por ejemplo, un cambio en la materia prima que afecta la calidad del producto.
+### 1. Estadísticas Descriptivas
 
-### 1.2. Objetivo del SPC
+Las estadísticas descriptivas son nuestras herramientas básicas de medición:
 
-El objetivo del SPC es identificar y controlar la variación en los procesos para mantenerlos dentro de límites aceptables. Esto se logra mediante el uso de gráficos de control.
+#### Media (x̄)
 
-## 2. Herramientas del Control Estadístico de Procesos
+$$ \bar{x} = \frac{1}{n}\sum\_{i=1}^n x_i $$
 
-### 2.1. Gráficos de Control
+Es el centro de gravedad de nuestros datos, el punto de equilibrio.
 
-Los gráficos de control son herramientas visuales que permiten monitorear el comportamiento de un proceso a lo largo del tiempo. Los dos tipos más comunes son:
+#### Desviación Estándar (σ)
 
-- **Gráfico X-bar**: Utilizado para monitorear la media de un proceso.
-- **Gráfico R**: Utilizado para monitorear la variabilidad del proceso.
+$$ \sigma = \sqrt{\frac{1}{n-1}\sum\_{i=1}^{n}(x_i - \bar{x})^2} $$
 
-#### Ejemplo de Gráfico de Control
+Mide qué tan dispersos están los datos alrededor de la media.
 
-Supongamos que una fábrica produce tornillos y toma muestras de 5 tornillos cada hora. Si la media de la longitud de los tornillos se encuentra dentro de los límites de control, el proceso está bajo control.
+### 2. La Distribución Normal
 
-### 2.2. Límites de Control
+```mermaid
+graph TD
+    A[Distribución Normal] --> B[68.3% dentro de ±1σ]
+    A --> C[95.4% dentro de ±2σ]
+    A --> D[99.73% dentro de ±3σ]
+```
 
-Los límites de control se establecen a partir de datos históricos del proceso y se utilizan para determinar si el proceso está bajo control. Se calculan como:
+### 3. Capacidad del Proceso
 
-$$
-UCL = \bar{X} + z \cdot \sigma
-$$
+#### Índices de Capacidad
 
-$$
-LCL = \bar{X} - z \cdot \sigma
-$$
+- Cp (Proceso centrado):
+  $$ C_p = \frac{USL - LSL}{6\sigma} $$
 
-Donde:
+- Cpk (Cualquier proceso):
+  $$ C\_{pk} = \min(\frac{USL-\mu}{3\sigma}, \frac{\mu-LSL}{3\sigma}) $$
 
-- $UCL$ = Límite de control superior
-- $LCL$ = Límite de control inferior
-- $\bar{X}$ = Media del proceso
-- $z$ = Número de desviaciones estándar (usualmente 3)
-- $\sigma$ = Desviación estándar del proceso
+## 💻 Herramientas de Control
 
-## 3. Proceso de Implementación del SPC
+### 1. Diagramas de Control
 
-### 3.1. Identificación de Atributos a Controlar
+- Límites de control superior (UCL)
+- Línea central (CL)
+- Límites de control inferior (LCL)
 
-El primer paso es identificar qué características del proceso se van a monitorear. Por ejemplo, en una línea de producción de botellas, se podría controlar el volumen de líquido en cada botella.
+## 📈 Aplicaciones Prácticas
 
-### 3.2. Recolección de Datos
+### Ejemplo: Proceso de Embotellado
 
-Se deben recolectar datos de manera sistemática para poder analizarlos. Esto puede incluir la medición de dimensiones, pesos, o cualquier otra característica relevante.
+Datos de muestra:
 
-### 3.3. Análisis de Datos
+```
+Muestra 1: 15.8, 16.0, 15.8, 15.9
+Muestra 2: 16.1, 16.0, 15.8, 15.9
+Muestra 3: 16.0, 15.9, 15.9, 15.8
+```
 
-Una vez recolectados los datos, se analizan utilizando gráficos de control para identificar tendencias o patrones que indiquen que el proceso está fuera de control.
+## 🎓 Ejercicio Práctico
 
-## 4. Ejemplo Práctico
+### Cálculo de Límites de Control
 
-### Caso de una Fábrica de Botellas
+1. Calcular la media general:
+   $$ \bar{\bar{x}} = \frac{15.875 + 15.975 + 15.9}{3} = 15.92 $$
 
-Supongamos que una fábrica de botellas de vidrio quiere controlar el peso de las botellas producidas. Se toman muestras de 10 botellas cada hora y se registra el peso.
+2. Calcular límites (σ = 0.2):
 
-1. **Recolección de Datos**: Se obtienen los siguientes pesos (en gramos): 250, 252, 251, 249, 253, 250, 251, 252, 250, 251.
-2. **Cálculo de la Media y Desviación Estándar**:
-   - Media ($\bar{X}$):
-     $$
-     \bar{X} = \frac{250 + 252 + 251 + 249 + 253 + 250 + 251 + 252 + 250 + 251}{10} = 250.2
-     $$
-   - Desviación Estándar ($\sigma$):
-     $$
-     \sigma = \sqrt{\frac{\sum (x_i - \bar{X})^2}{n-1}} \approx 1.2
-     $$
-3. **Cálculo de Límites de Control**:
-   - Límite Superior ($UCL$):
-     $$
-     UCL = 250.2 + 3 \cdot 1.2 \approx 253.8
-     $$
-   - Límite Inferior ($LCL$):
-     $$
-     LCL = 250.2 - 3 \cdot 1.2 \approx 246.6
-     $$
+- UCL = 15.92 + 3(0.2/√4) = 16.22
+- LCL = 15.92 - 3(0.2/√4) = 15.62
 
-## 5. Conclusión
+## 🔑 Puntos Clave para el Control de Calidad
 
-El Control Estadístico de Procesos es una herramienta poderosa para asegurar la calidad en la producción. Al monitorear y controlar la variación en los procesos, las empresas pueden mejorar la calidad de sus productos y aumentar la satisfacción del cliente.
+1. Tomar acción cuando:
 
-## 6. Resumen de Fórmulas
+- Un punto cae fuera de los límites de control
+- Siete puntos consecutivos en un mismo lado de la línea central
+- Tendencias consistentes hacia arriba o abajo
+- Patrones no aleatorios
 
-- **Límites de Control**:
-  $$
-  UCL = \bar{X} + z \cdot \sigma
-  $$
-  $$
-  LCL = \bar{X} - z \cdot \sigma
-  $$
+## 📝 Conclusión
+
+El SPC es fundamental para:
+
+- Mantener procesos bajo control
+- Reducir variabilidad
+- Mejorar calidad del producto
+- Prevenir defectos
+
+## 📚 Fórmulas Relevantes
+
+### Estadísticas Básicas
+
+1. Media muestral: $\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i$
+2. Desviación estándar: $\sigma = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$
+
+### Índices de Capacidad
+
+1. Cp: $C_p = \frac{USL - LSL}{6\sigma}$
+2. Cpk: $C_{pk} = \min(\frac{USL-\mu}{3\sigma}, \frac{\mu-LSL}{3\sigma})$
+
+### Límites de Control
+
+1. UCL = $\bar{x} + z\sigma_{\bar{x}}$
+2. LCL = $\bar{x} - z\sigma_{\bar{x}}$
+
+## 🔍 Métricas de Calidad Six Sigma
+
+- 3σ: 2,700 defectos por millón
+- 4σ: 63 defectos por millón
+- 5σ: 0.57 defectos por millón
+- 6σ: 0.002 defectos por millón

@@ -31,8 +31,10 @@ $$
 
 Donde:
 
-- $\Delta D$ es el cambio en la demanda.
-- $D$ es la demanda promedio.
+- \(\Delta D\) es el cambio en la demanda.
+- \(D\) es la demanda original.
+
+Este fenómeno puede causar ineficiencias y sobrecostos en la cadena de suministro si no se gestiona adecuadamente.
 
 ## 3. Innovaciones en la Cadena de Suministro
 

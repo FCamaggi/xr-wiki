@@ -1,106 +1,135 @@
 # Clase 20: Programación de Operaciones y Líneas de Espera
 
-## Introducción a la Programación de Operaciones
+## 🎯 Introducción
 
-La **Programación de Operaciones** es una disciplina que se encarga de planificar y organizar los recursos de una empresa para maximizar la eficiencia y cumplir con los plazos de entrega. Esto incluye la programación de talleres, personal, vehículos y proyectos.
+Imagina que estás en un restaurante de comida rápida durante la hora pico del almuerzo. La fila de clientes crece mientras los cajeros toman y procesan pedidos. Esta situación cotidiana representa perfectamente el concepto de líneas de espera o colas, un elemento fundamental en la programación de operaciones.
 
-### Analogía
+Las líneas de espera son una parte inevitable de nuestra vida diaria - desde esperar en el banco hasta hacer fila en el supermercado. Según estudios, las personas destinan entre 2 a 5 años de sus vidas esperando en colas. Entender cómo funcionan y optimizarlas es crucial para mejorar la eficiencia de los sistemas y la satisfacción del cliente.
 
-Imagina que estás organizando un evento. Necesitas coordinar a los proveedores, el lugar, y el personal para asegurarte de que todo esté listo a tiempo. La programación de operaciones es similar, pero en un contexto empresarial.
+### ¿Qué son las líneas de espera?
 
-## 1. ¿Qué es la Programación de Operaciones?
+Las líneas de espera o colas son sistemas donde los clientes llegan para recibir un servicio, esperan si el servicio no está disponible inmediatamente, y salen después de ser atendidos.
 
-La programación de operaciones se refiere a la asignación de recursos y tareas en un entorno de producción. [Su objetivo es optimizar el uso de recursos, minimizar costos y cumplir con las fechas de entrega.](https://atlas.org/api/v1/files?documentId=a09823cc-9738-4414-83f9-d731e488417d)
+Características principales:
 
-### Ejemplo
+- Tienen un patrón de llegada de clientes
+- Cuentan con uno o más servidores
+- Siguen reglas específicas de atención
+- Presentan tiempos de servicio variables
 
-En una fábrica de automóviles, la programación de operaciones determina qué vehículos se ensamblan en qué momento y en qué línea de producción, asegurando que se cumplan los plazos de entrega.
+> 💡 Dato importante: A.K. Erlang fue el primero en estudiar científicamente las líneas de espera en 1913, analizando el comportamiento de las centrales telefónicas.
 
-## 2. Problemas Comunes en la Programación
+## 📊 Conceptos Principales
 
-Algunos de los problemas más comunes en la programación de operaciones incluyen:
+### Tipos de Sistemas de Líneas de Espera
 
-- **Programación de talleres de trabajo**: Asignar tareas a diferentes máquinas y trabajadores.
-- **Programación de personal**: Determinar cuántos empleados se necesitan en cada turno.
-- **Programación de vehículos**: Planificar las rutas y horarios de entrega.
+1. Canal Simple - Una fase
 
-## 3. Reglas de Secuenciamiento
+```mermaid
+graph LR
+    A[Llegadas] --> B[Cola]
+    B --> C[Servidor]
+    C --> D[Salidas]
+```
 
-Las reglas de secuenciamiento son criterios que se utilizan para decidir el orden en que se procesan los trabajos. Algunas de las más comunes son:
+2. Canal Simple - Multi-fase
 
-### 3.1. FIFO (First In, First Out)
+```mermaid
+graph LR
+    A[Llegadas] --> B[Cola]
+    B --> C[Servicio 1]
+    C --> D[Servicio 2]
+    D --> E[Salidas]
+```
 
-Los trabajos se procesan en el orden en que llegan. Es como una fila en un banco: el primero en llegar es el primero en ser atendido.
+3. Multi-canal - Una fase
 
-### 3.2. SPT (Shortest Processing Time)
+```mermaid
+graph LR
+    A[Llegadas] --> B[Cola]
+    B --> C[Servidor 1]
+    B --> D[Servidor 2]
+    C --> E[Salidas]
+    D --> E
+```
 
-Los trabajos se ordenan según el tiempo de procesamiento. Se priorizan los trabajos que requieren menos tiempo.
+### Parámetros Fundamentales
 
-### 3.3. EDD (Earliest Due Date)
+- λ (lambda): Tasa de llegada de clientes
+- μ (mu): Tasa de servicio
+- ρ (rho): Utilización del sistema = λ/μ
+- Ls: Número promedio de unidades en el sistema
+- Lq: Número promedio de unidades en la cola
+- Ws: Tiempo promedio en el sistema
+- Wq: Tiempo promedio en la cola
 
-Los trabajos se procesan según su fecha de entrega. Los trabajos con fechas más cercanas se realizan primero.
+## 💻 Métricas y Fórmulas Clave
 
-### Ejemplo de Reglas de Secuenciamiento
+Para un sistema M/M/1 (llegadas Poisson, servicio exponencial, un servidor):
 
-Supongamos que tenemos tres trabajos con los siguientes tiempos de procesamiento y fechas de entrega:
+$$ L_s = \frac{\lambda}{\mu - \lambda} $$
+$$ W_s = \frac{1}{\mu - \lambda} $$
+$$ L_q = \frac{\lambda^2}{\mu(\mu - \lambda)} $$
+$$ W_q = \frac{\lambda}{\mu(\mu - \lambda)} $$
+$$ \rho = \frac{\lambda}{\mu} $$
 
-| Trabajo | Tiempo de Procesamiento | Fecha de Entrega |
-| ------- | ----------------------- | ---------------- |
-| A       | 3 horas                 | Día 5            |
-| B       | 2 horas                 | Día 2            |
-| C       | 1 hora                  | Día 4            |
+## 📈 Aplicaciones Prácticas
 
-- **FIFO**: Se procesarían en el orden A, B, C.
-- **SPT**: Se procesarían en el orden C, B, A.
-- **EDD**: Se procesarían en el orden B, C, A.
+1. Bancos:
 
-## 4. Líneas de Espera
+   - Clientes llegan para depósitos/retiros
+   - Cajeros como servidores
+   - Sistema de números para orden de atención
 
-Las **líneas de espera** son un fenómeno común en la programación de operaciones. Se refieren a la acumulación de trabajos que esperan ser procesados. La teoría de colas estudia cómo gestionar estas líneas para minimizar el tiempo de espera y mejorar el servicio.
+2. Hospitales:
+   - Pacientes llegan para atención
+   - Doctores como servidores
+   - Priorización por gravedad
 
-### Ejemplo de Líneas de Espera
+## 🎓 Ejercicio Práctico
 
-Imagina un restaurante donde los clientes forman una fila para ser atendidos. Si el restaurante tiene un solo mesero, los clientes tendrán que esperar. La gestión eficiente de esta línea es crucial para mantener la satisfacción del cliente.
+**Problema**: Un banco tiene un cajero que puede atender 20 clientes por hora (μ = 20). Llegan en promedio 15 clientes por hora (λ = 15).
 
-## 5. Fórmulas Relevantes
+**Calcular**:
 
-### 5.1. Utilización de la Capacidad
+1. Utilización del sistema
+2. Tiempo promedio en el sistema
+3. Número promedio de clientes en cola
 
-La utilización de la capacidad se puede calcular como:
+**Solución**:
 
-$$
-\rho = \frac{\lambda}{\mu}
-$$
+1. ρ = λ/μ = 15/20 = 0.75 (75% utilización)
+2. Ws = 1/(μ-λ) = 1/(20-15) = 0.2 horas = 12 minutos
+3. Lq = λ²/[μ(μ-λ)] = 15²/[20(20-15)] = 2.25 clientes
 
-Donde:
+## 🔑 Psicología de las Colas
 
-- $\lambda$ es la tasa de llegada (número de trabajos por unidad de tiempo).
-- $\mu$ es la tasa de servicio (número de trabajos que se pueden procesar por unidad de tiempo).
+1. El tiempo ocioso se percibe más largo que el tiempo ocupado
+2. Las esperas inciertas parecen más largas que las conocidas
+3. Las esperas inexplicadas parecen más largas que aquellas con explicación
+4. Las esperas injustas se sienten más largas que las justas
+5. La ansiedad hace que las esperas parezcan más largas
+6. Las esperas individuales se perciben más largas que las grupales
 
-### 5.2. Tiempo de Espera Promedio
+## 📝 Conclusión
 
-El tiempo de espera promedio en una cola se puede calcular usando la Ley de Little:
+La teoría de colas es fundamental para optimizar operaciones y mejorar la experiencia del cliente. El balance entre el costo de servicio y el costo de espera es crucial para un sistema eficiente.
 
-$$
-L = \lambda W
-$$
+## 📚 Fórmulas Relevantes
 
-Donde:
+### Sistema M/M/1
 
-- $L$ es el número promedio de trabajos en el sistema.
-- $W$ es el tiempo promedio que un trabajo pasa en el sistema.
+- Utilización: $\rho = \frac{\lambda}{\mu}$
+- Tiempo en sistema: $W_s = \frac{1}{\mu - \lambda}$
+- Longitud de cola: $L_q = \frac{\lambda^2}{\mu(\mu - \lambda)}$
+- Tiempo en cola: $W_q = \frac{\lambda}{\mu(\mu - \lambda)}$
 
-## 6. Conclusión
+### Relaciones Generales
 
-La programación de operaciones y la gestión de líneas de espera son fundamentales para el éxito de cualquier empresa. Al aplicar las reglas de secuenciamiento adecuadas y gestionar eficientemente las colas, las empresas pueden mejorar su eficiencia y satisfacción del cliente.
+- Ley de Little: $L = \lambda W$
+- Relación sistema-cola: $W_s = W_q + \frac{1}{\mu}$
 
-## 7. Resumen de Fórmulas
+## 🔍 Recursos Adicionales
 
-- **Utilización de la Capacidad**:
-  $$
-  \rho = \frac{\lambda}{\mu}
-  $$
-- **Ley de Little**:
-  $$
-  L = \lambda W
-  $$
+- "Perspectives on Queues: Social Justice and the Psychology of Queueing" por R. Larson
+- "Queueing Theory" por V.G. Narayanan

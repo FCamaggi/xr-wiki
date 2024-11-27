@@ -1,111 +1,112 @@
-# Clase 24: Planificación de Corto Plazo MRP-ERP
+# Clase 24: Planificación de Corto Plazo - MRP
 
-## Introducción a la Planificación de Corto Plazo
+## 🎯 Introducción
 
-La **planificación de corto plazo** es un proceso esencial en la gestión de operaciones que se centra en la programación y control de la producción a corto plazo. Utiliza herramientas como el **MRP** (Material Requirement Planning) y **ERP** (Enterprise Resource Planning) para asegurar que los materiales y recursos estén disponibles en el momento adecuado.
+La planificación de materiales en manufactura es como organizar los ingredientes para una receta a gran escala. Así como un chef debe asegurar tener todos los ingredientes necesarios en el momento preciso para preparar múltiples platos simultáneamente, las empresas manufactureras necesitan coordinar la disponibilidad de múltiples componentes para sus productos.
 
-### Analogía
+### ¿Qué es MRP?
 
-Imagina que estás organizando una fiesta. Necesitas asegurarte de que tienes suficientes sillas, comida y bebidas para tus invitados. Si no planificas bien, podrías quedarte sin sillas o comida a mitad de la fiesta. La planificación de corto plazo funciona de manera similar, ayudando a las empresas a coordinar sus recursos para satisfacer la demanda.
+El Material Requirements Planning (MRP) es un sistema de información computacional desarrollado en los años 60 por J. Orlicky y otros en IBM, que ayuda a las empresas a determinar:
 
-## 1. Objetivos de la Planificación de Corto Plazo
+- Qué componentes se necesitan producir
+- Cuántos se necesitan
+- Cuándo se necesitan para cumplir con la demanda
 
-Los principales objetivos de la planificación de corto plazo son:
+> 💡 Dato importante: MRP se basa en el concepto de demanda dependiente, donde la necesidad de componentes está directamente relacionada con la demanda de productos finales.
 
-- **Asegurar la disponibilidad de materiales**: Garantizar que los materiales necesarios estén disponibles cuando se necesiten.
-- **Optimizar la producción**: Programar la producción de manera eficiente para cumplir con los compromisos de entrega.
-- **Minimizar costos**: Reducir los costos asociados con la producción y el inventario.
+## 📊 Conceptos Principales
 
-## 2. Conceptos Clave
+### Demanda Independiente vs. Dependiente
 
-### 2.1. Demanda Independiente vs. Dependiente
+```mermaid
+graph TD
+    A[Producto Final] --> B[Demanda Independiente]
+    A --> C[Demanda Dependiente]
+    C --> D[Componente 1]
+    C --> E[Componente 2]
+    C --> F[Componente 3]
+```
 
-- **Demanda Independiente**: Es la demanda que no está relacionada con otros productos. Por ejemplo, la demanda de un producto terminado como un automóvil.
-- **Demanda Dependiente**: Es la demanda que se deriva de la necesidad de otros productos. Por ejemplo, la demanda de piezas necesarias para ensamblar un automóvil.
+### Plan Maestro de Producción (MPS)
 
-### 2.2. Plan Maestro de Producción (PMP)
+El MPS es un documento dinámico que determina:
 
-El **Plan Maestro de Producción** es un documento que establece qué productos se deben producir, en qué cantidades y en qué momentos. Es dinámico y se ajusta a las condiciones cambiantes del mercado.
+- Cuándo producir cada producto final
+- En qué cantidad producirlo
+- Cómo cumplir con los compromisos de entrega
 
-## 3. Herramientas de Planificación
+### Lista de Materiales (BOM)
 
-### 3.1. MRP (Material Requirement Planning)
+```mermaid
+graph TD
+    A[Producto Final] --> B[Subconjunto 1]
+    A --> C[Subconjunto 2]
+    B --> D[Componente 1.1]
+    B --> E[Componente 1.2]
+    C --> F[Componente 2.1]
+    C --> G[Componente 2.2]
+```
 
-El MRP es un sistema que ayuda a determinar:
+## 💻 Elementos del Sistema MRP
 
-- **Qué componentes se necesitan producir**.
-- **Cuántos se necesitan**.
-- **Cuándo se deben producir**.
+```mermaid
+flowchart LR
+    A[Pronósticos] --> D[Plan Maestro de Producción]
+    B[Órdenes de clientes] --> D
+    D --> E[MRP]
+    C[Lista de materiales] --> E
+    F[Estado del inventario] --> E
+    E --> G[Reportes de Producción]
+```
 
-#### Ejemplo de MRP
+## 📈 Cálculos Principales
 
-Supongamos que una empresa necesita producir 100 sillas. Si cada silla requiere 4 patas, el MRP calculará que se necesitan 400 patas.
+### Requerimientos Netos
 
-### 3.2. ERP (Enterprise Resource Planning)
-
-El ERP es un sistema más amplio que integra todas las áreas de una empresa, incluyendo finanzas, recursos humanos y operaciones. Facilita la coordinación entre diferentes departamentos y mejora la eficiencia.
-
-## 4. Fórmulas Relevantes
-
-### 4.1. Requerimientos Netos
-
-Los requerimientos netos se pueden calcular como:
-
-$$
-RN = RB - (R + I)
-$$
-
+$$ RN = RB - (R + I) $$
 Donde:
 
-- $RN$ = Requerimientos netos
-- $RB$ = Requerimientos brutos (demanda total)
-- $R$ = Recepciones programadas
-- $I$ = Inventario en mano proyectado
+- RN = Requerimientos Netos
+- RB = Requerimientos Brutos
+- R = Recepciones Programadas
+- I = Inventario en Mano
 
-### 4.2. Cálculo de Inventario Proyectado
+## 🔑 Técnicas de Loteo
 
-El inventario proyectado se calcula como:
+1. Lote a Lote (L4L)
 
-$$
-IP = I + R - D
-$$
+   - Minimiza costo de inventario
+   - Produce exactamente lo necesario
 
-Donde:
+2. Cantidad Económica de Pedido (EOQ)
+   - Balance entre costos de preparación e inventario
+     $$ Q = \sqrt{\frac{2DS}{H}} $$
+     Donde:
+   - D = Demanda
+   - S = Costo de preparación
+   - H = Costo de mantención
 
-- $IP$ = Inventario proyectado
-- $I$ = Inventario inicial
-- $R$ = Recepciones programadas
-- $D$ = Demanda
+## 📝 Conclusión
 
-## 5. Ejemplo Práctico
+El MRP evolucionó hacia sistemas más completos:
 
-### Caso de una Fábrica de Sillas
+1. MRP II: Incorpora capacidad y recursos adicionales
+2. ERP: Sistema integral que incluye todas las áreas de la empresa
 
-Supongamos que una fábrica de sillas tiene la siguiente información:
+## 🔍 Limitaciones del MRP
 
-- **Demanda bruta**: 200 sillas
-- **Inventario inicial**: 50 sillas
-- **Recepciones programadas**: 100 sillas
+- Modelo determinístico
+- Sistema Push
+- Grandes requerimientos de datos
+- Costos significativos de implementación y mantenimiento
 
-Calculamos los requerimientos netos:
+## 📚 Sistemas Modernos (ERP)
 
-$$
-RN = 200 - (100 + 50) = 50
-$$
+Los sistemas actuales integran:
 
-Esto significa que la fábrica necesita producir 50 sillas adicionales.
+- Ventas y comercialización
+- Contabilidad y finanzas
+- Manejo de personas
+- Operaciones y logística
 
-## 6. Conclusión
-
-La planificación de corto plazo es fundamental para la gestión eficiente de operaciones. [Utilizando herramientas como MRP y ERP, las empresas pueden asegurar la disponibilidad de materiales, optimizar la producción y minimizar costos.](https://atlas.org/api/v1/files?documentId=c9f7b071-e422-4838-85a5-f5baafcdfd0d) La correcta implementación de estas estrategias permite a las organizaciones adaptarse a las fluctuaciones del mercado y satisfacer la demanda de manera efectiva.
-
-## 7. Resumen de Fórmulas
-
-- **Requerimientos Netos**:
-  $$
-  RN = RB - (R + I)
-  $$
-- **Inventario Proyectado**:
-  $$
-  IP = I + R - D
-  $$
+> 💡 Ejemplos de ERP modernos: SAP, Oracle, SAGE, IFS

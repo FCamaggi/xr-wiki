@@ -1,85 +1,119 @@
-# Clase 12: Sistemas Pull
+# Clase 12: Sistemas Pull y Manufactura Just-in-Time
 
-## Introducción a los Sistemas Pull
+## 🎯 Introducción
 
-Los **Sistemas Pull** son una estrategia en la gestión de operaciones que se basa en producir bienes solo cuando hay una demanda real. Esto contrasta con los sistemas push, donde la producción se basa en pronósticos. Imagina un restaurante que solo cocina los platos cuando recibe un pedido; esto asegura que los clientes obtengan comidas frescas y evita el desperdicio.
+En el mundo de la manufactura moderna, podemos pensar en los sistemas de producción como una orquesta sinfónica. En un sistema tradicional (Push), cada sección musical toca según una partitura predeterminada, sin importar si las otras secciones están listas o no. En contraste, un sistema Pull es como una orquesta donde cada sección espera la señal precisa para comenzar, creando una armonía perfecta basada en la necesidad real.
 
-## 1. ¿Qué es un Sistema Pull?
+### ¿Qué es un Sistema Pull?
 
-Un sistema pull se puede comparar con un río que fluye: solo se mueve cuando hay una corriente (demanda) que lo impulsa. Esto significa que los productos se fabrican solo cuando se necesitan, lo que ayuda a reducir el exceso de inventario y los costos asociados.
+Un sistema Pull es un método de producción donde cada proceso produce exactamente lo que el siguiente proceso necesita, cuando lo necesita. Es como una cadena de restaurantes donde cada estación solo prepara los ingredientes cuando recibe un pedido del cliente.
 
-### Características Principales
+Características principales:
 
-- **Producción bajo demanda**: Se fabrican productos solo cuando hay un pedido.
-- **Reducción de inventarios**: Minimiza el almacenamiento de productos no vendidos.
-- **Flexibilidad**: Permite adaptarse rápidamente a cambios en la demanda.
+- Producción basada en demanda real
+- Minimización de inventario
+- Sincronización entre procesos
+- Control descentralizado
 
-## 2. Comparación con Sistemas Push
+> 💡 Dato importante: El sistema Pull fue popularizado por Toyota como parte del Sistema de Producción Toyota (TPS), revolucionando la manufactura global.
 
-En un sistema push, los productos se fabrican en grandes cantidades basándose en pronósticos de ventas. Esto puede llevar a un exceso de inventario y a costos adicionales.
+## 📊 Conceptos Principales
 
-### Analogía
+### 1. Just-in-Time (JIT)
 
-Piensa en un fabricante de juguetes que produce miles de unidades de un juguete basado en suposiciones de ventas. Si las ventas no cumplen con las expectativas, se quedará con un gran inventario que no puede vender, como un armario lleno de ropa que nunca usas.
+```mermaid
+graph LR
+    A[Demanda Real] -->|Activa| B[Producción]
+    B -->|Solicita| C[Componentes]
+    C -->|Entrega| B
+    B -->|Entrega| D[Cliente]
+```
 
-## 3. Principios del Sistema Pull
+El JIT es un sistema donde se produce:
 
-Los sistemas pull se basan en varios principios clave:
+- La cantidad correcta
+- En el momento correcto
+- En el lugar correcto
 
-### 3.1. Producción Justo a Tiempo (JIT)
+### 2. Sistema Kanban
 
-El JIT es un enfoque que busca minimizar el inventario y producir solo lo necesario. Esto se logra mediante una coordinación eficiente entre los proveedores y la producción.
+```mermaid
+stateDiagram-v2
+    [*] --> Demanda
+    Demanda --> ProcesoB: Señal Kanban
+    ProcesoB --> ProcesoA: Solicitud
+    ProcesoA --> ProcesoB: Suministro
+    ProcesoB --> Cliente: Producto
+```
 
-#### Ejemplo Real
+Fórmula para número de Kanbans:
 
-Toyota es un ejemplo clásico de una empresa que utiliza el JIT. La compañía produce vehículos solo cuando recibe pedidos, lo que le permite reducir costos y mejorar la eficiencia.
-
-### 3.2. Kanban
-
-El sistema Kanban es una herramienta utilizada en los sistemas pull para gestionar el flujo de trabajo. Utiliza tarjetas o señales visuales para indicar cuándo se necesita más producción.
-
-#### Ejemplo de Kanban
-
-Si un centro de producción tiene un contenedor que almacena 25 botellas y se producen 200 botellas por hora, se puede calcular el número de Kanbans necesarios con la fórmula:
-
-$$
-N = \frac{D \cdot T}{C}
-$$
+$$ N = \frac{D \times T}{C} $$
 
 Donde:
 
-- $N$ = número de Kanbans 
-- $D$ = tasa de demanda (botellas por hora) 
-- $T$ = tiempo de entrega (horas) 
-- $C$ = tamaño del contenedor (botellas)
+- N = Número de contenedores
+- D = Tasa de demanda
+- T = Tiempo de entrega
+- C = Capacidad del contenedor
 
-### Ejemplo Práctico
+## 💻 Herramientas y Recursos
 
-Supongamos que una fábrica de refrescos produce 200 botellas por hora, el tiempo de entrega es de 0.5 horas y cada contenedor almacena 25 botellas. Entonces, el número de Kanbans necesarios sería:
+1. Tableros Kanban
+2. Sistemas de señalización visual
+3. Software de control de producción
+4. Contenedores estandarizados
 
-$$
-N = \frac{200 \cdot 0.5}{25} = 4 \text{ kanbans}
-$$
+## 📈 Aplicaciones Prácticas
 
-## 4. Beneficios de los Sistemas Pull
+### Caso Toyota
 
-Los sistemas pull ofrecen varios beneficios, incluyendo:
+- Reducción de inventario del 75%
+- Mejora de calidad del 95%
+- Reducción de tiempo de entrega del 90%
 
-- **Reducción de Inventarios**: Al producir solo lo necesario, se minimizan los costos de almacenamiento.
-- **Mayor Flexibilidad**: Permiten adaptarse rápidamente a cambios en la demanda del cliente.
-- **Mejora de la Calidad**: Al enfocarse en la producción bajo demanda, se pueden identificar y corregir problemas más rápidamente.
+### Caso Dell Computers
 
-### Ejemplo de Beneficios
+- Ensamblaje bajo demanda
+- Personalización masiva
+- Inventario mínimo
 
-Un caso notable es el de Dell, que utiliza un sistema pull para ensamblar computadoras. Los clientes personalizan sus pedidos, y Dell produce solo lo que se ha vendido, lo que reduce el inventario y mejora la satisfacción del cliente.
+## 🎓 Ejercicio Práctico
 
-## 5. Conclusión
+Calcular número de Kanbans necesarios:
 
-Los sistemas pull son una estrategia efectiva en la gestión de operaciones que ayuda a las empresas a ser más eficientes y a satisfacer mejor las necesidades de sus clientes. Al implementar principios como el JIT y el Kanban, las organizaciones pueden optimizar su producción y reducir costos.
+- Demanda: 200 unidades/hora
+- Tiempo de entrega: 30 minutos
+- Capacidad del contenedor: 25 unidades
 
-## 6. Fórmulas Relevantes
+Solución:
+$$ N = \frac{200 \times 0.5}{25} = 4 \text{ kanbans} $$
 
-- **Número de Kanbans**:
-  $$
-   N = \frac{D \cdot T}{C}
-  $$
+## 🔑 Consejos Clave
+
+1. Comenzar con procesos simples
+2. Implementar gradualmente
+3. Capacitar al personal
+4. Mantener visibilidad del sistema
+5. Mejorar continuamente
+
+## 📝 Conclusión
+
+Al igual que una orquesta bien afinada, un sistema Pull efectivo requiere coordinación, práctica y mejora continua. La implementación exitosa resulta en una producción más eficiente, menor desperdicio y mayor satisfacción del cliente.
+
+## 📚 Fórmulas Relevantes
+
+### Cálculo de Kanbans
+
+$$ N = \frac{D \times T}{C} $$
+
+### Eficiencia del Sistema
+
+$$ \text{Eficiencia} = \frac{\text{Valor agregado}}{\text{Tiempo total}} \times 100\% $$
+
+## 🔍 Recursos Adicionales
+
+- Sistema de Producción Toyota
+- Lean Manufacturing
+- 5S y Control Visual
+- Mejora Continua (Kaizen)

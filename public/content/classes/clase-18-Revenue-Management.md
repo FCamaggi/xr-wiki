@@ -1,106 +1,115 @@
-# Clase 18: Gestión de Revenue Management
+Let me help you create an educational document based on the Revenue Management slides. I'll generate a comprehensive markdown document following your format.
 
-## Introducción al Revenue Management
+# Clase 18: Revenue Management
 
-El **Revenue Management** (RM) es una estrategia utilizada por las empresas para maximizar sus ingresos mediante la optimización de precios y la gestión de la capacidad. Se aplica en industrias donde los productos o servicios son perecibles, como aerolíneas, hoteles y alquiler de autos.
+## 🎯 Introducción
 
-### Analogía
+Revenue Management es como la dirección de una orquesta donde cada instrumento (precio, capacidad, demanda) debe tocar en el momento preciso para crear la mejor sinfonía (maximizar ingresos). Imagina un teatro con asientos limitados - algunos espectadores están dispuestos a comprar entradas con anticipación a precio completo, mientras otros esperan ofertas de último minuto.
 
-Imagina que tienes un restaurante con un número limitado de mesas. Si no gestionas bien las reservas y los precios, podrías perder ingresos en noches de alta demanda. El Revenue Management te ayuda a asegurarte de que cada mesa se utilice de la mejor manera posible, maximizando tus ganancias.
+### ¿Qué es Revenue Management?
 
-## 1. Objetivos del Revenue Management
+Revenue Management es una estrategia que busca vender el producto correcto, al cliente correcto, en el momento correcto y al precio correcto. Es como un director de tráfico aéreo que debe optimizar el uso de las pistas disponibles.
 
-Los principales objetivos del Revenue Management son:
+Características principales:
 
-- **Maximizar los ingresos**: Aumentar la cantidad de dinero que se genera a partir de la venta de productos o servicios.
-- **Optimizar la capacidad**: Asegurarse de que se utilicen todos los recursos disponibles de manera eficiente.
-- **Segmentar la demanda**: Identificar diferentes grupos de clientes y ajustar precios y disponibilidad según sus características.
+- Producto perecible con horizonte de venta fijo
+- Capacidad fija irreversible
+- Demanda estocástica (variable)
+- Segmentación de demanda por precio
+- Capacidad de aceptar o rechazar clientes
 
-## 2. Características del Revenue Management
+> 💡 Dato importante: Revenue Management surgió en la industria aérea tras la desregulación de 1978, generando incrementos típicos de 5-10% en ingresos.
 
-### 2.1. Productos Perecibles
+## 📊 Conceptos Principales
 
-Los productos gestionados a través del RM son perecibles, lo que significa que tienen un tiempo limitado para ser vendidos. Por ejemplo, un asiento en un avión no se puede vender una vez que el vuelo ha despegado.
+### 1. Segmentación de Mercado
 
-### 2.2. Capacidad Fija
+La segmentación permite identificar diferentes grupos de clientes con distintas disposiciones a pagar.
 
-La capacidad de producción o servicio es fija e irreversible. Por ejemplo, un hotel tiene un número limitado de habitaciones que no puede aumentar en el corto plazo.
+```mermaid
+graph LR
+    A[Mercado Total] --> B[Turista]
+    A --> C[Negocios]
+    B --> D[Precio Sensible]
+    B --> E[Flexible]
+    C --> F[Urgente]
+    C --> G[Planificado]
+```
 
-### 2.3. Demanda Estocástica
+### 2. Gestión de Capacidad
 
-La demanda es incierta y puede variar. Por lo tanto, es crucial predecirla con precisión para ajustar precios y disponibilidad.
+```mermaid
+graph TD
+    A[Capacidad Total] --> B[Clase Alta]
+    A --> C[Clase Media]
+    A --> D[Clase Económica]
+    B --> E[Protección de Asientos]
+    C --> F[Nivel de Ocupación]
+    D --> G[Descuentos]
+```
 
-## 3. Estrategias de Revenue Management
+## 💻 Herramientas y Aplicaciones
 
-### 3.1. Segmentación de Clientes
+### Industrias que aplican RM:
 
-La segmentación permite a las empresas ofrecer diferentes precios a diferentes grupos de clientes. Por ejemplo, las aerolíneas pueden ofrecer tarifas más bajas a los pasajeros que reservan con antelación y precios más altos a los que compran en el último minuto.
+- Aerolíneas
+- Hoteles
+- Retail
+- Telecomunicaciones
+- Marítima
+- Trenes
+- Televisión
 
-### 3.2. Ajuste de Precios
+## 📈 Aplicaciones Prácticas
 
-Los precios pueden ajustarse en función de la demanda. Por ejemplo, un hotel puede aumentar sus tarifas durante las vacaciones y reducirlas en temporada baja.
+### Ejemplo 1: Peluquería
 
-### 3.3. Control de Inventario
+- Un asiento de corte
+- Precios 20% más altos el sábado
+- Precios 20% más bajos el martes
+- Resultado: Reducción de tiempos de espera de 2 horas a 30 minutos
+- Aumento de ventas del 20%
 
-El control de inventario implica decidir cuántos productos o servicios ofrecer a cada segmento de clientes. Por ejemplo, una aerolínea puede reservar un número específico de asientos para tarifas bajas y mantener otros para tarifas más altas.
+### Ejemplo 2: Retail
 
-## 4. Fórmulas Relevantes
+- Productos perecibles (ej: ropa de temporada)
+- Tiempo de reposición: 6 meses
+- Horizonte de venta: 3 meses
+- Gestión de descuentos según inventario
 
-### 4.1. Ingreso Esperado
+## 🎓 Ejercicio Práctico
 
-El ingreso esperado se puede calcular como:
+Problema de Protección de Asientos:
 
-$$
-IE = P \times Q
-$$
+1. Capacidad total: 100 asientos
+2. Dos clases: Business (Y) y Económica (Q)
+3. Determinar nivel óptimo de protección para maximizar ingresos
 
-Donde:
+## 🔑 Consejos Clave
 
-- $IE$ = Ingreso esperado
-- $P$ = Precio por unidad
-- $Q$ = Cantidad vendida
+1. Monitorear constantemente la demanda y ajustar precios
+2. Segmentar clientes efectivamente
+3. Mantener sistemas de información actualizados
+4. Considerar la elasticidad precio-demanda
+5. Proteger capacidad para clientes de alto valor
 
-### 4.2. Cálculo de la Tasa de Ocupación
+## 📝 Conclusión
 
-La tasa de ocupación se calcula como:
+Revenue Management es una herramienta fundamental para optimizar ingresos en industrias con capacidad fija y productos perecibles. Su éxito depende de una correcta segmentación de mercado y una gestión dinámica de precios.
 
-$$
-TO = \frac{H}{T} \times 100
-$$
+## 📚 Fórmulas Relevantes
 
-Donde:
+Beneficio óptimo esperado:
+$$ W(C,T) = \max E[p_1V_1(T) + p_2V_2(T)] $$
+donde:
 
-- $TO$ = Tasa de ocupación
-- $H$ = Habitaciones ocupadas
-- $T$ = Total de habitaciones disponibles
+- C = Capacidad disponible
+- T = Tiempo
+- p = Precio
+- V = Volumen de ventas
 
-## 5. Ejemplo Práctico
+## 🔍 Recursos Adicionales
 
-### Caso de un Hotel
-
-Supongamos que un hotel tiene 100 habitaciones. Durante un fin de semana, el hotel espera una alta demanda y decide ajustar sus precios. Si el precio por habitación es de $150 y se espera vender 80 habitaciones, el ingreso esperado sería:
-
-$$
-IE = 150 \times 80 = 12,000
-$$
-
-Si el hotel tiene 100 habitaciones y 80 están ocupadas, la tasa de ocupación sería:
-
-$$
-TO = \frac{80}{100} \times 100 = 80\%
-$$
-
-## 6. Conclusión
-
-El Revenue Management es una herramienta poderosa para maximizar los ingresos en industrias con productos perecibles. [Al segmentar la demanda, ajustar precios y controlar el inventario, las empresas pueden optimizar sus operaciones y mejorar su rentabilidad.](https://atlas.org/api/v1/files?documentId=e28b1dfc-97ef-4be8-b2d2-57edf2af0a51)
-
-## 7. Resumen de Fórmulas
-
-- **Ingreso Esperado**:
-  $$
-  IE = P \times Q
-  $$
-- **Tasa de Ocupación**:
-  $$
-  TO = \frac{H}{T} \times 100
-  $$
+- Libro: "Managing the tug-of-war..." por Bitran and Mondshein 1995
+- Tesis doctoral: Belobaba 1987, M.I.T.
+- Artículo: Weatherford & Bodily 1992, OR(40)5

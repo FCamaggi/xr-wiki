@@ -1,129 +1,146 @@
 # Clase 3: Diseño de Procesos
 
-## Introducción
+## 🎯 Introducción
 
-El diseño de procesos es fundamental en la gestión de operaciones, ya que los procesos son los que producen bienes y servicios. Como mencionan Hammer y Champy: **"No son los productos, sino los procesos que crean esos productos los que generan el éxito de las compañías"**.
+En el mundo empresarial, así como una orquesta requiere que cada músico sepa exactamente qué tocar y cuándo hacerlo, los procesos empresariales necesitan una estructura clara y bien definida para funcionar eficientemente. Como señala Hammer & Champy: "No son los productos, sino los procesos que crean esos productos los que generan el éxito de las compañías".
 
-En esta clase aprenderemos qué es un proceso, sus componentes, mediciones clave, tipos, y estrategias para mejorarlos.
+### ¿Qué es un Proceso?
 
----
+Un proceso es cualquier parte de una empresa que toma insumos y los transforma en resultados. Como una cocina que convierte ingredientes en platillos terminados, un proceso empresarial consta de:
 
-## ¿Qué es un proceso?
+- Tareas que transforman insumos en resultados
+- Flujos de materiales e información
+- Almacenamiento de inventario en proceso
 
-Un proceso es una parte de una organización que toma insumos y los transforma en resultados.
+> 💡 Dato importante: Todo sistema está sujeto a restricciones (cuellos de botella). El éxito radica en detectarlas y abordarlas efectivamente.
 
-**Ejemplo**:
-Un restaurante transforma insumos como alimentos crudos, chefs y mozos en un resultado: clientes satisfechos al recibir alimentos bien preparados.
+## 📊 Conceptos Principales
 
-### Componentes de un proceso:
+### Medidas de Desempeño
 
-1. **Tareas**: Transforman los insumos.
-2. **Flujo**: Incluye materiales e información.
-3. **Almacenamiento**: Donde se mantiene inventario en proceso.
+1. **Tiempo de ciclo (cycle time)**
 
----
+   - Tiempo promedio entre la producción de dos unidades consecutivas
+   - Como el ritmo entre platos servidos en un restaurante
 
-## Medidas Clave de Desempeño
+2. **Tasa de producción (throughput)**
 
-### 1. Tiempo de ciclo (Cycle Time)
+   - Velocidad a la que un proceso produce bienes o servicios
+   - Similar a la cantidad de clientes atendidos por hora
 
-Es el tiempo promedio entre la producción de dos unidades consecutivas.
+3. **Tiempo de producción (throughput time)**
 
-### 2. Tasa de producción (Throughput)
+   - Tiempo total que una unidad utiliza el sistema (producción + espera)
+   - Equivalente al tiempo desde que un cliente ordena hasta que recibe su pedido
 
-Es la velocidad a la que un proceso produce bienes o servicios.
+4. **Capacidad**
 
-### 3. Tiempo de producción (Throughput Time)
+   - Throughput máximo de un sistema
+   - Como el número máximo de mesas que un restaurante puede atender
 
-Es el tiempo total que una unidad pasa en el sistema, considerando producción y espera.
+5. **Utilización**
+   - Razón entre el tiempo activo de un recurso y su tiempo disponible
+   - Similar al porcentaje de ocupación de las mesas en un restaurante
 
-**Fórmula de Little**:
+### Tipos de Procesos
 
-$$
-L = \lambda \cdot W
-$$
+```mermaid
+graph LR
+    A[Procesos] --> B[Proceso de una etapa]
+    A --> C[Proceso multi-etapa]
+    A --> D[Proceso con rutas alternativas]
+    C --> E[Con almacenamiento]
+    C --> F[Sin almacenamiento]
+```
 
+### Estrategias de Procesos
+
+```mermaid
+graph LR
+    A[Estrategias] --> B[Orientada al proceso]
+    A --> C[Enfoque repetitivo]
+    A --> D[Orientada al producto]
+    B --> E[Bajo volumen/Alta variedad]
+    D --> F[Alto volumen/Baja variedad]
+```
+
+## 💻 Herramientas y Recursos
+
+1. **Diagramas de flujo**
+
+   - Para visualizar secuencias de operaciones
+   - Identificar puntos de decisión
+   - Mapear flujos de materiales e información
+
+2. **BPMN (Business Process Model and Notation)**
+   - Estándar para modelado de procesos
+   - Permite documentar y comunicar procesos complejos
+
+## 📈 Aplicaciones Prácticas
+
+### Ejemplo 1: Proceso de Atención en Hospital
+
+- Insumos: Pacientes, médicos, enfermeras, medicamentos
+- Proceso: Atención en salud
+- Resultado: Pacientes saludables
+
+### Ejemplo 2: Proceso de Restaurante
+
+- Insumos: Clientes hambrientos, alimentos, chef, mozos
+- Proceso: Preparación y servicio de alimentos
+- Resultado: Clientes satisfechos
+
+## 🎓 Ejercicio Práctico
+
+### Análisis de un Proceso de Panadería
+
+**Caso de estudio:**
+
+- Hornear: 1 hora / 100 panes
+- Empaquetar: 45 minutos / 100 panes
+
+**Pregunta:** ¿Cuál es el tiempo de producción total para 100 panes?
+
+**Solución:**
+
+1. Identificar etapas del proceso
+2. Calcular tiempo por etapa
+3. Considerar tiempos de espera
+4. Sumar tiempos totales
+
+## 🔑 Consejos Clave
+
+1. Siempre considerar el impacto sobre:
+
+   - Throughput
+   - Inventarios
+   - Costo Operacional
+
+2. Buscar cuellos de botella y abordarlos primero
+
+3. Considerar la variabilidad en los tiempos de proceso
+
+## 📝 Conclusión
+
+El diseño efectivo de procesos es fundamental para el éxito empresarial. Como una orquesta bien afinada, cada componente debe trabajar en armonía para producir el resultado deseado.
+
+## 📚 Fórmulas Relevantes
+
+### Ley de Little
+
+$L = λW$
 Donde:
 
-- $L$: Inventario promedio.
-- $\lambda$: Tasa de producción promedio.
-- $W$: Tiempo promedio en el sistema.
+- L = Número de unidades en el sistema
+- λ = Tasa de llegada
+- W = Tiempo de espera promedio
 
-**Ejemplo**:
-En una panadería, si se producen 100 panes por hora ($\lambda = 100$) y cada pan tarda 2 horas en completarse ($W = 2$), el inventario promedio es:
+### Utilización
 
-$$
+$U = \frac{\text{Tiempo activo}}{\text{Tiempo disponible}} \times 100\%$
 
-L = 100 \cdot 2 = 200 \, panes.
-$$
+## 🔍 Recursos Adicionales
 
----
-
-## Tipos de Procesos
-
-### 1. Proceso de una etapa
-
-Transforma insumos en resultados directamente. Ejemplo: tragamonedas.
-
-### 2. Proceso multi-etapa
-
-Incluye varias actividades que transforman insumos paso a paso. Ejemplo: Producción de automóviles.
-
-#### Cuello de botella (Bottleneck)
-
-Es la etapa más lenta que limita la capacidad total del proceso.
-
-**Ejemplo**:
-Si la etapa 1 produce una unidad cada 30 segundos y la etapa 2 cada 45 segundos, la etapa 2 es el cuello de botella.
-
----
-
-## Estrategias de Procesos
-
-### Estrategia orientada al proceso
-
-Diseñada para producir una gran variedad de productos en pequeños volúmenes. Ejemplo: talleres de trabajo.
-
-- **Ventajas**:
-  - Flexibilidad.
-  - Equipamiento general.
-- **Desventajas**:
-  - Costos variables altos.
-  - Complejidad en planificación.
-
-### Estrategia orientada al producto
-
-Optimizada para grandes volúmenes y poca variedad. Ejemplo: líneas de ensamblaje.
-
-- **Ventajas**:
-  - Bajo costo unitario.
-  - Alta eficiencia.
-- **Desventajas**:
-  - Baja flexibilidad.
-  - Alta inversión inicial.
-
----
-
-## Teoría de Restricciones (TOC)
-
-Desarrollada por Eliyahu Goldratt, esta teoría indica que un sistema está limitado por sus restricciones o cuellos de botella. Mejorar el sistema requiere abordar estas limitaciones.
-
-**Enfoque**:
-
-1. Identificar la restricción.
-2. Explorar cómo aumentar su capacidad.
-3. Reajustar el resto del proceso.
-
----
-
-## Conclusión
-
-El diseño de procesos es una herramienta poderosa para mejorar la eficiencia y competitividad de una organización. Modelar, analizar y mejorar procesos no solo optimiza los recursos sino que también asegura la satisfacción del cliente.
-
-**Próximos pasos**:
-
-- Aplicar lo aprendido en el análisis de un proceso real.
-- Utilizar herramientas como diagramas BPMN para representar procesos.
-
----
-
+1. Bizagi Modeler para modelado BPMN
+2. "La Meta" de Eliyahu M. Goldratt
+3. Documentación de estándares BPMN

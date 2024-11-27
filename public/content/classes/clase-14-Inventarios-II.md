@@ -1,119 +1,143 @@
 # Clase 14: Control de Inventarios II
 
-## Introducción a las Extensiones del Modelo Básico EOQ
+## 🎯 Introducción
 
-El modelo de **Cantidad Económica de Pedido (EOQ)** es fundamental en la gestión de inventarios, pero en la práctica, las empresas enfrentan situaciones más complejas. Esta clase explora las extensiones del modelo EOQ para abordar diferentes escenarios, como lotes de producción, descuentos por cantidad y limitaciones de capacidad.
+El control de inventarios en situaciones reales raramente sigue un modelo simple y perfecto. Así como un chef debe ajustar sus recetas según los ingredientes disponibles y las preferencias del cliente, las empresas deben adaptar sus modelos de inventario a diferentes situaciones y restricciones.
 
-## 1. Supuestos del Modelo EOQ
+### ¿Qué son las extensiones del modelo EOQ?
 
-El modelo EOQ se basa en varios supuestos clave:
+Son adaptaciones del modelo básico EOQ que consideran situaciones más realistas como:
 
-- **Demanda constante**: Se asume que la demanda de productos es uniforme a lo largo del tiempo.
-- **Lead time constante**: El tiempo de entrega de los pedidos es predecible.
-- **Costo unitario constante**: El precio de los productos no varía.
-- **Costos de inventario basados en promedios**: Los costos de mantener inventario se calculan en función de los niveles promedio.
-- **Sin faltantes**: Se asume que toda la demanda se satisface sin interrupciones.
+- Lotes de producción
+- Descuentos por cantidad
+- Múltiples productos
+- Capacidad limitada de almacenamiento
 
-### Analogía
+> 💡 Dato importante: El modelo EOQ básico asume condiciones ideales que raramente existen en la realidad.
 
-Imagina un restaurante que siempre tiene los ingredientes necesarios para preparar sus platos. Si la demanda de un platillo es constante y el proveedor entrega los ingredientes a tiempo, el restaurante puede operar sin problemas.
+## 📊 Conceptos Principales
 
-## 2. EOQ para Lotes de Producción (POQ)
+### 1. EOQ para Lotes de Producción (POQ)
 
-El modelo de **Cantidad Económica de Pedido para Lotes de Producción (POQ)** se utiliza cuando un ítem se produce en varias etapas. A diferencia del modelo EOQ, donde los pedidos llegan de una sola vez, en el POQ, los pedidos se despachan a una tasa constante.
+Este modelo se utiliza cuando los productos se fabrican en lugar de comprarse. La principal diferencia es que el inventario se acumula gradualmente durante la producción, en lugar de recibirse todo de una vez.
 
-### Ejemplo Real
+```mermaid
+graph TD
+    A[Inicio Producción] --> B[Acumulación Gradual]
+    B --> C[Fin Producción]
+    C --> D[Consumo]
+    D --> A
+```
 
-En una fábrica de muebles, la producción de sillas puede llevar tiempo. Si la tasa de producción es mayor que la demanda, la empresa puede producir un lote de sillas y almacenarlas hasta que se vendan.
+La fórmula clave es:
 
-### Fórmula del POQ
-
-La cantidad óptima a ordenar en un modelo POQ se calcula como:
-
-$$
-Q^* = \sqrt{\frac{2DS}{H} \cdot \frac{p}{p-d}}
-$$
-
-Donde:
-
-- $D$ = Demanda anual
-- $S$ = Costo de setup
-- $H$ = Costo de mantener inventario
-- $p$ = Tasa de producción
-- $d$ = Tasa de demanda
-
-## 3. EOQ con Descuentos por Cantidad
-
-Las empresas a menudo ofrecen descuentos por comprar en grandes cantidades. [El modelo EOQ se puede ajustar para considerar estos descuentos, lo que puede influir en la cantidad óptima a ordenar.](https://atlas.org/api/v1/files?documentId=10ef7bfb-4e33-4720-8493-c1d62f4ab78c)
-
-### Ejemplo de Descuentos
-
-Supongamos que una empresa vende un producto a diferentes precios según la cantidad comprada:
-
-- 0 a 2,499 unidades:$1.20 por unidad
-- 2,500 a 3,999 unidades:$1.00 por unidad
-- 4,000 o más:$0.98 por unidad
-
-### Cálculo de la Cantidad Óptima
-
-Para determinar la cantidad óptima a ordenar, se deben calcular los costos totales para cada rango de precios y seleccionar el que minimice los costos. Por ejemplo, si la demanda anual es de 10,000 unidades y el costo de setup es de$4, se calcularían los costos totales para cada intervalo.
-
-### Fórmulas de Costo Total
-
-Los costos totales se pueden calcular como:
-
-$$
-TC = \frac{D}{Q}S + \frac{Q}{2}H + DC
-$$
+$$ Q\* = \sqrt{\frac{2DS}{H(1-d/p)}} $$
 
 Donde:
 
-- $TC$ = Costo total
-- $D$ = Demanda anual
-- $Q$ = Cantidad a ordenar
-- $S$ = Costo de setup
-- $H$ = Costo de mantener inventario
-- $C$ = Costo por unidad
+- $p$ = tasa de producción
+- $d$ = tasa de demanda
+- $D$ = demanda total
+- $S$ = costo de setup
+- $H$ = costo de mantener inventario
 
-## 4. Inventarios Bajo Incertidumbre
+### 2. EOQ con Descuentos por Cantidad
 
-La gestión de inventarios también debe considerar la incertidumbre en la demanda y el tiempo de reposición. Para manejar esta incertidumbre, se puede establecer un **stock de seguridad**.
+Cuando los proveedores ofrecen descuentos por volumen, el modelo debe considerar los diferentes precios según la cantidad ordenada.
 
-### Ejemplo de Stock de Seguridad
+La fórmula base sigue siendo:
 
-Si una empresa de distribución de alimentos sabe que la demanda diaria de un producto tiene una variabilidad, puede mantener un stock de seguridad para asegurarse de que siempre haya suficiente producto disponible.
-
-### Cálculo del Nivel de Reorden
-
-El nivel de reorden se puede calcular considerando la probabilidad de satisfacer la demanda durante el tiempo de reposición:
-
-$$
-R = d \cdot L + Z \cdot \sigma_L
-$$
+$$ Q\_{OPT} = \sqrt{\frac{2DS}{iC}} $$
 
 Donde:
 
-- $R$ = Nivel de reorden
-- $d$ = Tasa de demanda
-- $L$ = Tiempo de reposición
-- $Z$ = Valor Z correspondiente al nivel de servicio deseado
-- $\sigma_L$ = Desviación estándar de la demanda durante el tiempo de reposición
+- $i$ = porcentaje del costo para calcular costo de inventario
+- $C$ = costo por unidad (varía según el rango de cantidad)
 
-## 5. Conclusión
+### 3. Inventarios bajo Incertidumbre
 
-Las extensiones del modelo EOQ permiten a las empresas adaptarse a situaciones más complejas en la gestión de inventarios. [Al considerar factores como lotes de producción, descuentos por cantidad y la incertidumbre en la demanda, las organizaciones pueden optimizar su control de inventarios y mejorar su eficiencia operativa.](https://atlas.org/api/v1/files?documentId=10ef7bfb-4e33-4720-8493-c1d62f4ab78c)
+En la realidad, la demanda y los tiempos de entrega suelen ser variables aleatorias. Para manejar esta incertidumbre:
 
-## 6. Fórmulas Relevantes
+$$ R = \bar{d}L + Z\_{\alpha}\sigma\sqrt{L} $$
 
-- **Cantidad Óptima en POQ**:
-  $$
-   Q^* = \sqrt{\frac{2DS}{H} \cdot \frac{p}{p-d}}
-  $$
-- **Costo Total con Descuentos**:
-  $$
-   TC = \frac{D}{Q}S + \frac{Q}{2}H + DC
-  $$
-- **Nivel de Reorden**:
-  $$
-   R = d \cdot L + Z \cdot \sigma_L
-  $$
+Donde:
+
+- $R$ = punto de reorden
+- $\bar{d}$ = demanda promedio
+- $L$ = tiempo de entrega
+- $Z_{\alpha}$ = factor de seguridad
+- $\sigma$ = desviación estándar de la demanda
+
+## 💻 Herramientas y Recursos
+
+- Hojas de cálculo para análisis de costos
+- Software de gestión de inventarios
+- Calculadoras de punto de reorden
+- Sistemas de pronóstico de demanda
+
+## 📈 Aplicaciones Prácticas
+
+### Ejemplo 1: Descuentos por Cantidad
+
+Una empresa compra componentes con la siguiente estructura de descuentos:
+
+- 0 a 2,499 unidades: $1.20/unidad
+- 2,500 a 3,999 unidades: $1.00/unidad
+- 4,000 o más unidades: $0.98/unidad
+
+Con demanda anual de 10,000 unidades, costo de orden $4, y costo de inventario 2% del valor del ítem.
+
+### Ejemplo 2: Modelo del Vendedor de Diarios
+
+Un vendedor debe decidir cuántos periódicos comprar diariamente:
+
+- Demanda media: 11.73
+- Desviación estándar: 4.74
+- Costo de compra: $0.25
+- Precio de venta: $0.75
+- Valor de recuperación: $0.10
+
+## 🎓 Ejercicio Práctico
+
+Calcular la cantidad óptima a ordenar para el ejemplo de descuentos por cantidad:
+
+1. Calcular EOQ para cada rango de precio
+2. Verificar si el EOQ calculado está dentro del rango correspondiente
+3. Calcular costos totales para las cantidades factibles
+4. Seleccionar la cantidad que minimiza el costo total
+
+## 🔑 Consejos Clave
+
+1. Siempre verificar que las soluciones EOQ estén dentro de los rangos válidos
+2. Considerar restricciones prácticas como capacidad de almacenamiento
+3. Incluir stock de seguridad cuando hay incertidumbre en la demanda
+4. Evaluar el impacto de los descuentos en el costo total
+
+## 📝 Conclusión
+
+Los modelos de inventario deben adaptarse a las condiciones reales del negocio. La clave está en encontrar el balance entre los diferentes costos y restricciones operativas.
+
+## 📚 Fórmulas Relevantes
+
+### EOQ Básico
+
+$$ Q\_{OPT} = \sqrt{\frac{2DS}{iC}} $$
+
+### EOQ para Lotes de Producción
+
+$$ Q^{\text{\*}} = \sqrt{\frac{2DS}{H(1-d/p)}} $$
+
+### Punto de Reorden con Inventario de Seguridad
+
+$$ R = \bar{d}L + Z\_{\alpha}\sigma\sqrt{L} $$
+
+### Modelo del Vendedor de Diarios
+
+$$ F(Q^\*) = \frac{c_u}{c_o + c_u} $$
+
+## 🔍 Recursos Adicionales
+
+- Libros de texto sobre gestión de operaciones
+- Simuladores de inventario en línea
+- Casos de estudio de empresas reales
+- Herramientas de optimización de inventario

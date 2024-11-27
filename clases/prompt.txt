@@ -1,0 +1,219 @@
+# AI Prompt for Educational Content Generation
+
+OBJETIVO: Generar un documento markdown educativo para la clase [numero clase documento] sobre [Contenido del documento], manteniendo un formato consistente y pedagógicamente efectivo.
+
+## INSTRUCCIONES DE FORMATO
+
+1. NOMBRE DEL ARCHIVO:
+
+- Usar formato: clase-XX-nombre-tema.md
+
+- Donde XX es el número de clase con dos dígitos
+
+- nombre-tema en kebab-case
+
+2. ESTRUCTURA DEL DOCUMENTO:
+
+```markdown
+
+# Clase X: [Nombre de la Clase]
+
+## 🎯 Introducción
+
+[Presenta el tema usando una analogía principal que se mantendrá consistente en todo el documento. Usa lenguaje conversacional y accesible. 2-3 párrafos máximo.]
+
+### ¿Qué es [concepto principal]?
+
+[Define el concepto usando analogías cotidianas]
+
+- Característica 1
+
+- Característica 2
+
+- Característica 3
+
+> 💡 Dato importante: [Incluir dato clave]
+
+## 📊 Conceptos Principales
+
+[Desarrollar cada concepto siguiendo este patrón:
+
+1. Explicación simple
+
+2. Analogía práctica
+
+3. Ejemplo concreto
+
+4. Visualización o diagrama cuando sea relevante]
+
+[INCLUIR DIAGRAMAS MERMAID RELEVANTES]
+
+Ejemplo:
+
+```mermaid
+
+[DIAGRAMA APROPIADO PARA EL CONCEPTO]
+
+```
+
+[INCLUIR FÓRMULAS MATEMÁTICAS SI APLICAN]
+
+Inline: $formula$
+
+Bloque: $$ formula $$
+
+## 💻 Herramientas y Recursos (cuando sea relevante)
+
+[Listar y describir herramientas relevantes, clasificadas por uso/complejidad]
+
+## 📈 Aplicaciones Prácticas
+
+[Mínimo 2 ejemplos del mundo real con detalles específicos]
+
+## 🎓 Ejercicio Práctico
+
+[Desarrollar un ejercicio paso a paso con ejemplo de solución]
+
+## 🔑 Consejos Clave
+
+[3-5 puntos principales]
+
+## 📝 Conclusión
+
+[Conectar con la analogía principal y resumir puntos clave]
+
+## 📚 Fórmulas Relevantes
+
+[Listar TODAS las fórmulas mencionadas en el documento, organizadas por categoría]
+
+## 🔍 Recursos Adicionales
+
+[Enlaces y recursos relevantes]
+
+```
+
+## CRITERIOS DE GENERACIÓN
+
+1. LENGUAJE:
+
+- Evitar jerga técnica compleja
+
+- Usar analogías consistentes
+
+- Mantener tono conversacional
+
+- Explicar conceptos técnicos con ejemplos cotidianos
+
+2. ELEMENTOS VISUALES:
+
+- Usar diagramas Mermaid para:
+
+  * Procesos (flowchart/stateDiagram-v2)
+
+  * Cronologías (gantt)
+
+  * Relaciones (graph)
+
+  * Secuencias (sequence)
+
+- Incluir fórmulas matemáticas cuando sean relevantes
+
+- Mantener consistencia en la notación matemática
+
+3. EJEMPLOS:
+
+- Usar situaciones cotidianas
+
+- Proporcionar casos prácticos específicos
+
+- Incluir números y datos concretos
+
+- Mantener complejidad apropiada
+
+4. EMOJIS ESTANDARIZADOS:
+
+🎯 Introducción/Objetivos
+
+📊 Datos/Estadísticas
+
+💡 Tips/Ideas
+
+📝 Notas/Conclusiones
+
+🎓 Ejercicios
+
+🔑 Puntos Clave
+
+📚 Referencias
+
+💻 Herramientas
+
+🔍 Recursos
+
+5. FORMATO MARKDOWN:
+
+- Usar títulos jerárquicos (# a ####)
+
+- Incluir listas ordenadas y no ordenadas
+
+- Utilizar bloques de código cuando sea necesario
+
+- Mantener espaciado consistente
+
+- Usar énfasis (**negrita**, cursiva) moderadamente
+
+6. SECCIÓN DE FÓRMULAS:
+
+- Agrupar todas las fórmulas al final
+
+- Organizar por categorías
+
+- Incluir descripción de variables
+
+- Usar LaTeX correctamente
+
+## INSTRUCCIONES ESPECÍFICAS PARA LA IA
+
+1. ANALIZAR CONTENIDO:
+
+- Identificar conceptos principales
+
+- Determinar jerarquía de información
+
+- Planificar ejemplos apropiados
+
+- Identificar fórmulas necesarias
+
+2. GENERAR CONTENIDO:
+
+- Mantener coherencia en analogías
+
+- Asegurar progresión lógica
+
+- Verificar precisión técnica
+
+- Mantener nivel de complejidad consistente
+
+3. VALIDACIÓN:
+
+- Asegurar que todas las fórmulas están en la sección final
+
+- Verificar que los diagramas son apropiados
+
+- Confirmar que los ejemplos son prácticos y relevantes
+
+- Mantener formato consistente
+
+---
+
+NOTA: Al generar el contenido, priorizar:
+
+1. Claridad sobre complejidad
+
+2. Ejemplos prácticos sobre teoría
+
+3. Visualización de conceptos cuando sea posible
+
+4. Consistencia en analogías y explicaciones
+
+5. Ahórrate comentarios de comprensión o dirigidos al usuario de la IA, solo haz el documento

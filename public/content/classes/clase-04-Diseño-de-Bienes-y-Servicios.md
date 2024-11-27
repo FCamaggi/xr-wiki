@@ -1,119 +1,122 @@
-# Clase 4: Diseño de Bienes y Servicios
+# Clase 04: Diseño de Bienes y Servicios
 
-## Introducción
+## 🎯 Introducción
 
-El diseño de bienes y servicios es crucial para satisfacer las necesidades de los clientes y generar valor en el mercado. Un diseño efectivo debe ser funcional, eficiente y deseable para los usuarios.
+El diseño de bienes y servicios es como construir un puente entre las necesidades del cliente y las capacidades de la organización. Al igual que un arquitecto debe considerar tanto la estética como la funcionalidad de un edificio, las empresas deben balancear múltiples aspectos al diseñar sus ofertas.
 
----
+### ¿Qué es el diseño de productos y servicios?
 
-## Facetas del Diseño de un Producto
+Es el proceso sistemático de crear y desarrollar bienes y servicios que satisfagan las necesidades específicas del mercado, considerando tanto aspectos técnicos como comerciales.
 
-El diseño de productos tiene dos objetivos principales:
+- Orientado al éxito en el mercado
+- Enfocado en la eficiencia de fabricación
+- Centrado en la calidad del producto final
 
-1. **Orientación al cliente**:
+> 💡 Dato importante: La falta de cooperación entre departamentos puede llevar a interpretaciones muy distintas del mismo producto, como se ilustra en el caso del columpio.
 
-   - Asegurar que el producto cumpla con los requerimientos y expectativas del cliente.
-   - **Ejemplo**: Un smartphone que integra una cámara de alta calidad para los amantes de la fotografía.
+## 📊 Conceptos Principales
 
-2. **Orientación a la fabricación**:
-   - Simplificar el diseño para reducir costos y asegurar la calidad.
-   - **Ejemplo**: Utilizar materiales reciclados para minimizar costos sin comprometer la calidad.
+### Etapas del Desarrollo de Productos
 
----
+```mermaid
+graph LR
+    A[Desarrollo del concepto] --> B[Planificación del producto]
+    B --> C[Ingeniería detallada]
+    C --> D[Producción piloto]
+    D --> E[Introducción al mercado]
+```
 
-## Etapas del Desarrollo de Productos
+1. **Desarrollo del concepto**
 
-El desarrollo de un producto sigue varias etapas:
+   - Proponer nuevas tecnologías
+   - Desarrollar ideas de productos
+   - Construir modelos y simulaciones
 
-1. **Desarrollo del concepto**:
+2. **Planificación del producto**
 
-   - Generar ideas y construir modelos iniciales.
-   - **Ejemplo**: Prototipar un vehículo eléctrico.
+   - Elegir componentes
+   - Interactuar con proveedores
+   - Definir arquitectura del producto
 
-2. **Planificación del producto**:
+3. **Ingeniería detallada**
 
-   - Seleccionar componentes y definir la arquitectura del producto.
-   - **Ejemplo**: Diseñar un auto con batería reemplazable.
+   - Diseño detallado
+   - Construcción de prototipos
+   - Testeo de prototipos
 
-3. **Ingeniería detallada**:
+4. **Producción piloto**
 
-   - Diseñar, construir y testear prototipos.
-   - **Ejemplo**: Probar la resistencia de un smartphone contra caídas.
+   - Evaluar unidades piloto
+   - Resolver problemas
 
-4. **Producción piloto**:
+5. **Introducción al mercado**
+   - Evaluar experiencia en terreno
+   - Alcanzar objetivos comerciales
 
-   - Producir unidades de prueba para detectar problemas.
-   - **Ejemplo**: Ensamblar un lote pequeño de bicicletas.
+### Características de Servicios
 
-5. **Introducción al mercado**:
-   - Lanzar el producto al público y alcanzar objetivos comerciales.
-   - **Ejemplo**: El lanzamiento del iPhone.
+1. **INTANGIBLES**
 
-### Fórmula de Filtrado de Ideas
+   - No pueden ser vistos o tocados
+   - Son experiencias y procesos
+   - Requieren materialización y fuerte imagen corporativa
 
-Durante estas etapas, muchas ideas iniciales se descartan:
+2. **PERECIBLES**
 
-$$
-\text{Éxito final} = \frac{\text{Número de ideas originales}}{\text{Número de ideas implementadas}}
-$$
+   - No pueden ser inventariados
+   - Demanda fluctuante
+   - Requiere sincronización oferta-demanda
 
-Esto asegura que solo las mejores ideas lleguen al mercado.
+3. **HETEROGÉNEOS**
 
----
+   - Alta variabilidad en calidad
+   - Dependen de las personas
+   - Requieren estandarización
 
-## Características de los Servicios
+4. **SIMULTÁNEOS**
+   - Producción y consumo simultáneos
+   - Cliente participa en el proceso
+   - Calidad de interacción es clave
 
-Los servicios tienen atributos únicos:
+## 💻 Metodologías y Herramientas
 
-1. **Intangibles**:
+### Quality Function Deployment (QFD)
 
-   - No se pueden tocar ni almacenar.
-   - **Ejemplo**: La experiencia en un restaurante.
+1. Identificar necesidades de clientes
+2. Identificar cómo satisfacer necesidades
+3. Relacionar necesidades con atributos
+4. Identificar relaciones entre atributos
+5. Desarrollar ratings de importancia
+6. Evaluar productos de competencia
 
-2. **Perecederos**:
+## 📈 Aplicaciones Prácticas
 
-   - No pueden ser inventariados.
-   - **Ejemplo**: Asientos en un avión que no se vendieron.
+### Ingeniería Concurrente
 
-3. **Heterogéneos**:
+- Traslapa actividades de desarrollo
+- Reduce tiempo de llegada al mercado
+- Requiere alta coordinación
+- Mejora el valor de la información
 
-   - Varían según el proveedor y la situación.
-   - **Ejemplo**: Diferente atención al cliente entre dos tiendas de la misma cadena.
+### Momento de la Verdad en Servicios
 
-4. **Simultáneos**:
-   - Producidos y consumidos al mismo tiempo.
-   - **Ejemplo**: Una consulta médica.
+- Identificar puntos críticos de contacto
+- Diseñar para superar expectativas
+- Gestionar experiencia del cliente
 
----
+## 🔑 Consejos Clave
 
-## Metodología para el Desarrollo de Productos
+1. Mantener comunicación efectiva entre departamentos
+2. Enfocarse en necesidades reales del cliente
+3. Balancear eficiencia operacional con calidad
+4. Considerar el ciclo completo del producto/servicio
 
-El proceso de diseño debe enfocarse en identificar y satisfacer las necesidades de los clientes. Esto incluye:
+## 📝 Conclusión
 
-1. Identificar las necesidades del cliente.
-2. Relacionar esas necesidades con características del producto.
-3. Evaluar productos de la competencia para encontrar áreas de mejora.
+El éxito en el diseño de bienes y servicios requiere un enfoque integral que considere tanto aspectos técnicos como humanos, manteniendo siempre el foco en las necesidades del cliente y la eficiencia operacional.
 
----
+## 🔍 Recursos Adicionales
 
-## Ingeniería Concurrente
-
-La **ingeniería concurrente** traslapa actividades como diseño y planificación para acortar tiempos. Esto requiere alta coordinación pero ofrece beneficios significativos como:
-
-- Reducción del tiempo de desarrollo.
-- Mayor integración entre equipos.
-
-**Ejemplo**: Diseñar un software mientras se crean estrategias de marketing para su lanzamiento.
-
----
-
-## Conclusión
-
-El diseño de bienes y servicios requiere un equilibrio entre la satisfacción del cliente y la eficiencia operativa. Utilizar metodologías claras y considerar las características únicas de los servicios puede marcar la diferencia en el éxito de un producto o servicio.
-
-**Próximos pasos**:
-
-- Aplicar estos conceptos a casos reales para entender su impacto práctico.
-- Implementar técnicas como la Casa de la Calidad para estructurar el diseño.
-
----
+- Video: Rethinking service design
+- Referencia: Ulrich K. y Eppinger S. (1995)
+- World Bank Data sobre estructura económica mundial

@@ -100,20 +100,32 @@
   "cases": [],
   "tests": [
     {
-      "slug": "Criterio de Correccion I2-2017 ",
-      "title": "Criterio de Correccion I2 2017 ",
+      "slug": "Examen - 2022 (pauta)",
+      "title": "Examen   2022 (pauta)",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "Criterio de Corrección Interrogación 2 - 2023",
-      "title": "Criterio de Corrección Interrogación 2   2023",
+      "slug": "Examen 2013-2",
+      "title": "Examen 2013 2",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "Examen (Enunciado y Pauta) - 2022",
-      "title": "Examen (Enunciado y Pauta)   2022",
+      "slug": "Examen 2014-1",
+      "title": "Examen 2014 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Examen 2016-1",
+      "title": "Examen 2016 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Examen 2017-1",
+      "title": "Examen 2017 1",
       "order": 0,
       "isPdf": true
     },
@@ -124,8 +136,8 @@
       "isPdf": true
     },
     {
-      "slug": "Gop-i2",
-      "title": "Gop i2",
+      "slug": "I1 - 2023 (pauta)",
+      "title": "I1   2023 (pauta)",
       "order": 0,
       "isPdf": true
     },
@@ -136,14 +148,158 @@
       "isPdf": true
     },
     {
-      "slug": "Interrogacion 1 - 2023 pauta",
-      "title": "Interrogacion 1   2023 pauta",
+      "slug": "I1 2014-1",
+      "title": "I1 2014 1",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "Interrogación 2 - 2017",
-      "title": "Interrogación 2   2017",
+      "slug": "I1 2015-1",
+      "title": "I1 2015 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I1 2016-1",
+      "title": "I1 2016 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I1 2017-1",
+      "title": "I1 2017 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I1 2018-1",
+      "title": "I1 2018 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I1 2019-1",
+      "title": "I1 2019 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 - 2017 (pauta) ",
+      "title": "I2   2017 (pauta) ",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 - 2017 (pauta)",
+      "title": "I2   2017 (pauta)",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 - 2023 (pauta)",
+      "title": "I2   2023 (pauta)",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 - 2024 (sin pauta)",
+      "title": "I2   2024 (sin pauta)",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 2013-1",
+      "title": "I2 2013 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 2014-1",
+      "title": "I2 2014 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 2014-2",
+      "title": "I2 2014 2",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 2015-1",
+      "title": "I2 2015 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 2016-1",
+      "title": "I2 2016 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 2017-1",
+      "title": "I2 2017 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 2018-1",
+      "title": "I2 2018 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I2 2019-1",
+      "title": "I2 2019 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I3 2013-2",
+      "title": "I3 2013 2",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I3 2014-1",
+      "title": "I3 2014 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I3 2015-1 (Sin Pauta)",
+      "title": "I3 2015 1 (Sin Pauta)",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I3 2015-2",
+      "title": "I3 2015 2",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I3 2016-1",
+      "title": "I3 2016 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I3 2017-1",
+      "title": "I3 2017 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I3 2018-1",
+      "title": "I3 2018 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I3 2019-1",
+      "title": "I3 2019 1",
       "order": 0,
       "isPdf": true
     },
