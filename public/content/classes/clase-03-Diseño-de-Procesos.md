@@ -127,4 +127,3 @@ El diseño de procesos es una herramienta poderosa para mejorar la eficiencia y 
 
 ---
 
-¡Espero este resumen te sea útil! Si necesitas más ejemplos o explicaciones, no dudes en preguntar.
