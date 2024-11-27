@@ -1,6 +1,12 @@
 {
   "classes": [
     {
+      "slug": "clase-00-Invitado-Ikea",
+      "title": "Clase 00: Invitado Ikea",
+      "order": 0,
+      "isPdf": false
+    },
+    {
       "slug": "clase-02-Administracion-Proyectos",
       "title": "Clase 02: Administracion Proyectos",
       "order": 2,
