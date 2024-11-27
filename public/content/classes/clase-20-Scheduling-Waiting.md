@@ -12,10 +12,10 @@ Las líneas de espera o colas son sistemas donde los clientes llegan para recibi
 
 Características principales:
 
-- Tienen un patrón de llegada de clientes
-- Cuentan con uno o más servidores
-- Siguen reglas específicas de atención
-- Presentan tiempos de servicio variables
+- **Patrón de llegada de clientes**: Describe cómo y cuándo llegan los clientes al sistema. Puede ser constante o variable, y se suele modelar mediante distribuciones probabilísticas como la distribución de Poisson.
+- **Servidores**: Son los recursos que proporcionan el servicio a los clientes. Pueden ser uno o varios, y su capacidad de atención puede variar.
+- **Reglas de atención**: Determinan el orden en que los clientes son atendidos. Las reglas más comunes son FIFO (First In, First Out), LIFO (Last In, First Out) y prioridades.
+- **Tiempos de servicio variables**: El tiempo que cada cliente necesita para ser atendido puede variar, y se suele modelar mediante distribuciones probabilísticas como la distribución exponencial.
 
 > 💡 Dato importante: A.K. Erlang fue el primero en estudiar científicamente las líneas de espera en 1913, analizando el comportamiento de las centrales telefónicas.
 
@@ -23,7 +23,7 @@ Características principales:
 
 ### Tipos de Sistemas de Líneas de Espera
 
-1. Canal Simple - Una fase
+1. **Canal Simple - Una fase**: Un solo servidor atiende a los clientes en una única etapa.
 
 ```mermaid
 graph LR
@@ -32,7 +32,7 @@ graph LR
     C --> D[Salidas]
 ```
 
-2. Canal Simple - Multi-fase
+2. **Canal Simple - Multi-fase**: Un solo servidor atiende a los clientes en múltiples etapas consecutivas.
 
 ```mermaid
 graph LR
@@ -42,7 +42,7 @@ graph LR
     D --> E[Salidas]
 ```
 
-3. Multi-canal - Una fase
+3. **Multi-canal - Una fase**: Varios servidores atienden a los clientes en una única etapa.
 
 ```mermaid
 graph LR
@@ -55,13 +55,13 @@ graph LR
 
 ### Parámetros Fundamentales
 
-- λ (lambda): Tasa de llegada de clientes
-- μ (mu): Tasa de servicio
-- ρ (rho): Utilización del sistema = λ/μ
-- Ls: Número promedio de unidades en el sistema
-- Lq: Número promedio de unidades en la cola
-- Ws: Tiempo promedio en el sistema
-- Wq: Tiempo promedio en la cola
+- **λ (lambda)**: Tasa de llegada de clientes, es decir, el número promedio de clientes que llegan al sistema por unidad de tiempo.
+- **μ (mu)**: Tasa de servicio, es decir, el número promedio de clientes que un servidor puede atender por unidad de tiempo.
+- **ρ (rho)**: Utilización del sistema, definida como la proporción del tiempo que el servidor está ocupado. Se calcula como ρ = λ/μ.
+- **Ls**: Número promedio de unidades en el sistema, incluyendo tanto a los clientes en cola como a los que están siendo atendidos.
+- **Lq**: Número promedio de unidades en la cola, es decir, los clientes que están esperando para ser atendidos.
+- **Ws**: Tiempo promedio que un cliente pasa en el sistema, desde su llegada hasta su salida.
+- **Wq**: Tiempo promedio que un cliente pasa esperando en la cola antes de ser atendido.
 
 ## 💻 Métricas y Fórmulas Clave
 
@@ -75,16 +75,16 @@ $$ \rho = \frac{\lambda}{\mu} $$
 
 ## 📈 Aplicaciones Prácticas
 
-1. Bancos:
+1. **Bancos**:
 
-   - Clientes llegan para depósitos/retiros
-   - Cajeros como servidores
-   - Sistema de números para orden de atención
+   - Los clientes llegan para realizar depósitos, retiros u otras transacciones.
+   - Los cajeros actúan como servidores que atienden a los clientes.
+   - Se utiliza un sistema de números para mantener el orden de atención y gestionar la cola de manera eficiente.
 
-2. Hospitales:
-   - Pacientes llegan para atención
-   - Doctores como servidores
-   - Priorización por gravedad
+2. **Hospitales**:
+   - Los pacientes llegan para recibir atención médica.
+   - Los doctores y enfermeras actúan como servidores.
+   - Se prioriza la atención según la gravedad de la condición del paciente, utilizando sistemas de triaje.
 
 ## 🎓 Ejercicio Práctico
 
@@ -104,12 +104,12 @@ $$ \rho = \frac{\lambda}{\mu} $$
 
 ## 🔑 Psicología de las Colas
 
-1. El tiempo ocioso se percibe más largo que el tiempo ocupado
-2. Las esperas inciertas parecen más largas que las conocidas
-3. Las esperas inexplicadas parecen más largas que aquellas con explicación
-4. Las esperas injustas se sienten más largas que las justas
-5. La ansiedad hace que las esperas parezcan más largas
-6. Las esperas individuales se perciben más largas que las grupales
+1. El tiempo ocioso se percibe más largo que el tiempo ocupado.
+2. Las esperas inciertas parecen más largas que las conocidas.
+3. Las esperas inexplicadas parecen más largas que aquellas con explicación.
+4. Las esperas injustas se sienten más largas que las justas.
+5. La ansiedad hace que las esperas parezcan más largas.
+6. Las esperas individuales se perciben más largas que las grupales.
 
 ## 📝 Conclusión
 

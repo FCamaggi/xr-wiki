@@ -2,62 +2,74 @@
 
 ## 🎯 Introducción
 
-El Control Estadístico de Procesos (SPC) es como tener un termómetro que mide constantemente la "salud" de nuestros procesos productivos. Así como un médico utiliza diferentes medidas para evaluar el estado de un paciente, el SPC nos proporciona herramientas estadísticas para monitorear y mejorar la calidad de nuestros procesos.
+El Control Estadístico de Procesos (SPC) es una metodología que utiliza herramientas estadísticas para monitorear y controlar un proceso. Al igual que un termómetro mide la temperatura de un paciente para evaluar su salud, el SPC mide la "salud" de los procesos productivos. Esto permite identificar y corregir problemas antes de que se conviertan en defectos graves.
 
 ### ¿Qué es el Control Estadístico de Procesos?
 
-El SPC es un conjunto de herramientas estadísticas que nos ayudan a:
+El SPC es un conjunto de técnicas estadísticas que ayudan a:
 
-- Monitorear el comportamiento de los procesos
-- Detectar variaciones anormales
-- Mantener la calidad del producto dentro de límites aceptables
+- **Monitorear el comportamiento de los procesos:** Permite observar cómo se desempeñan los procesos a lo largo del tiempo.
+- **Detectar variaciones anormales:** Identifica desviaciones que pueden indicar problemas en el proceso.
+- **Mantener la calidad del producto dentro de límites aceptables:** Asegura que los productos cumplan con los estándares de calidad establecidos.
 
-> 💡 El SPC es parte fundamental del TQM (Total Quality Management) y se enfoca en prevenir defectos en lugar de detectarlos.
+> 💡 El SPC es una parte integral del TQM (Total Quality Management) y se centra en la prevención de defectos en lugar de su detección.
 
 ## 📊 Conceptos Principales
 
 ### 1. Estadísticas Descriptivas
 
-Las estadísticas descriptivas son nuestras herramientas básicas de medición:
+Las estadísticas descriptivas son herramientas básicas que nos permiten resumir y describir las características de un conjunto de datos.
 
 #### Media (x̄)
 
+La media es el promedio de un conjunto de datos y se calcula sumando todos los valores y dividiéndolos por el número total de valores.
+
 $$ \bar{x} = \frac{1}{n}\sum\_{i=1}^n x_i $$
 
-Es el centro de gravedad de nuestros datos, el punto de equilibrio.
+Es el punto de equilibrio de nuestros datos, representando el valor central.
 
 #### Desviación Estándar (σ)
 
+La desviación estándar mide la dispersión de los datos alrededor de la media. Indica cuánto varían los datos respecto a la media.
+
 $$ \sigma = \sqrt{\frac{1}{n-1}\sum\_{i=1}^{n}(x_i - \bar{x})^2} $$
 
-Mide qué tan dispersos están los datos alrededor de la media.
+Una desviación estándar baja indica que los datos están cerca de la media, mientras que una alta indica mayor dispersión.
 
 ### 2. La Distribución Normal
 
+La distribución normal, también conocida como curva de Gauss, es una distribución de probabilidad que es simétrica respecto a la media. La mayoría de los datos se agrupan alrededor de la media, y la probabilidad de valores extremos disminuye a medida que nos alejamos de la media.
+
 ```mermaid
 graph TD
-    A[Distribución Normal] --> B[68.3% dentro de ±1σ]
-    A --> C[95.4% dentro de ±2σ]
-    A --> D[99.73% dentro de ±3σ]
+  A[Distribución Normal] --> B[68.3% dentro de ±1σ]
+  A --> C[95.4% dentro de ±2σ]
+  A --> D[99.73% dentro de ±3σ]
 ```
 
 ### 3. Capacidad del Proceso
 
+La capacidad del proceso mide la habilidad de un proceso para producir resultados dentro de los límites especificados.
+
 #### Índices de Capacidad
 
-- Cp (Proceso centrado):
+- **Cp (Proceso centrado):** Mide la capacidad del proceso asumiendo que está centrado entre los límites de especificación.
+
   $$ C_p = \frac{USL - LSL}{6\sigma} $$
 
-- Cpk (Cualquier proceso):
+- **Cpk (Cualquier proceso):** Mide la capacidad del proceso teniendo en cuenta su centrado. Es el menor valor entre la capacidad del proceso respecto al límite superior y al límite inferior.
+
   $$ C\_{pk} = \min(\frac{USL-\mu}{3\sigma}, \frac{\mu-LSL}{3\sigma}) $$
 
 ## 💻 Herramientas de Control
 
 ### 1. Diagramas de Control
 
-- Límites de control superior (UCL)
-- Línea central (CL)
-- Límites de control inferior (LCL)
+Los diagramas de control son gráficos utilizados para estudiar cómo cambia un proceso a lo largo del tiempo. Incluyen:
+
+- **Límites de control superior (UCL):** El límite superior dentro del cual se espera que caigan la mayoría de los puntos de datos.
+- **Línea central (CL):** Representa la media del proceso.
+- **Límites de control inferior (LCL):** El límite inferior dentro del cual se espera que caigan la mayoría de los puntos de datos.
 
 ## 📈 Aplicaciones Prácticas
 

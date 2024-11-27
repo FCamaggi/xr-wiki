@@ -2,32 +2,36 @@
 
 ## 🎯 Introducción
 
-La calidad de servicio es como la diferencia entre las expectativas que tenemos al entrar a un restaurante y la experiencia real que vivimos. Así como un chef debe entender qué espera cada comensal para poder deleitarlo, las empresas deben comprender y gestionar la brecha entre lo que el cliente espera y lo que realmente recibe.
+La calidad de servicio se puede comparar con la experiencia de visitar un restaurante: tenemos ciertas expectativas y luego vivimos una experiencia real. Al igual que un chef debe conocer las expectativas de sus comensales para satisfacerlos, las empresas deben entender y gestionar la diferencia entre lo que el cliente espera y lo que realmente recibe.
 
 ### ¿Qué es la Calidad de Servicio?
 
-La calidad de servicio es una función de las expectativas del cliente, definida matemáticamente como:
+La calidad de servicio depende de las expectativas del cliente y se puede definir matemáticamente como:
 
 CALIDAD = Percepción de lo recibido - Expectativas
 
-Esta relación puede resultar en tres escenarios:
+Esta relación puede dar lugar a tres escenarios:
 
 - P < E: Servicio deficiente
 - P = E: Servicio satisfactorio
 - P > E: Servicio excepcional
 
-> 💡 La lealtad no se logra con satisfacción, se logra con deleite.
+> 💡 La lealtad del cliente no se logra solo con satisfacción, sino con deleite.
 
 ## 📊 Dimensiones de la Calidad de Servicio
 
 ### 1. Dimensiones Tangibles
 
-- Apariencia física
-- Equipamiento
-- Personal
-- Materiales de comunicación
+Las dimensiones tangibles se refieren a los aspectos físicos y materiales del servicio que pueden influir en la percepción del cliente. Incluyen:
+
+- Apariencia física: La limpieza y el orden del entorno.
+- Equipamiento: La modernidad y el estado de los equipos utilizados.
+- Personal: La presentación y profesionalismo del personal.
+- Materiales de comunicación: La claridad y calidad de los documentos y medios de comunicación.
 
 ### 2. Dimensiones Intangibles
+
+Las dimensiones intangibles son aquellas que no se pueden tocar pero que afectan significativamente la percepción del servicio. Estas incluyen:
 
 ```mermaid
 graph TD
@@ -42,9 +46,19 @@ graph TD
     A --> J[Entendimiento]
 ```
 
+- **Confiabilidad**: La capacidad de realizar el servicio de manera confiable y precisa.
+- **Respuesta**: La disposición y capacidad de ayudar a los clientes y proporcionar un servicio rápido.
+- **Competencia**: La posesión de las habilidades y conocimientos necesarios para realizar el servicio.
+- **Cortesía**: La amabilidad y respeto mostrado hacia los clientes.
+- **Credibilidad**: La confianza y honestidad percibida por los clientes.
+- **Seguridad**: La ausencia de peligros, riesgos o dudas.
+- **Acceso**: La facilidad de contacto y disponibilidad del servicio.
+- **Comunicación**: La claridad y efectividad en la transmisión de información.
+- **Entendimiento**: El esfuerzo por conocer y comprender las necesidades del cliente.
+
 ## 💻 Modelo de Brechas (GAP)
 
-El modelo identifica cinco brechas críticas:
+El modelo de brechas identifica cinco brechas críticas que pueden afectar la calidad del servicio:
 
 ```mermaid
 graph TB
@@ -88,19 +102,19 @@ graph TB
 
 ### Ciclo del Fracaso
 
-- Alta rotación de clientes
-- Baja lealtad
-- Énfasis en nuevos clientes
-- Bajos márgenes
-- Personal desmotivado
+- Alta rotación de clientes: Los clientes no regresan debido a experiencias negativas.
+- Baja lealtad: Los clientes no desarrollan un compromiso con la empresa.
+- Énfasis en nuevos clientes: Se invierte más en atraer nuevos clientes que en retener a los existentes.
+- Bajos márgenes: Las ganancias son menores debido a la falta de clientes leales.
+- Personal desmotivado: Los empleados no están comprometidos ni motivados.
 
 ### Ciclo del Éxito
 
-- Baja rotación de clientes
-- Alta lealtad
-- Énfasis en retención
-- Mayores márgenes
-- Personal comprometido
+- Baja rotación de clientes: Los clientes regresan debido a experiencias positivas.
+- Alta lealtad: Los clientes desarrollan un compromiso con la empresa.
+- Énfasis en retención: Se invierte en mantener a los clientes existentes.
+- Mayores márgenes: Las ganancias son mayores debido a la lealtad de los clientes.
+- Personal comprometido: Los empleados están motivados y comprometidos con su trabajo.
 
 ## 🎓 Ejercicio Práctico
 

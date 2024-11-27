@@ -6,13 +6,16 @@ En el mundo empresarial, así como una orquesta requiere que cada músico sepa e
 
 ### ¿Qué es un Proceso?
 
-Un proceso es cualquier parte de una empresa que toma insumos y los transforma en resultados. Como una cocina que convierte ingredientes en platillos terminados, un proceso empresarial consta de:
+Un proceso es cualquier parte de una empresa que toma insumos y los transforma en resultados de valor añadido. Como una cocina que convierte ingredientes en platillos terminados, un proceso empresarial consta de:
 
-- Tareas que transforman insumos en resultados
-- Flujos de materiales e información
-- Almacenamiento de inventario en proceso
+- **Entradas (Inputs)**: Materiales, información, recursos humanos
+- **Transformación**: Tareas que agregan valor
+- **Salidas (Outputs)**: Productos o servicios finales
+- **Flujos**: Movimiento de materiales e información
+- **Almacenamiento**: Inventario en proceso y productos terminados
+- **Control**: Mecanismos de supervisión y ajuste
 
-> 💡 Dato importante: Todo sistema está sujeto a restricciones (cuellos de botella). El éxito radica en detectarlas y abordarlas efectivamente.
+> 💡 **Nota importante**: Todo sistema está sujeto a restricciones (cuellos de botella). El éxito radica en detectarlas y abordarlas efectivamente siguiendo la Teoría de Restricciones (TOC).
 
 ## 📊 Conceptos Principales
 
@@ -20,35 +23,50 @@ Un proceso es cualquier parte de una empresa que toma insumos y los transforma e
 
 1. **Tiempo de ciclo (cycle time)**
 
-   - Tiempo promedio entre la producción de dos unidades consecutivas
-   - Como el ritmo entre platos servidos en un restaurante
+   - Tiempo entre unidades consecutivas
+   - Fórmula: CT = 1/Tasa de producción
+   - Ejemplo: Si una línea produce 60 unidades/hora, CT = 1 minuto
+   - Impacto en sincronización y planificación
 
 2. **Tasa de producción (throughput)**
 
-   - Velocidad a la que un proceso produce bienes o servicios
-   - Similar a la cantidad de clientes atendidos por hora
+   - Unidades producidas por unidad de tiempo
+   - Factores que la afectan:
+     - Velocidad de equipos
+     - Eficiencia de operadores
+     - Disponibilidad de recursos
+   - Métodos de optimización
 
 3. **Tiempo de producción (throughput time)**
 
-   - Tiempo total que una unidad utiliza el sistema (producción + espera)
-   - Equivalente al tiempo desde que un cliente ordena hasta que recibe su pedido
+   - Componentes:
+     - Tiempo de procesamiento
+     - Tiempo de espera
+     - Tiempo de transporte
+     - Tiempo de inspección
+   - Técnicas de reducción
 
 4. **Capacidad**
 
-   - Throughput máximo de un sistema
-   - Como el número máximo de mesas que un restaurante puede atender
+   - Tipos:
+     - Capacidad teórica
+     - Capacidad efectiva
+     - Capacidad real
+   - Factores limitantes
+   - Estrategias de expansión
 
 5. **Utilización**
-   - Razón entre el tiempo activo de un recurso y su tiempo disponible
-   - Similar al porcentaje de ocupación de las mesas en un restaurante
+   - Métricas de eficiencia
+   - Optimización de recursos
+   - Balanceo de líneas
 
 ### Tipos de Procesos
 
 ```mermaid
 graph LR
-    A[Procesos] --> B[Proceso de una etapa]
-    A --> C[Proceso multi-etapa]
-    A --> D[Proceso con rutas alternativas]
+    A[Procesos] --> B[De una etapa]
+    A --> C[Multi-etapa]
+    A --> D[Con rutas alternativas]
     C --> E[Con almacenamiento]
     C --> F[Sin almacenamiento]
 ```

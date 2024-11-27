@@ -10,16 +10,18 @@ Un sistema Pull es un método de producción donde cada proceso produce exactame
 
 Características principales:
 
-- Producción basada en demanda real
-- Minimización de inventario
-- Sincronización entre procesos
-- Control descentralizado
+- **Producción basada en demanda real**: Solo se produce lo que se necesita, evitando la sobreproducción y reduciendo el desperdicio.
+- **Minimización de inventario**: Al producir solo lo necesario, se reduce la cantidad de inventario en proceso y de productos terminados.
+- **Sincronización entre procesos**: Cada proceso está alineado con el siguiente, asegurando un flujo continuo y eficiente de materiales y productos.
+- **Control descentralizado**: Las decisiones de producción se toman en cada etapa del proceso, permitiendo una mayor flexibilidad y respuesta rápida a los cambios en la demanda.
 
 > 💡 Dato importante: El sistema Pull fue popularizado por Toyota como parte del Sistema de Producción Toyota (TPS), revolucionando la manufactura global.
 
 ## 📊 Conceptos Principales
 
 ### 1. Just-in-Time (JIT)
+
+El Just-in-Time (JIT) es una estrategia de gestión de inventarios que busca mejorar la eficiencia y reducir el desperdicio produciendo solo lo necesario, en el momento necesario y en la cantidad necesaria. Este enfoque permite a las empresas responder rápidamente a las demandas del mercado y minimizar los costos asociados con el almacenamiento de inventarios.
 
 ```mermaid
 graph LR
@@ -29,13 +31,15 @@ graph LR
     B -->|Entrega| D[Cliente]
 ```
 
-El JIT es un sistema donde se produce:
+El JIT se basa en tres principios fundamentales:
 
-- La cantidad correcta
-- En el momento correcto
-- En el lugar correcto
+- **La cantidad correcta**: Producir solo la cantidad de productos que se necesitan para satisfacer la demanda.
+- **En el momento correcto**: Producir y entregar los productos justo cuando se necesitan, evitando el almacenamiento innecesario.
+- **En el lugar correcto**: Asegurar que los productos estén disponibles en el lugar donde se necesitan, optimizando el flujo de materiales.
 
 ### 2. Sistema Kanban
+
+El sistema Kanban es una herramienta visual que ayuda a gestionar y mejorar los procesos de producción. Utiliza tarjetas (o señales) para indicar cuándo se debe producir o mover un producto, asegurando que cada proceso reciba los materiales necesarios justo a tiempo.
 
 ```mermaid
 stateDiagram-v2
@@ -52,50 +56,52 @@ $$ N = \frac{D \times T}{C} $$
 
 Donde:
 
-- N = Número de contenedores
-- D = Tasa de demanda
-- T = Tiempo de entrega
-- C = Capacidad del contenedor
+- **N** = Número de contenedores
+- **D** = Tasa de demanda (unidades por tiempo)
+- **T** = Tiempo de entrega (tiempo que tarda en reponer el inventario)
+- **C** = Capacidad del contenedor (unidades por contenedor)
+
+El sistema Kanban permite una producción más flexible y eficiente, ya que cada proceso solo produce lo que el siguiente proceso necesita, reduciendo el exceso de inventario y mejorando el flujo de trabajo.
 
 ## 💻 Herramientas y Recursos
 
-1. Tableros Kanban
-2. Sistemas de señalización visual
-3. Software de control de producción
-4. Contenedores estandarizados
+1. **Tableros Kanban**: Herramientas visuales que ayudan a gestionar el flujo de trabajo y a identificar cuellos de botella.
+2. **Sistemas de señalización visual**: Indicadores que muestran el estado de los procesos y ayudan a coordinar las actividades de producción.
+3. **Software de control de producción**: Programas que automatizan la gestión de inventarios y la planificación de la producción.
+4. **Contenedores estandarizados**: Recipientes uniformes que facilitan el manejo y el transporte de materiales, mejorando la eficiencia del sistema.
 
 ## 📈 Aplicaciones Prácticas
 
 ### Caso Toyota
 
-- Reducción de inventario del 75%
-- Mejora de calidad del 95%
-- Reducción de tiempo de entrega del 90%
+- **Reducción de inventario del 75%**: Implementando el sistema Pull, Toyota logró reducir significativamente el inventario en proceso y de productos terminados.
+- **Mejora de calidad del 95%**: La sincronización de los procesos y la producción basada en demanda real resultaron en una mejora notable en la calidad de los productos.
+- **Reducción de tiempo de entrega del 90%**: Al producir solo lo necesario y cuando es necesario, Toyota pudo reducir drásticamente los tiempos de entrega.
 
 ### Caso Dell Computers
 
-- Ensamblaje bajo demanda
-- Personalización masiva
-- Inventario mínimo
+- **Ensamblaje bajo demanda**: Dell utiliza un sistema Pull para ensamblar computadoras solo cuando se recibe un pedido, permitiendo una mayor personalización y reducción de inventarios.
+- **Personalización masiva**: La producción basada en demanda real permite a Dell ofrecer una amplia variedad de configuraciones personalizadas sin aumentar los costos de inventario.
+- **Inventario mínimo**: Al producir solo lo necesario, Dell mantiene niveles de inventario muy bajos, reduciendo los costos asociados con el almacenamiento y el manejo de materiales.
 
 ## 🎓 Ejercicio Práctico
 
 Calcular número de Kanbans necesarios:
 
-- Demanda: 200 unidades/hora
-- Tiempo de entrega: 30 minutos
-- Capacidad del contenedor: 25 unidades
+- **Demanda**: 200 unidades/hora
+- **Tiempo de entrega**: 30 minutos
+- **Capacidad del contenedor**: 25 unidades
 
 Solución:
 $$ N = \frac{200 \times 0.5}{25} = 4 \text{ kanbans} $$
 
 ## 🔑 Consejos Clave
 
-1. Comenzar con procesos simples
-2. Implementar gradualmente
-3. Capacitar al personal
-4. Mantener visibilidad del sistema
-5. Mejorar continuamente
+1. **Comenzar con procesos simples**: Implementar el sistema Pull en procesos sencillos antes de expandirlo a toda la producción.
+2. **Implementar gradualmente**: Introducir cambios de manera gradual para permitir la adaptación y minimizar el impacto en la producción.
+3. **Capacitar al personal**: Asegurar que todos los empleados comprendan el sistema Pull y cómo aplicarlo en sus tareas diarias.
+4. **Mantener visibilidad del sistema**: Utilizar herramientas visuales para monitorear el estado de los procesos y detectar problemas rápidamente.
+5. **Mejorar continuamente**: Evaluar y ajustar constantemente el sistema Pull para optimizar la eficiencia y la calidad de la producción.
 
 ## 📝 Conclusión
 

@@ -8,11 +8,30 @@ El diseño de bienes y servicios es como construir un puente entre las necesidad
 
 Es el proceso sistemático de crear y desarrollar bienes y servicios que satisfagan las necesidades específicas del mercado, considerando tanto aspectos técnicos como comerciales.
 
+#### Aspectos fundamentales:
+
 - Orientado al éxito en el mercado
 - Enfocado en la eficiencia de fabricación
 - Centrado en la calidad del producto final
+- Alineado con la estrategia empresarial
+- Sostenible ambientalmente
+- Económicamente viable
 
 > 💡 Dato importante: La falta de cooperación entre departamentos puede llevar a interpretaciones muy distintas del mismo producto, como se ilustra en el caso del columpio.
+
+### Casos de Éxito y Fracaso
+
+#### Éxito: Apple iPhone
+
+- Identificación clara de necesidades
+- Diseño centrado en usuario
+- Integración perfecta hardware-software
+
+#### Fracaso: Google Glass
+
+- Falta de comprensión del mercado
+- Problemas de privacidad
+- Precio excesivo
 
 ## 📊 Conceptos Principales
 

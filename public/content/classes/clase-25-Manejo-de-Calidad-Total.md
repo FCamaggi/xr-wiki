@@ -2,23 +2,41 @@
 
 ## 🎯 Introducción
 
-El manejo de calidad total es como la dirección de una orquesta sinfónica, donde cada músico, instrumento y nota debe funcionar en perfecta armonía para crear una experiencia excepcional. Al igual que un director de orquesta coordina múltiples elementos para lograr una interpretación perfecta, el TQM coordina todos los aspectos de una organización para alcanzar la excelencia.
+El manejo de calidad total (TQM) es como la dirección de una orquesta sinfónica, donde cada músico, instrumento y nota debe funcionar en perfecta armonía para crear una experiencia excepcional. Al igual que un director de orquesta coordina múltiples elementos para lograr una interpretación perfecta, el TQM coordina todos los aspectos de una organización para alcanzar la excelencia operativa y la satisfacción del cliente.
 
 ### ¿Qué es la Calidad?
 
 La calidad puede definirse desde múltiples perspectivas:
 
-- Cumplimiento de especificaciones: Como un rompecabezas donde cada pieza debe encajar perfectamente según el diseño
-- Propósito de uso: El producto cumple efectivamente la función para la que fue creado
-- Valor por precio pagado: La utilidad justifica la inversión realizada
-- Servicio post-venta: El respaldo después de la compra
-- Criterio psicológico: La percepción subjetiva de excelencia
+- **Cumplimiento de especificaciones**: Como un rompecabezas donde cada pieza debe encajar perfectamente según el diseño. Por ejemplo, las dimensiones de una pieza mecánica deben estar dentro de las tolerancias especificadas.
+- **Propósito de uso**: El producto cumple efectivamente la función para la que fue creado. Un buen paraguas debe mantener seco al usuario, ser fácil de abrir/cerrar y resistente al viento.
+- **Valor por precio pagado**: La utilidad justifica la inversión realizada. Un producto de calidad ofrece beneficios que el cliente percibe como superiores a su costo.
+- **Servicio post-venta**: El respaldo después de la compra, incluyendo garantía, mantenimiento y soporte técnico.
+- **Criterio psicológico**: La percepción subjetiva de excelencia, influenciada por la marca, el diseño y la experiencia del usuario.
 
-> 💡 Dato importante: La calidad no es un departamento, es una filosofía que debe permear toda la organización.
+> 💡 Dato importante: La calidad no es solo responsabilidad del departamento de calidad, es una filosofía que debe permear toda la organización, desde el CEO hasta el personal de primera línea.
 
 ## 📊 Conceptos Principales
 
 ### Manufactura vs. Servicios
+
+La calidad se manifiesta de manera diferente en manufactura y servicios:
+
+**Manufactura**:
+
+- Características medibles y especificaciones precisas
+- Control estadístico del proceso
+- Productos físicos que pueden ser inspeccionados
+- Defectos son identificables y cuantificables
+- Procesos repetitivos y estandarizables
+
+**Servicios**:
+
+- Experiencias intangibles y personalizadas
+- Variabilidad inherente al factor humano
+- Producción y consumo simultáneos
+- Calidad basada en percepciones
+- Mayor dificultad para estandarizar
 
 ```mermaid
 graph TB
@@ -36,6 +54,8 @@ graph TB
 
 ### Evolución del Concepto de Calidad
 
+La calidad ha evolucionado significativamente a lo largo del tiempo:
+
 ```mermaid
 timeline
     title Evolución de la Calidad
@@ -44,6 +64,8 @@ timeline
     1960s : Enfoque Organizacional
     1980s+ : Calidad Impulsada por Cliente : TQM
 ```
+
+> 💡 Nota: Cada era construyó sobre los avances de la anterior, creando un enfoque cada vez más integral hacia la calidad.
 
 ### Filosofía TQM
 
