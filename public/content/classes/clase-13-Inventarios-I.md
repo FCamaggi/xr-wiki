@@ -50,7 +50,7 @@ $$
 
 ### Ejemplo de Cálculo
 
-Si una empresa tiene un valor de inventario promedio de$100,000 y un costo de bienes vendidos de$500,000 al año, la rotación de inventario sería:
+Si una empresa tiene un valor de inventario promedio de \$100,000 y un costo de bienes vendidos de \$500,000 al año, la rotación de inventario sería:
 
 $$
 \text{Rotación de Inventario} = \frac{500,000}{100,000} = 5
