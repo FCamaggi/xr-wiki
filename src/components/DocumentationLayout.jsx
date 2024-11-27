@@ -80,7 +80,7 @@ const DocumentationLayout = () => {
           <div className="mb-8 sticky top-0 bg-white z-10 pb-4">
             <h1 className="text-2xl font-bold text-slate-900">GOP Wiki</h1>
             <p className="text-sm text-slate-500 mt-1">
-              Documentación y práctica
+              Resumen y repositorio de GOP (PUC)
             </p>
             <p className="text-sm text-slate-500 mt-1">
               Creado con{' '}
