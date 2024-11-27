@@ -20,7 +20,11 @@ const MarkdownContent = ({ content, currentPage }) => {
   if (currentPage.isPdf) {
     return (
       <div className="w-full h-screen">
-        <PDFViewer url={`/content/tests/${currentPage.slug}.pdf`} />
+        <iframe
+          src={`/content/tests/${currentPage.slug}.pdf`}
+          className="w-full h-full"
+          title={currentPage.title}
+        />
       </div>
     );
   }
