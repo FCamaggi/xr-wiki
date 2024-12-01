@@ -1,63 +1,48 @@
-# 📝 Caso de Estudio: Implementación de un Sistema de Just-in-Time de Distribución en Barilla SpA
+# 📝 Caso de Estudio: National Cranberry Cooperative (NCC)
 
 ## 🌟 Introducción
 
-El caso de Barilla SpA se centra en la implementación de un sistema de distribución Just-in-Time (DJIT) para optimizar la logística y mejorar la respuesta a la demanda en la industria de la pasta. Este caso es fundamental en el contexto de la gestión de operaciones, ya que ilustra cómo una empresa puede transformar sus procesos logísticos para aumentar la eficiencia y la satisfacción del cliente.
+Este caso de estudio analiza las operaciones de la National Cranberry Cooperative (NCC), una de las cooperativas más grandes en la industria del arándano. [La importancia de este caso radica en su enfoque en la gestión de operaciones y la optimización de procesos en un contexto de alta estacionalidad y competencia en el mercado.](https://atlas.org/api/v1/files?documentId=291d09bb-d09e-4576-8ae1-37b1871e46ae)
 
 ## 📚 Antecedentes
 
-Barilla fue fundada en 1875 como una pequeña tienda en Parma, Italia, y ha crecido hasta convertirse en uno de los principales fabricantes de pasta en el mundo. En la década de 1980, Barilla controlaba aproximadamente el 35% del mercado de pasta en Italia y el 22% en Europa. Sin embargo, la empresa enfrentaba grandes fluctuaciones en los pedidos de sus distribuidores, lo que generaba ineficiencias en la producción y altos costos operativos. La propuesta de implementar el DJIT fue impulsada por Brando Vitali, quien sugirió que Barilla debería basar sus decisiones de envío en datos de ventas en lugar de en los pedidos de los distribuidores.
+La NCC fue formada y es propiedad de los cultivadores de arándanos, con el objetivo de procesar y comercializar sus productos. A lo largo de los años, la cooperativa ha enfrentado desafíos significativos, especialmente en la gestión de su planta de recepción, que opera principalmente durante la temporada de cosecha, de septiembre a diciembre. El contexto del mercado se caracteriza por una creciente demanda de arándanos y la necesidad de mejorar la eficiencia operativa para satisfacer a los productores y consumidores.
 
 ## 📊 Descripción del Caso
 
-El sistema de distribución de Barilla estaba compuesto por dos centros de distribución y dependía de agentes independientes y distribuidores para llegar a los minoristas. El DJIT buscaba reducir las fluctuaciones en los pedidos y optimizar la logística al permitir que Barilla decidiera las cantidades a enviar a los distribuidores. Esto implicaba un cambio significativo en la forma en que Barilla operaba, pasando de un modelo reactivo a uno proactivo.
+La planta de recepción No. 1 (RP1) de la NCC maneja tanto arándanos frescos como procesados. Las operaciones incluyen:
 
-### Datos relevantes
-
-- **Crecimiento de Barilla**: 35% del mercado de pasta en Italia y 22% en Europa en la década de 1980.
-- **Propuesta de DJIT**: Basar las decisiones de envío en datos de ventas en lugar de pedidos.
-- **Desafíos logísticos**: Fluctuaciones en la demanda, altos costos de inventario y resistencia al cambio por parte de distribuidores y equipos internos.
+- **Recepción y prueba**: Los camiones que transportan arándanos son pesados y se les toma una muestra para evaluar la calidad.
+- **Procesamiento**: Incluye la separación de arándanos de calidad, destonificación, dechaffing y secado.
+- **Datos relevantes**: En 1980, la planta recibió un total de 1,834,020 libras de arándanos, con un 54% de ellos siendo arándanos húmedos.
 
 ## 🔍 Análisis
 
-Barilla enfrentaba varios **desafíos** antes de implementar el DJIT:
+Los principales problemas enfrentados por la NCC incluyen:
 
-- **Fluctuaciones en la demanda**: Las variaciones drásticas en los pedidos de los distribuidores generaban ineficiencias en la producción.
-- **Altos costos de inventario**: La necesidad de mantener altos niveles de inventario para satisfacer la demanda variable resultaba costosa.
-- **Resistencia al cambio**: Tanto los equipos internos como los distribuidores mostraron resistencia a la implementación del nuevo sistema, temiendo perder control sobre sus operaciones.
+- **Altos costos de mano de obra**: La planta experimentó un alto uso de horas extras debido a la programación ineficiente y el ausentismo.
+- **Cuello de botella en el secado**: La capacidad de secado no era suficiente para manejar el volumen de arándanos húmedos, lo que causaba retrasos en la recepción.
+- **Estrategias implementadas**: Se propuso la instalación de nuevos secadores para mejorar la eficiencia del proceso y reducir los tiempos de espera para los productores.
 
-Las **estrategias** implementadas incluyeron:
-
-- **Uso de datos de ventas**: Barilla comenzó a utilizar datos de ventas para predecir la demanda y ajustar sus envíos.
-- **Comunicación mejorada**: Se establecieron canales de comunicación más efectivos entre Barilla y sus distribuidores para alinear expectativas.
-
-### Resultados
-
-La implementación del DJIT permitió a Barilla mejorar la eficiencia operativa, reducir costos y aumentar la satisfacción del cliente al garantizar una mejor disponibilidad de productos. Sin embargo, también se identificaron lecciones importantes sobre la gestión del cambio y la necesidad de involucrar a todos los actores en el proceso.
+Los resultados de estas estrategias incluyeron una mejora en la eficiencia operativa, aunque la implementación fue un desafío debido a la resistencia al cambio y la necesidad de inversión en infraestructura.
 
 ## ⚙️ Metodología
 
-Para el análisis del caso, se utilizaron métodos cualitativos y cuantitativos, incluyendo:
-
-- **Análisis de datos de ventas**: Se recopilaron y analizaron datos de ventas para identificar patrones de demanda.
-- **Estudios de caso**: Se revisaron otros casos de éxito en la implementación de sistemas Just-in-Time en diferentes industrias.
+El análisis del caso se llevó a cabo mediante la revisión de datos operativos, entrevistas con el personal de la planta y el estudio de la estructura de costos. Se utilizaron herramientas de análisis de operaciones y gestión de la cadena de suministro para evaluar la efectividad de las operaciones de la NCC.
 
 ## ✅ Conclusiones
 
-Los hallazgos clave del caso de Barilla destacan la importancia de la flexibilidad y la adaptabilidad en la gestión de operaciones. La implementación del DJIT no solo mejoró la eficiencia, sino que también permitió a Barilla responder de manera más efectiva a las necesidades del mercado.
+Los hallazgos clave indican que la NCC necesita mejorar su capacidad de respuesta a la demanda estacional y optimizar sus procesos de recepción y procesamiento. [La implementación de nuevas tecnologías y la mejora en la gestión de la mano de obra son esenciales para aumentar la eficiencia y reducir costos.](https://atlas.org/api/v1/files?documentId=291d09bb-d09e-4576-8ae1-37b1871e46ae)
 
-### Implicaciones
+## 💡 Recomendaciones
 
-Este caso tiene implicaciones significativas para la práctica de la gestión de operaciones, especialmente en industrias con alta variabilidad en la demanda. La capacidad de anticipar y responder a las fluctuaciones del mercado es crucial para el éxito a largo plazo.
+Para futuras acciones, se sugiere:
 
-### 💡 Recomendaciones
-
-- **Fortalecer la colaboración con distribuidores**: Es fundamental continuar mejorando la comunicación y colaboración con los distribuidores para asegurar el éxito del DJIT.
-- **Capacitación continua**: Invertir en la capacitación del personal para manejar el nuevo sistema y adaptarse a los cambios en la demanda.
-- **Monitoreo y ajuste**: Establecer un sistema de monitoreo continuo para evaluar el desempeño del DJIT y realizar ajustes según sea necesario.
+- **Inversión en tecnología**: Adquirir nuevos secadores y mejorar la infraestructura de la planta para aumentar la capacidad de procesamiento.
+- **Capacitación del personal**: Proporcionar formación continua a los empleados para mejorar la eficiencia y reducir el ausentismo.
+- **Investigación de mercado**: Realizar estudios periódicos para ajustar las operaciones según las tendencias de consumo y demanda.
 
 ## 📖 Referencias
 
-- Casos de estudio de Barilla SpA y otros ejemplos de gestión de operaciones.
-- Documentos de clase de ICS3213 - Introducción a Gestión de Operaciones y Gestión de la Cadena de Abastecimiento.
-- Resumen de casos de estudio sobre optimización de procesos en la industria alimentaria.
+- Caso 2 - NCC_case.pdf: National Cranberry Cooperative (Abridged) Case Study.
+- Resumen casos GOP.pdf: Resumen de Casos de Estudio: Optimización de Procesos en Benihana of Tokyo, Bar National Cranberry Cooperative y Barilla SpA.
