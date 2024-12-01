@@ -14,6 +14,13 @@ const DocumentationLayout = () => {
   const { tableOfContents, loading: navLoading } = useNavigation();
   const [currentContent, setCurrentContent] = useState(null);
 
+  // Nuevo efecto para limpiar el contenido cuando cambia la sección
+  useEffect(() => {
+    setActivePage(null);
+    setCurrentContent(null);
+    setActiveHeading(null);
+  }, [activeSection]);
+
   useEffect(() => {
     if (!activePage) {
       setCurrentContent(null);
@@ -27,8 +34,14 @@ const DocumentationLayout = () => {
           return;
         }
 
+        // Determinar la sección basada en el slug actual
         const section = activePage.slug.toLowerCase().startsWith('caso')
           ? 'cases'
+          : activePage.slug.toLowerCase().startsWith('i') ||
+            activePage.slug.toLowerCase().startsWith('examen')
+          ? 'tests'
+          : activePage.slug.toLowerCase().startsWith('otros')
+          ? 'others'
           : 'classes';
 
         const response = await fetch(
@@ -54,26 +67,19 @@ const DocumentationLayout = () => {
     setIsMobileNavOpen(false);
   };
 
+  // Manejar cambio de sección
+  const handleSectionChange = (newSection) => {
+    setActiveSection(newSection);
+    // No es necesario limpiar aquí ya que el efecto se encargará de eso
+  };
+
   return (
     <div className="min-h-screen bg-white lg:grid lg:grid-cols-[280px_1fr_280px]">
-      {/* Botón de menú móvil */}
-      <button
-        onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-        className="fixed top-4 left-4 lg:hidden z-50 p-2 bg-white rounded-md shadow-sm"
-      >
-        {isMobileNavOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-
-      {/* Navegación izquierda - Ahora con position fixed en lg */}
+      {/* ... Resto del código del componente ... */}
       <div
-        className={`
-        fixed inset-0 z-40 
-        transform transition-transform duration-200 ease-in-out
-       ${isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0 lg:relative lg:block
-        bg-white border-r border-slate-200
-        lg:sticky lg:top-0 lg:h-screen
-      `}
+        className={`fixed inset-0 z-40 transform transition-transform duration-200 ease-in-out ${
+          isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'
+        } lg:translate-x-0 lg:relative lg:block bg-white border-r border-slate-200 lg:sticky lg:top-0 lg:h-screen`}
       >
         <div className="h-full overflow-y-auto p-6">
           <div className="mb-8 sticky top-0 bg-white z-10 pb-4">
@@ -97,7 +103,7 @@ const DocumentationLayout = () => {
           ) : (
             <Navigation
               activeSection={activeSection}
-              setActiveSection={setActiveSection}
+              setActiveSection={handleSectionChange}
               activePage={activePage}
               onPageChange={handlePageChange}
               tableOfContents={tableOfContents}
@@ -106,14 +112,12 @@ const DocumentationLayout = () => {
         </div>
       </div>
 
-      {/* Contenido principal */}
       <main className="px-4 py-12 lg:px-8 lg:py-12">
         <div className="max-w-3xl mx-auto">
           <MarkdownContent content={currentContent} currentPage={activePage} />
         </div>
       </main>
 
-      {/* Tabla de contenidos derecha - solo mostrar si no es PDF */}
       {!activePage?.isPdf && (
         <div className="hidden lg:block border-l border-slate-200">
           <div className="sticky top-0 h-screen overflow-y-auto p-6">
@@ -127,7 +131,6 @@ const DocumentationLayout = () => {
         </div>
       )}
 
-      {/* Overlay para móvil */}
       {isMobileNavOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"

@@ -1,4 +1,3 @@
-// useNavigation.js
 import { useState, useEffect } from 'react';
 
 const useNavigation = () => {
@@ -15,13 +14,22 @@ const useNavigation = () => {
         const loadTableOfContents = async () => {
             try {
                 setLoading(true);
-                // Cargar el archivo JSON generado por Vite
                 const response = await fetch('/content/content-map.json');
                 if (!response.ok) {
                     throw new Error('No se pudo cargar la tabla de contenidos');
                 }
                 const data = await response.json();
-                setTableOfContents(data);
+
+                // Asegurarse de que cada ítem tenga un ID único
+                const processedData = Object.keys(data).reduce((acc, section) => {
+                    acc[section] = data[section].map((item, index) => ({
+                        ...item,
+                        id: `${section}-${item.slug}-${index}` // Agregar un identificador único
+                    }));
+                    return acc;
+                }, {});
+
+                setTableOfContents(processedData);
             } catch (err) {
                 console.error('Error cargando la tabla de contenidos:', err);
                 setError('Error cargando la estructura de contenido');
