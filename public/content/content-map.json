@@ -97,7 +97,116 @@
       "isPdf": false
     }
   ],
-  "cases": [],
+  "cases": [
+    {
+      "slug": "Caso 1 - Benihana",
+      "title": "Caso 1   Benihana",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 1 - Benihana",
+      "title": "Caso 1   Benihana",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Caso 2 - NCC",
+      "title": "Caso 2   NCC",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 2 - NCC",
+      "title": "Caso 2   NCC",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Caso 3 - Barilla",
+      "title": "Caso 3   Barilla",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 3 - Barilla",
+      "title": "Caso 3   Barilla",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Caso 4 - Blanchard",
+      "title": "Caso 4   Blanchard",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 4 - Blanchard",
+      "title": "Caso 4   Blanchard",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Caso 5 - TNG - Revenue Management",
+      "title": "Caso 5   TNG   Revenue Management",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 5 - TNG - Revenue Management",
+      "title": "Caso 5   TNG   Revenue Management",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Caso 6 - SSU",
+      "title": "Caso 6   SSU",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 6 - SSU",
+      "title": "Caso 6   SSU",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Caso 7 - Toyota",
+      "title": "Caso 7   Toyota",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 7 - Toyota",
+      "title": "Caso 7   Toyota",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Caso 8 - British Airways",
+      "title": "Caso 8   British Airways",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 8 - British Airways",
+      "title": "Caso 8   British Airways",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "Caso 8 - Ritz Carlton",
+      "title": "Caso 8   Ritz Carlton",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "slug": "Caso 8 - Ritz Carlton",
+      "title": "Caso 8   Ritz Carlton",
+      "order": 0,
+      "isPdf": true
+    }
+  ],
   "tests": [
     {
       "slug": "Examen - 2022 (pauta)",
@@ -180,6 +289,12 @@
     {
       "slug": "I1 2019-1",
       "title": "I1 2019 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "I1 2022 pauta",
+      "title": "I1 2022 pauta",
       "order": 0,
       "isPdf": true
     },
@@ -302,9 +417,29 @@
       "title": "I3 2019 1",
       "order": 0,
       "isPdf": true
+    }
+  ],
+  "others": [
+    {
+      "slug": "otros - Notas la meta (by: Ivan)",
+      "title": "Notas la meta (by: Ivan)",
+      "order": 0,
+      "isPdf": true
     },
     {
-      "slug": "Resumen LA META",
+      "slug": "otros - Resumen Casos GOP 1",
+      "title": "Resumen Casos GOP 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "otros - Resumen Casos GOP 2",
+      "title": "Resumen Casos GOP 2",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "slug": "otros - Resumen LA META",
       "title": "Resumen LA META",
       "order": 0,
       "isPdf": true

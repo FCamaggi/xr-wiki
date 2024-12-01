@@ -5,7 +5,8 @@ const useNavigation = () => {
     const [tableOfContents, setTableOfContents] = useState({
         classes: [],
         cases: [],
-        tests: []
+        tests: [],
+        others: [],
     });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

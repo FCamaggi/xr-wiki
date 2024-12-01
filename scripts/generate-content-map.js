@@ -14,14 +14,27 @@ function getContentFiles(dir) {
             .map(file => {
                 const slug = file.replace(/\.(md|pdf)$/, '');
                 const match = slug.match(/^(clase|caso)-(\d+)-(.+)$/);
+
                 if (match) {
+                    const extension = file.endsWith('.pdf') ? '-pdf' : '-md';
                     return {
-                        slug,
+                        slug: `${slug}${extension}`,
                         title: `${match[1].charAt(0).toUpperCase() + match[1].slice(1)} ${match[2]}: ${match[3].replace(/-/g, ' ')}`,
                         order: parseInt(match[2]),
                         isPdf: file.endsWith('.pdf')
                     };
                 }
+
+                // Procesar títulos de la sección "others"
+                if (dir === 'others' && slug.toLowerCase().startsWith('otros -')) {
+                    return {
+                        slug,
+                        title: slug.replace(/^otros -\s*/i, '').replace(/-/g, ' '),
+                        order: 0,
+                        isPdf: file.endsWith('.pdf')
+                    };
+                }
+
                 return {
                     slug,
                     title: slug.replace(/-/g, ' '),
@@ -39,7 +52,8 @@ function getContentFiles(dir) {
 const contentMap = {
     classes: getContentFiles('classes'),
     cases: getContentFiles('cases'),
-    tests: getContentFiles('tests')
+    tests: getContentFiles('tests'),
+    others: getContentFiles('others')
 };
 
 // Asegurarse de que el directorio existe

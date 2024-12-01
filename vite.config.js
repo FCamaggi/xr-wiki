@@ -2,17 +2,21 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { readdirSync } from 'fs';
-import { resolve } from 'path';
+import { resolve, join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-// Función para obtener los archivos de un directorio
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 function getContentFiles(dir) {
-  const contentPath = resolve(__dirname, 'public/content', dir);
+  const contentPath = resolve(__dirname, 'public/content', dir); 
   try {
     return readdirSync(contentPath)
       .filter(file => file.endsWith('.md') || file.endsWith('.pdf'))
       .map(file => {
         const slug = file.replace(/\.(md|pdf)$/, '');
         const match = slug.match(/^(clase|caso)-(\d+)-(.+)$/);
+
         if (match) {
           return {
             slug,
@@ -21,6 +25,17 @@ function getContentFiles(dir) {
             isPdf: file.endsWith('.pdf')
           };
         }
+
+        // Procesar títulos de la sección "others"
+        if (dir === 'others' && slug.toLowerCase().startsWith('otros -')) {
+          return {
+            slug,
+            title: slug.replace(/^otros -\s*/i, '').replace(/-/g, ' '),
+            order: 0,
+            isPdf: file.endsWith('.pdf')
+          };
+        }
+
         return {
           slug,
           title: slug.replace(/-/g, ' '),
@@ -39,7 +54,8 @@ function getContentFiles(dir) {
 const contentMap = {
   classes: getContentFiles('classes'),
   cases: getContentFiles('cases'),
-  tests: getContentFiles('tests')
+  tests: getContentFiles('tests'),
+  others: getContentFiles('others')
 };
 
 // Escribir el contenido a un archivo JSON

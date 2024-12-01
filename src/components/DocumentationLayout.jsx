@@ -22,15 +22,14 @@ const DocumentationLayout = () => {
 
     const loadContent = async () => {
       try {
-        // Si es un PDF, no necesitamos cargar contenido
-        if (activePage.isPdf) {
+        if (!activePage || activePage.isPdf) {
           setCurrentContent(null);
           return;
         }
 
-        // Determinar la sección correcta basada en el slug
-        let section = 'classes';
-        if (activePage.slug.startsWith('caso-')) section = 'cases';
+        const section = activePage.slug.toLowerCase().startsWith('caso')
+          ? 'cases'
+          : 'classes';
 
         const response = await fetch(
           `/content/${section}/${activePage.slug}.md`

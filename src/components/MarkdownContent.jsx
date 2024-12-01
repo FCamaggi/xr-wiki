@@ -17,12 +17,33 @@ const MarkdownContent = ({ content, currentPage }) => {
   }
 
   if (currentPage.isPdf) {
+    // Determinar la sección basada en el slug y título
+    const section = currentPage.slug.toLowerCase().startsWith('caso')
+      ? 'cases'
+      : currentPage.slug.toLowerCase().startsWith('i') ||
+        currentPage.slug.toLowerCase().startsWith('examen')
+      ? 'tests'
+      : currentPage.slug.toLowerCase().startsWith('otros')
+      ? 'others'
+      : 'classes';
+
+    // Debug logging
+    console.log('Loading PDF:', {
+      section,
+      slug: currentPage.slug,
+      title: currentPage.title,
+      path: `/content/${section}/${currentPage.slug}.pdf`,
+    });
+
     return (
       <div className="w-full h-screen">
         <iframe
-          src={`/content/tests/${currentPage.slug}.pdf`}
+          src={`/content/${section}/${currentPage.slug}.pdf`}
           className="w-full h-full"
           title={currentPage.title}
+          onError={(e) => {
+            console.error('Error loading PDF:', e);
+          }}
         />
       </div>
     );

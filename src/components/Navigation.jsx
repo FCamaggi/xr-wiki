@@ -12,7 +12,8 @@ const Navigation = ({
   const sections = [
     { id: 'classes', label: 'Clases' },
     { id: 'cases', label: 'Casos de estudio' },
-    { id: 'tests', label: 'Pruebas y otros' },
+    { id: 'tests', label: 'Interrogaciones' },
+    { id: 'others', label: 'Otros' },
   ];
 
   return (
