@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 function getContentFiles(dir) {
-  const contentPath = resolve(__dirname, 'public/content', dir); 
+  const contentPath = resolve(__dirname, 'public/content', dir);
   try {
     return readdirSync(contentPath)
       .filter(file => file.endsWith('.md') || file.endsWith('.pdf'))

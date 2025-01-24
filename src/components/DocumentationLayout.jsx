@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, AlignLeft } from 'lucide-react';
 import Navigation from './Navigation';
 import TableOfContents from './TableOfContents';
 import MarkdownContent from './MarkdownContent';
 import useNavigation from '../hooks/useNavigation';
-import useMarkdown from '../hooks/useMarkdown';
+import PDFViewer from './PDFViewer';
 
 const DocumentationLayout = () => {
   const [activeSection, setActiveSection] = useState('classes');
   const [activePage, setActivePage] = useState(null);
   const [activeHeading, setActiveHeading] = useState(null);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
   const { tableOfContents, loading: navLoading } = useNavigation();
   const [currentContent, setCurrentContent] = useState(null);
 
-  // Nuevo efecto para limpiar el contenido cuando cambia la sección
   useEffect(() => {
     setActivePage(null);
     setCurrentContent(null);
@@ -29,12 +29,11 @@ const DocumentationLayout = () => {
 
     const loadContent = async () => {
       try {
-        if (!activePage || activePage.isPdf) {
+        if (!activePage) {
           setCurrentContent(null);
           return;
         }
 
-        // Determinar la sección basada en el slug actual
         const section = activePage.slug.toLowerCase().startsWith('caso')
           ? 'cases'
           : activePage.slug.toLowerCase().startsWith('i') ||
@@ -43,6 +42,11 @@ const DocumentationLayout = () => {
           : activePage.slug.toLowerCase().startsWith('otros')
           ? 'others'
           : 'classes';
+
+        if (activePage.isPdf) {
+          setCurrentContent(`/content/${section}/${activePage.slug}.pdf`);
+          return;
+        }
 
         const response = await fetch(
           `/content/${section}/${activePage.slug}.md`
@@ -60,81 +64,130 @@ const DocumentationLayout = () => {
     loadContent();
   }, [activePage]);
 
-  // Manejar cambio de página
-  const handlePageChange = (page) => {
-    window.scrollTo({ top: 0 });
-    setActivePage(page);
-    setIsMobileNavOpen(false);
-  };
-
-  // Manejar cambio de sección
-  const handleSectionChange = (newSection) => {
-    setActiveSection(newSection);
-    // No es necesario limpiar aquí ya que el efecto se encargará de eso
-  };
-
   return (
-    <div className="min-h-screen bg-white lg:grid lg:grid-cols-[280px_1fr_280px]">
-      {/* ... Resto del código del componente ... */}
-      <div
-        className={`fixed inset-0 z-40 transform transition-transform duration-200 ease-in-out ${
-          isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0 lg:relative lg:block bg-white border-r border-slate-200 lg:sticky lg:top-0 lg:h-screen`}
-      >
-        <div className="h-full overflow-y-auto p-6">
-          <div className="mb-8 sticky top-0 bg-white z-10 pb-4">
-            <h1 className="text-2xl font-bold text-slate-900">GOP Wiki</h1>
-            <p className="text-sm text-slate-500 mt-1">
-              Resumen y repositorio de GOP (PUC)
-            </p>
-            <p className="text-sm text-slate-500 mt-1">
-              Creado con{' '}
-              <span role="img" aria-label="heart">
-                ❤️
-              </span>{' '}
-              por Fabrizio Camaggi
-            </p>
-          </div>
+    <div className="relative min-h-screen bg-white">
+      {/* Header móvil */}
+      <header className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-slate-200 z-50 px-4 flex items-center justify-between">
+        <button
+          onClick={() => setIsMobileNavOpen(!isMobileNavOpen)} // Cambiado para toggle
+          className={`p-2 transition-colors ${
+            isMobileNavOpen
+              ? 'text-slate-900 bg-slate-100'
+              : 'text-slate-600 hover:text-slate-900'
+          }`}
+          aria-label="Toggle navegación"
+        >
+          <AlignLeft size={24} />
+        </button>
+        <h1 className="text-xl font-bold text-slate-900">GOP Wiki</h1>
+        {!activePage?.isPdf && currentContent && (
+          <button
+            onClick={() => setIsMobileTocOpen(!isMobileTocOpen)} // Cambiado para toggle
+            className={`p-2 transition-colors ${
+              isMobileTocOpen
+                ? 'text-slate-900 bg-slate-100'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+            aria-label="Toggle índice"
+          >
+            <Menu size={24} />
+          </button>
+        )}
+      </header>
 
-          {navLoading ? (
-            <div className="flex justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-900" />
+      {/* Layout principal */}
+      <div className="lg:grid lg:grid-cols-[280px_1fr_280px] pt-16 lg:pt-0">
+        {/* Sidebar de navegación */}
+        <aside
+          className={`
+            fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out
+            ${isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'}
+            lg:relative lg:translate-x-0 lg:block
+            bg-white border-r border-slate-200 
+            lg:sticky lg:top-0 lg:h-screen
+          `}
+        >
+          <div className="h-full overflow-y-auto p-6">
+            <div className="mb-8 lg:sticky lg:top-0 bg-white z-10 pb-4">
+              <button
+                onClick={() => setIsMobileNavOpen(false)}
+                className="lg:hidden absolute top-4 right-4 p-2 text-slate-500 hover:text-slate-700"
+              >
+                <X size={24} />
+              </button>
+              <h1 className="text-2xl font-bold text-slate-900">GOP Wiki</h1>
+              <p className="text-sm text-slate-500 mt-1">
+                Resumen y repositorio de GOP (PUC)
+              </p>
             </div>
-          ) : (
-            <Navigation
-              activeSection={activeSection}
-              setActiveSection={handleSectionChange}
-              activePage={activePage}
-              onPageChange={handlePageChange}
-              tableOfContents={tableOfContents}
-            />
-          )}
-        </div>
-      </div>
 
-      <main className="px-4 py-12 lg:px-8 lg:py-12">
-        <div className="max-w-3xl mx-auto">
-          <MarkdownContent content={currentContent} currentPage={activePage} />
-        </div>
-      </main>
+            {navLoading ? (
+              <div className="flex justify-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-900" />
+              </div>
+            ) : (
+              <Navigation
+                activeSection={activeSection}
+                setActiveSection={setActiveSection}
+                activePage={activePage}
+                onPageChange={(page) => {
+                  setActivePage(page);
+                  setIsMobileNavOpen(false);
+                }}
+                tableOfContents={tableOfContents}
+              />
+            )}
+          </div>
+        </aside>
 
-      {!activePage?.isPdf && (
-        <div className="hidden lg:block border-l border-slate-200">
-          <div className="sticky top-0 h-screen overflow-y-auto p-6">
-            {currentContent && (
+        {/* Contenido principal */}
+        <main className="w-full px-4 py-6 lg:px-8 lg:py-12 overflow-x-hidden">
+          <div className="max-w-4xl mx-auto">
+            {activePage?.isPdf ? (
+              <PDFViewer url={currentContent} />
+            ) : (
+              <MarkdownContent
+                content={currentContent}
+                currentPage={activePage}
+              />
+            )}
+          </div>
+        </main>
+
+        {/* Tabla de contenidos */}
+        {!activePage?.isPdf && currentContent && (
+          <aside
+            className={`
+              fixed inset-y-0 right-0 w-[280px] bg-white border-l border-slate-200
+              transform transition-transform duration-300 ease-in-out z-40
+              ${isMobileTocOpen ? 'translate-x-0' : 'translate-x-full'}
+              lg:relative lg:translate-x-0 lg:block
+            `}
+          >
+            <div className="h-full overflow-y-auto p-6 pt-20 lg:pt-6">
+              <button
+                onClick={() => setIsMobileTocOpen(false)}
+                className="lg:hidden absolute top-4 right-4 p-2 text-slate-500 hover:text-slate-700"
+              >
+                <X size={24} />
+              </button>
               <TableOfContents
                 content={currentContent}
                 activeHeading={activeHeading}
               />
-            )}
-          </div>
-        </div>
-      )}
+            </div>
+          </aside>
+        )}
+      </div>
 
-      {isMobileNavOpen && (
+      {/* Overlays móviles */}
+      {(isMobileNavOpen || isMobileTocOpen) && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
-          onClick={() => setIsMobileNavOpen(false)}
+          className="fixed inset-0 bg-black/50 z-30 lg:hidden"
+          onClick={() => {
+            setIsMobileNavOpen(false);
+            setIsMobileTocOpen(false);
+          }}
         />
       )}
     </div>

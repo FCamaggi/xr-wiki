@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCw } from 'lucide-react';
+import * as pdfjsLib from 'pdfjs-dist';
+
+// Configurar worker
+pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.js';
 
 const PDFViewer = ({ url }) => {
   const [numPages, setNumPages] = useState(null);
@@ -12,16 +16,16 @@ const PDFViewer = ({ url }) => {
   const [pdfDoc, setPdfDoc] = useState(null);
 
   useEffect(() => {
+    setPageNumber(1);
+  }, [url]);
+
+  useEffect(() => {
     const loadPDF = async () => {
+      if (!url) return;
+
       try {
         setLoading(true);
-        // Cargar PDF.js si aún no está disponible
-        if (!window.pdfjsLib) {
-          window.pdfjsLib = await import('pdfjs-dist/build/pdf');
-          window.pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${window.pdfjsLib.version}/pdf.worker.min.js`;
-        }
-
-        const loadingTask = window.pdfjsLib.getDocument(url);
+        const loadingTask = pdfjsLib.getDocument(url);
         const pdf = await loadingTask.promise;
         setPdfDoc(pdf);
         setNumPages(pdf.numPages);
@@ -43,7 +47,21 @@ const PDFViewer = ({ url }) => {
 
       try {
         const page = await pdfDoc.getPage(pageNumber);
-        const viewport = page.getViewport({ scale, rotation });
+
+        // Obtener el contenedor y calcular el ancho disponible
+        const container = canvasRef.current.parentElement;
+        const containerWidth = container.clientWidth - 32; // 32px para padding
+
+        // Obtener viewport original
+        const originalViewport = page.getViewport({ scale: 1, rotation });
+
+        // Calcular escala para ajustar al ancho del contenedor
+        const containerScale = containerWidth / originalViewport.width;
+
+        // Usar la escala más pequeña entre la definida por el usuario y la del contenedor
+        const finalScale = Math.min(scale, containerScale);
+
+        const viewport = page.getViewport({ scale: finalScale, rotation });
 
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
@@ -51,9 +69,14 @@ const PDFViewer = ({ url }) => {
         canvas.height = viewport.height;
         canvas.width = viewport.width;
 
+        // Establecer el estilo del canvas para evitar distorsión en dispositivos de alta densidad
+        canvas.style.width = `${viewport.width}px`;
+        canvas.style.height = `${viewport.height}px`;
+
         const renderContext = {
           canvasContext: context,
           viewport: viewport,
+          enableWebGL: true,
         };
 
         await page.render(renderContext).promise;
@@ -93,7 +116,7 @@ const PDFViewer = ({ url }) => {
   return (
     <div className="w-full flex flex-col items-center gap-4">
       {/* Controles */}
-      <div className="flex flex-wrap gap-2 p-2 bg-white rounded-lg shadow-sm">
+      <div className="w-full flex flex-wrap justify-center gap-2 p-2 bg-white rounded-lg shadow-sm">
         <div className="flex items-center gap-2 border-r pr-2">
           <button
             onClick={handlePrevPage}
@@ -142,11 +165,30 @@ const PDFViewer = ({ url }) => {
       </div>
 
       {/* Contenedor del PDF */}
-      <div className="w-full max-w-full overflow-x-auto bg-slate-100 rounded-lg p-4">
-        <div className="flex justify-center">
-          <canvas ref={canvasRef} className="shadow-lg" />
+      <div className="w-full overflow-x-auto bg-slate-100 rounded-lg p-4">
+        <div className="flex justify-center min-h-[50vh]">
+          <canvas ref={canvasRef} className="shadow-lg max-w-full h-auto" />
         </div>
       </div>
+
+      {/* Fallback para dispositivos que no soporten canvas */}
+      <object
+        data={url}
+        type="application/pdf"
+        className="hidden w-full h-screen"
+      >
+        <p>
+          Tu dispositivo no puede mostrar PDFs directamente.
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            Descarga el PDF
+          </a>
+        </p>
+      </object>
     </div>
   );
 };
