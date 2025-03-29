@@ -6,7 +6,7 @@ OBJETIVO: Generar un documento markdown educativo para la clase [numero clase do
 
 1. NOMBRE DEL ARCHIVO:
 
-- Usar formato: clase-XX-nombre-tema.md
+- Usar formato: clase-XX-nombre-tema-fecha.md
 
 - Donde XX es el número de clase con dos dígitos
 

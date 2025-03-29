@@ -4,9 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "normalize-files": "node scripts/normalize-filenames.js",
     "generate-content-map": "node scripts/generate-content-map.js",
-    "dev": "npm run generate-content-map && vite",
-    "build": "npm run generate-content-map && vite build",
+    "prepare-content": "npm run normalize-files && npm run generate-content-map",
+    "dev": "npm run prepare-content && vite",
+    "build": "npm run prepare-content && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -16,7 +18,7 @@
     "dompurify": "^3.2.2",
     "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.10.2",
-    "jspdf": "^2.5.2",
+    "jspdf": "^3.0.1",
     "lucide-react": "^0.456.0",
     "marked": "^15.0.3",
     "mermaid": "^11.4.0",
@@ -44,6 +46,6 @@
     "globals": "^15.11.0",
     "postcss": "^8.4.48",
     "tailwindcss": "^3.4.14",
-    "vite": "^5.4.10"
+    "vite": "^6.2.3"
   }
 }

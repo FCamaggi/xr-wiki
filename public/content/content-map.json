@@ -1,448 +1,362 @@
 {
-  "classes": [
+  "ayudantias": [
     {
-      "slug": "clase-00-Invitado-Ikea",
-      "title": "Clase 00: Invitado Ikea",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-02-Administracion-Proyectos",
-      "title": "Clase 02: Administracion Proyectos",
-      "order": 2,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-03-Diseño-de-Procesos",
-      "title": "Clase 03: Diseño de Procesos",
-      "order": 3,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-04-Diseño-de-Bienes-y-Servicios",
-      "title": "Clase 04: Diseño de Bienes y Servicios",
-      "order": 4,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-06-Introduccion-a-la-Gestión-de-la-Cadena-de-Abastecimiento",
-      "title": "Clase 06: Introduccion a la Gestión de la Cadena de Abastecimiento",
-      "order": 6,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-12-Sistemas-PULL",
-      "title": "Clase 12: Sistemas PULL",
-      "order": 12,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-13-Inventarios-I",
-      "title": "Clase 13: Inventarios I",
-      "order": 13,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-14-Inventarios-II",
-      "title": "Clase 14: Inventarios II",
-      "order": 14,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-16-Pronosticos(+clase17)",
-      "title": "Clase 16: Pronosticos(+clase17)",
-      "order": 16,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-18-Revenue-Management",
-      "title": "Clase 18: Revenue Management",
-      "order": 18,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-20-Scheduling-Waiting",
-      "title": "Clase 20: Scheduling Waiting",
-      "order": 20,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-22-Planif-Agregada",
-      "title": "Clase 22: Planif Agregada",
-      "order": 22,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-24-Planif-Corto-Plazo-MRP-ERP",
-      "title": "Clase 24: Planif Corto Plazo MRP ERP",
-      "order": 24,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-25-Manejo-de-Calidad-Total",
-      "title": "Clase 25: Manejo de Calidad Total",
-      "order": 25,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-27-Control-Estadistico-de-Procesos",
-      "title": "Clase 27: Control Estadistico de Procesos",
-      "order": 27,
-      "isPdf": false
-    },
-    {
-      "slug": "clase-28-Calidad-de-Servicio",
-      "title": "Clase 28: Calidad de Servicio",
-      "order": 28,
-      "isPdf": false
-    }
-  ],
-  "cases": [
-    {
-      "slug": "Caso 1 - Benihana",
-      "title": "Caso 1   Benihana",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 1 - Benihana",
-      "title": "Caso 1   Benihana",
+      "originalName": "ayudantia-1.pdf",
+      "slug": "ayudantia-1",
+      "title": "ayudantia 1",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "Caso 2 - NCC",
-      "title": "Caso 2   NCC",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 2 - NCC",
-      "title": "Caso 2   NCC",
+      "originalName": "ayudantia-2-enunciado.pdf",
+      "slug": "ayudantia-2-enunciado",
+      "title": "ayudantia 2 enunciado",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "Caso 3 - Barilla",
-      "title": "Caso 3   Barilla",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 3 - Barilla",
-      "title": "Caso 3   Barilla",
+      "originalName": "ayudantia-2-solucion.pdf",
+      "slug": "ayudantia-2-solucion",
+      "title": "ayudantia 2 solucion",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "Caso 4 - Blanchard",
-      "title": "Caso 4   Blanchard",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 4 - Blanchard",
-      "title": "Caso 4   Blanchard",
+      "originalName": "ayudantia-3-enunciado.pdf",
+      "slug": "ayudantia-3-enunciado",
+      "title": "ayudantia 3 enunciado",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "Caso 5 - TNG - Revenue Management",
-      "title": "Caso 5   TNG   Revenue Management",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 5 - TNG - Revenue Management",
-      "title": "Caso 5   TNG   Revenue Management",
+      "originalName": "ayudantia-3-solucion.pdf",
+      "slug": "ayudantia-3-solucion",
+      "title": "ayudantia 3 solucion",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "Caso 6 - SSU",
-      "title": "Caso 6   SSU",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 6 - SSU",
-      "title": "Caso 6   SSU",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "Caso 7 - Toyota",
-      "title": "Caso 7   Toyota",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 7 - Toyota",
-      "title": "Caso 7   Toyota",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "Caso 8 - British Airways",
-      "title": "Caso 8   British Airways",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 8 - British Airways",
-      "title": "Caso 8   British Airways",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "Caso 8 - Ritz Carlton",
-      "title": "Caso 8   Ritz Carlton",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "slug": "Caso 8 - Ritz Carlton",
-      "title": "Caso 8   Ritz Carlton",
+      "originalName": "pauta-ayudantia-1.pdf",
+      "slug": "pauta-ayudantia-1",
+      "title": "pauta ayudantia 1",
       "order": 0,
       "isPdf": true
     }
   ],
-  "tests": [
+  "casos": [
     {
-      "slug": "Examen - 2022 (pauta)",
-      "title": "Examen   2022 (pauta)",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "Examen 2013-2",
-      "title": "Examen 2013 2",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "Examen 2014-1",
-      "title": "Examen 2014 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "Examen 2016-1",
-      "title": "Examen 2016 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "Examen 2017-1",
-      "title": "Examen 2017 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "Examen 2018-1",
-      "title": "Examen 2018 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 - 2023 (pauta)",
-      "title": "I1   2023 (pauta)",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 - GOP",
-      "title": "I1   GOP",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 2014-1",
-      "title": "I1 2014 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 2015-1",
-      "title": "I1 2015 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 2016-1",
-      "title": "I1 2016 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 2017-1",
-      "title": "I1 2017 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 2018-1",
-      "title": "I1 2018 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 2019-1",
-      "title": "I1 2019 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I1 2022 pauta",
-      "title": "I1 2022 pauta",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 - 2017 (pauta) ",
-      "title": "I2   2017 (pauta) ",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 - 2017 (pauta)",
-      "title": "I2   2017 (pauta)",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 - 2023 (pauta)",
-      "title": "I2   2023 (pauta)",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 - 2024 (sin pauta)",
-      "title": "I2   2024 (sin pauta)",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 2013-1",
-      "title": "I2 2013 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 2014-1",
-      "title": "I2 2014 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 2014-2",
-      "title": "I2 2014 2",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 2015-1",
-      "title": "I2 2015 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 2016-1",
-      "title": "I2 2016 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 2017-1",
-      "title": "I2 2017 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 2018-1",
-      "title": "I2 2018 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I2 2019-1",
-      "title": "I2 2019 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I3 2013-2",
-      "title": "I3 2013 2",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I3 2014-1",
-      "title": "I3 2014 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I3 2015-1 (Sin Pauta)",
-      "title": "I3 2015 1 (Sin Pauta)",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I3 2015-2",
-      "title": "I3 2015 2",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I3 2016-1",
-      "title": "I3 2016 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I3 2017-1",
-      "title": "I3 2017 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I3 2018-1",
-      "title": "I3 2018 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "slug": "I3 2019-1",
-      "title": "I3 2019 1",
+      "originalName": "caso_1_morrison.pdf",
+      "slug": "caso_1_morrison",
+      "title": "caso_1_morrison",
       "order": 0,
       "isPdf": true
     }
   ],
-  "others": [
+  "clases": [
     {
-      "slug": "otros - Notas la meta (by: Ivan)",
-      "title": "Notas la meta (by: Ivan)",
+      "originalName": "1-introduccion-y-estrategia-2025.03.06.pdf",
+      "slug": "1-introduccion-y-estrategia-2025.03.06",
+      "title": "1 introduccion y estrategia 2025.03.06",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "otros - Resumen Casos GOP 1",
-      "title": "Resumen Casos GOP 1",
+      "originalName": "1-resumen-introduccion-y-estrategia-2025.03.06.md",
+      "slug": "1-resumen-introduccion-y-estrategia-2025.03.06",
+      "title": "1 resumen introduccion y estrategia 2025.03.06",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "2-procesos-2025.03.11.pdf",
+      "slug": "2-procesos-2025.03.11",
+      "title": "2 procesos 2025.03.11",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "otros - Resumen Casos GOP 2",
-      "title": "Resumen Casos GOP 2",
+      "originalName": "2-procesos-2025.03.13.pdf",
+      "slug": "2-procesos-2025.03.13",
+      "title": "2 procesos 2025.03.13",
       "order": 0,
       "isPdf": true
     },
     {
-      "slug": "otros - Resumen LA META",
-      "title": "Resumen LA META",
+      "originalName": "2-procesos-2025.03.18.pdf",
+      "slug": "2-procesos-2025.03.18",
+      "title": "2 procesos 2025.03.18",
       "order": 0,
       "isPdf": true
+    },
+    {
+      "originalName": "2-resumen-procesos-2025.03.11.md",
+      "slug": "2-resumen-procesos-2025.03.11",
+      "title": "2 resumen procesos 2025.03.11",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "2-resumen-procesos-2025.03.13.md",
+      "slug": "2-resumen-procesos-2025.03.13",
+      "title": "2 resumen procesos 2025.03.13",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "2-resumen-procesos-2025.03.18.md",
+      "slug": "2-resumen-procesos-2025.03.18",
+      "title": "2 resumen procesos 2025.03.18",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "3-inventarios-deterministicos-2025.03.18.pdf",
+      "slug": "3-inventarios-deterministicos-2025.03.18",
+      "title": "3 inventarios deterministicos 2025.03.18",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "3-inventarios-deterministicos-2025.03.20.pdf",
+      "slug": "3-inventarios-deterministicos-2025.03.20",
+      "title": "3 inventarios deterministicos 2025.03.20",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "3-inventarios-deterministicos-2025.03.25.pdf",
+      "slug": "3-inventarios-deterministicos-2025.03.25",
+      "title": "3 inventarios deterministicos 2025.03.25",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "3-resumen-inventarios-deterministicos-2025.03.18.md",
+      "slug": "3-resumen-inventarios-deterministicos-2025.03.18",
+      "title": "3 resumen inventarios deterministicos 2025.03.18",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "3-resumen-inventarios-deterministicos-2025.03.20.md",
+      "slug": "3-resumen-inventarios-deterministicos-2025.03.20",
+      "title": "3 resumen inventarios deterministicos 2025.03.20",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "3-resumen-inventarios-deterministicos-2025.03.25.md",
+      "slug": "3-resumen-inventarios-deterministicos-2025.03.25",
+      "title": "3 resumen inventarios deterministicos 2025.03.25",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "4-inventarios-variables-2025.03.25-1-.pdf",
+      "slug": "4-inventarios-variables-2025.03.25-1-",
+      "title": "4 inventarios variables 2025.03.25 1 ",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "4-inventarios-variables-2025.03.27.pdf",
+      "slug": "4-inventarios-variables-2025.03.27",
+      "title": "4 inventarios variables 2025.03.27",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "4-resumen-inventarios-variables-2025.03.25-1-.md",
+      "slug": "4-resumen-inventarios-variables-2025.03.25-1-",
+      "title": "4 resumen inventarios variables 2025.03.25 1 ",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "4-resumen-inventarios-variables-2025.03.27.md",
+      "slug": "4-resumen-inventarios-variables-2025.03.27",
+      "title": "4 resumen inventarios variables 2025.03.27",
+      "order": 0,
+      "isPdf": false
+    }
+  ],
+  "documentos": [
+    {
+      "originalName": "formulario-i1-2025.pdf",
+      "slug": "formulario-i1-2025",
+      "title": "formulario i1 2025",
+      "order": 0,
+      "isPdf": true
+    }
+  ],
+  "evaluaciones": [
+    {
+      "originalName": "i1-ics3213_pauta-2014.pdf",
+      "slug": "i1-ics3213_pauta-2014",
+      "title": "i1 ics3213_pauta 2014",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "i1_2017_pauta-gop-2017.pdf",
+      "slug": "i1_2017_pauta-gop-2017",
+      "title": "i1_2017_pauta gop 2017",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "i1_2018_vfinal_pauta.pdf",
+      "slug": "i1_2018_vfinal_pauta",
+      "title": "i1_2018_vfinal_pauta",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "i1_2019_-pauta.pdf",
+      "slug": "i1_2019_-pauta",
+      "title": "i1_2019_ pauta",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "i1_2020_pauta.pdf",
+      "slug": "i1_2020_pauta",
+      "title": "i1_2020_pauta",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "i1_pauta_2016.pdf",
+      "slug": "i1_pauta_2016",
+      "title": "i1_pauta_2016",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "pauta-2015.pdf",
+      "slug": "pauta-2015",
+      "title": "pauta 2015",
+      "order": 0,
+      "isPdf": true
+    }
+  ],
+  "guias": [
+    {
+      "originalName": "gu_a_calidad__lean__bodegas_y_cd.pdf",
+      "slug": "gu_a_calidad__lean__bodegas_y_cd",
+      "title": "gu_a_calidad__lean__bodegas_y_cd",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "gui_a-calidad.pdf",
+      "slug": "gui_a-calidad",
+      "title": "gui_a calidad",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia-bodegas-v2-2-.pdf",
+      "slug": "guia-bodegas-v2-2-",
+      "title": "guia bodegas v2 2 ",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia-pert-localizacion.pdf",
+      "slug": "guia-pert-localizacion",
+      "title": "guia pert localizacion",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia-variabilidad-y-calidad.pdf",
+      "slug": "guia-variabilidad-y-calidad",
+      "title": "guia variabilidad y calidad",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia_1_procesos_pronstico.pdf",
+      "slug": "guia_1_procesos_pronstico",
+      "title": "guia_1_procesos_pronstico",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia_2_inventario.pdf",
+      "slug": "guia_2_inventario",
+      "title": "guia_2_inventario",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia_localizacion.pdf",
+      "slug": "guia_localizacion",
+      "title": "guia_localizacion",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia_pert.pdf",
+      "slug": "guia_pert",
+      "title": "guia_pert",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia_planificacion_2018.pdf",
+      "slug": "guia_planificacion_2018",
+      "title": "guia_planificacion_2018",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "guia_variabilidad.pdf",
+      "slug": "guia_variabilidad",
+      "title": "guia_variabilidad",
+      "order": 0,
+      "isPdf": true
+    }
+  ],
+  "otros": [
+    {
+      "originalName": "otros-notas-la-meta-by-ivan-.pdf",
+      "slug": "otros-notas-la-meta-by-ivan-",
+      "title": "otros notas la meta by ivan ",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "otros-resumen-casos-gop-1.pdf",
+      "slug": "otros-resumen-casos-gop-1",
+      "title": "otros resumen casos gop 1",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "otros-resumen-casos-gop-2.pdf",
+      "slug": "otros-resumen-casos-gop-2",
+      "title": "otros resumen casos gop 2",
+      "order": 0,
+      "isPdf": true
+    },
+    {
+      "originalName": "otros-resumen-la-meta.pdf",
+      "slug": "otros-resumen-la-meta",
+      "title": "otros resumen la meta",
+      "order": 0,
+      "isPdf": true
+    }
+  ],
+  "anuncios": [
+    {
+      "originalName": "2025-03-29-temario-i1.md",
+      "slug": "2025-03-29-temario-i1",
+      "title": "temario i1",
+      "order": -1743206400000,
+      "isPdf": false,
+      "date": "2025-03-29"
     }
   ]
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -7,33 +8,18 @@ import MermaidDiagram from './MermaidDiagram';
 import Admonition from './Admonition';
 import '../styles/markdown.css';
 
-const MarkdownContent = ({ content, currentPage }) => {
-  if (!currentPage) {
-    return (
-      <div className="text-center text-slate-500">
-        <p>Selecciona una página para comenzar</p>
-      </div>
-    );
-  }
-
-  if (currentPage.isPdf) {
+const MarkdownContent = ({ content, currentPage = null }) => {
+  // Si hay currentPage y es PDF, mostrar el visor de PDF
+  if (currentPage?.isPdf) {
     // Determinar la sección basada en el slug y título
     const section = currentPage.slug.toLowerCase().startsWith('caso')
-      ? 'cases'
+      ? 'casos'
       : currentPage.slug.toLowerCase().startsWith('i') ||
         currentPage.slug.toLowerCase().startsWith('examen')
-      ? 'tests'
+      ? 'evaluaciones'
       : currentPage.slug.toLowerCase().startsWith('otros')
-      ? 'others'
-      : 'classes';
-
-    // Debug logging
-    console.log('Loading PDF:', {
-      section,
-      slug: currentPage.slug,
-      title: currentPage.title,
-      path: `/content/${section}/${currentPage.slug}.pdf`,
-    });
+      ? 'otros'
+      : 'clases';
 
     return (
       <div className="w-full h-screen">
@@ -49,8 +35,17 @@ const MarkdownContent = ({ content, currentPage }) => {
     );
   }
 
+  // Si no hay contenido, mostrar mensaje
+  if (!content) {
+    return (
+      <div className="text-center text-slate-500">
+        <p>No hay contenido disponible</p>
+      </div>
+    );
+  }
+
   const components = {
-    code: ({ node, inline, className, children, ...props }) => {
+    code: ({ className, children, ...props }) => {
       const match = /language-(\w+)/.exec(className || '');
       if (match && match[1] === 'mermaid') {
         return <MermaidDiagram content={String(children)} />;
@@ -98,7 +93,6 @@ const MarkdownContent = ({ content, currentPage }) => {
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
-      console.log('Rendering h1:', { children, id });
       return <h1 id={id}>{children}</h1>;
     },
     h2: ({ children }) => {
@@ -107,7 +101,6 @@ const MarkdownContent = ({ content, currentPage }) => {
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
-      console.log('Rendering h2:', { children, id });
       return <h2 id={id}>{children}</h2>;
     },
     h3: ({ children }) => {
@@ -116,7 +109,6 @@ const MarkdownContent = ({ content, currentPage }) => {
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
-      console.log('Rendering h3:', { children, id });
       return <h3 id={id}>{children}</h3>;
     },
   };
@@ -132,6 +124,20 @@ const MarkdownContent = ({ content, currentPage }) => {
       </ReactMarkdown>
     </div>
   );
+};
+
+MarkdownContent.propTypes = {
+  content: PropTypes.string,
+  currentPage: PropTypes.shape({
+    isPdf: PropTypes.bool,
+    slug: PropTypes.string,
+    title: PropTypes.string,
+  }),
+};
+
+MarkdownContent.defaultProps = {
+  content: null,
+  currentPage: null,
 };
 
 export default MarkdownContent;

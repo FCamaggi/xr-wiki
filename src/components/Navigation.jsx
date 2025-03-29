@@ -10,10 +10,13 @@ const Navigation = ({
   tableOfContents,
 }) => {
   const sections = [
-    { id: 'classes', label: 'Clases' },
-    { id: 'cases', label: 'Casos de estudio' },
-    { id: 'tests', label: 'Interrogaciones' },
-    { id: 'others', label: 'Otros' },
+    { id: 'ayudantias', label: 'Ayudantías' },
+    { id: 'casos', label: 'Casos de estudio' },
+    { id: 'clases', label: 'Clases' },
+    { id: 'documentos', label: 'Documentos' },
+    { id: 'evaluaciones', label: 'Evaluaciones' },
+    { id: 'guias', label: 'Guías' },
+    { id: 'otros', label: 'Otros' },
   ];
 
   const currentSectionItems = useMemo(() => {
