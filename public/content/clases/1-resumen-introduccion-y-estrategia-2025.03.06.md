@@ -59,7 +59,7 @@ $$\text{Volumen} \times \text{Estandarización}$$
 
 ## 🎓 Ejercicio Práctico
 
-**Problema**: Una panadería produce 200 baguettes/día con un costo de$1/unidad. El 10% se pierde por mala calidad.  
+**Problema**: Una panadería produce 200 baguettes/día con un costo de \$1/unidad. El 10% se pierde por mala calidad.  
 **Paso 1**: Calcular pérdidas diarias:  
 $$200 \times 0.10 \times \$1 = \$20$$
 **Paso 2**: Si mejoran calidad reduciendo desperdicio al 5%, ahorran \$10/día (\$3,650/año).

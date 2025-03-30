@@ -33,13 +33,14 @@ $$
 
 **Ejemplo (Chalecos)**:
 
--$p = \$180$,$c = \$110$,$v = \$90$ -$C_u = 180-110 = 70$,$C_o = 110-90 = 20$
+- $p = \$180$, $c = \$110$, $v = \$90$
+- $C_u = 180-110 = 70$, $C_o = 110-90 = 20$
 
-- Razón crítica =$\frac{70}{70+20} = 0.7778$
-- Si$D \sim N(100, 15^2)$:  
-  \[
-  Q^\* = 100 + 0.76 \times 15 \approx 111 \text{ unidades}
-  \]
+- Razón crítica = $\frac{70}{70+20} = 0.7778$
+- Si $D \sim N(100, 15^2)$:
+  $$
+  Q^* = 100 + 0.76 \times 15 \approx 111 \text{ unidades}
+  $$
 
 ---
 
@@ -57,10 +58,10 @@ $$
 
 ```mermaid
 flowchart TD
-    A[Inicio: I6=0] --> B[Calcular I5=50]
-    B --> C[I4=min(100+50, 155+0)=100]
-    C --> D[I3=min(150,125,285)=125]
-    D --> E[I2=175, I1=225]
+    A[Inicio: I6=0] --> B[Calcular I5 como 50]
+    B --> C[I4 es el mínimo entre 100+50 y 155+0, resultado: 100]
+    C --> D[I3 es el mínimo entre 150, 125 y 285, resultado: 125]
+    D --> E[I2 es 175, I1 es 225]
 ```
 
 **Solución Óptima**:
@@ -88,19 +89,20 @@ flowchart TD
 
 ### **🔹 Datos**
 
-- Producto: Leche fresca ($D \sim N(120, 20^2)$) -$p = \$5$,$c = \$3$,$v = \$1$
+- Producto: Leche fresca ($D \sim N(120, 20^2)$)
+- $p = \$5$, $c = \$3$, $v = \$1$
 - NS = 95% ($Z = 1.65$)
 
 ### **🔹 Solución**
 
-1. **Newsvendor**:  
-   \[
-   Q^\* = 120 + 1.65 \times 20 \approx 153 \text{ unidades}
-   \]
-2. **ROP con SS**:  
-   \[
+1. **Newsvendor**:
+   $$
+   Q^* = 120 + 1.65 \times 20 \approx 153 \text{ unidades}
+   $$
+2. **ROP con SS**:
+   $$
    SS = 1.65 \times 20 = 33 \text{ unidades}
-   \]
+   $$
 
 ---
 
@@ -120,15 +122,18 @@ flowchart TD
 **🏆 Ejercicio Propuesto**:  
 Un supermercado tiene:
 
--$D \sim N(200, 30^2)$,$p = \$8$,$c = \$4$,$v = \$2$.
+- $D \sim N(200, 30^2)$, $p = \$8$, $c = \$4$, $v = \$2$.
 
 - Períodos: 3 meses con demanda [150, 300, 250].
 
 **Preguntas**:
 
-1. Calcule$Q^*$con Newsvendor (NS=90%).
+1. Calcule $Q^*$ con Newsvendor (NS=90%).
 2. Optimice órdenes con WW ($S = \$60$,$H = \$0.8$).
 
-_(Solución: 1)$Q^* = 238 \text{ un}$, 2) Órdenes en t=1 (450u) y t=3 (250u), Costo=\$348$_.
+Solución:
+
+1. $Q^* = 238 \text{ un}$,
+2. Órdenes en $t=1 (450u)$ y $t=3 (250u)$, Costo= $\$348$.
 
 ---

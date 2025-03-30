@@ -35,6 +35,14 @@ pie
 | **B**         | Revisión periódica (T,Q) | Órdenes mensuales con ajuste    |
 | **C**         | Pedidos consolidados     | Compras semestrales por volumen |
 
+#### Revision periódica (T,Q)
+
+Se revisa el nivel de inventario cada T días y se ordena una cantidad Q para reabastecer hasta un nivel predeterminado.
+
+#### Revisión continua (s,Q)
+
+Se revisa el nivel de inventario continuamente y se ordena una cantidad Q cuando el inventario cae por debajo de un nivel crítico s (**ROP**).
+
 **📌 Caso Real**: _Walmart usa análisis ABC para priorizar reposición en tiendas (los ítems A tienen stock diario, los C se reponen semanalmente)._
 
 ---
@@ -52,27 +60,32 @@ $$
 C_T = \frac{DS}{Q} + \frac{HQ}{2} + PD \quad \text{(Costo total anual)}
 $$
 
+Con
+
+- $D$ = Demanda anual
+- $S$ = Costo por pedido (setup)
+- $H$ = Costo de mantención por unidad (inventario)
+- $P$ = Precio por unidad
+- $Q$ = Cantidad por pedido
+- $C_T$ = Costo total anual
+
 ### **🔹 Ejemplo Numérico**
 
-```mermaid
-gantt
-  title Ejemplo EOQ (D=1000 un, S=$100, H=$5)
-  dateFormat  X
-  axisFormat %s
-  section Costos
-  Pedido :a1, 0, 500
-  Mantención :a2, 0, 500
-  section Órdenes
-  Orden 1 :a3, 0, 200
-  Orden 2 :a4, 200, 200
-  Orden 3 :a5, 400, 200
-```
+Una empresa tiene:
 
-**Resultado**:
+- Demanda anual: D = **1000 unidades**
+- Costo unitario: P = **$500**
+- Costo por pedido: S = **$100**
+- Costo de mantención: H = 1% del costo unitario - $H = 0.01 \times P = \$5$
 
--$Q^* = 200$unidades
+**Cálculos**:
 
-- Costo total =$1,000 (pedido) +$500 (mantención) = **$1,500**
+1. **Cantidad óptima**:
+   $$Q^* = \sqrt{\frac{2DS}{H}} = \sqrt{\frac{2 \times 1000 \times 100}{5}} = 200 \text{ unidades}$$
+2. **Costo total anual**:
+   $$C_T = \frac{DS}{Q} + \frac{HQ}{2} + PD = \frac{1000 \times 100}{200} + \frac{5 \times 200}{2} = \$500 + \$500= \$1000$$
+
+- PD escondido por sensibilidad.
 
 ---
 
@@ -86,18 +99,18 @@ $$
 
 **Ejemplo**:
 
--$D = 1000 \text{ un/año}$→$d = 4 \text{ un/día}$ -$T_s = 10 \text{ días}$→$ROP = 40 \text{ un}$
+- $D = 1000 \text{ un/año}$ → $d = 4 \text{ un/día}$ 
+- $T_s = 10 \text{ días}$ → $ROP = 40 \text{ un}$
 
-### **🔹 Caso$T_s > T_c$**
+### **🔹 Caso $T_s > T_c$**
 
 $$
-
 ROP = d \times \left(T_s - \left\lfloor \frac{T_s}{T_c} \right\rfloor \times T_c \right)
 $$
 
 **Ejemplo**:
 
--$T_s = 60 \text{ días}, T_c = 50 \text{ días}$→$ROP = 40 \text{ un}$
+- $T_s = 60 \text{ días}, T_c = 50 \text{ días}$ → $ROP = 40 \text{ un}$
 
 ---
 
@@ -121,7 +134,7 @@ $$
 | X            | 500             | $50                  | 0.5 m³          |
 | Y            | 300             | $30                  | 0.3 m³          |
 
-**Solución**: Usar **multiplicadores de Lagrange** para optimizar$Q_X$y$Q_Y$dentro de$A = 100 \text{ m³}$.
+**Solución**: Usar **multiplicadores de Lagrange** para optimizar $Q_X$ y $Q_Y$ dentro de $A = 100 \text{ m³}$.
 
 ---
 
@@ -142,11 +155,12 @@ $$
 **🏆 Ejercicio Propuesto**:
 Una empresa tiene:
 
--$D = 2000 \text{ un/año}$,$S = \$75$,$H = \$3 \text{ un/año}$. -$T_s = 15 \text{ días}$, año laboral = 250 días.
+- $D = 2000 \text{ un/año}$, $S = \$75$, $H = \$3 \text{ un/año}$. 
+- $T_s = 15 \text{ días}$, año laboral = 250 días.
 
 **Preguntas**:
 
-1. Calcule$Q^*$y$C_T$.
+1. Calcule $Q^*$ y $C_T$.
 2. Determine el ROP.
 
-_(Solución:$Q^* = 316 \text{ un}, C_T = \$949, ROP = 120 \text{ un}$)_.
+_(Solución: $Q^* = 316 \text{ un}, C_T = \$949, ROP = 120 \text{ un}$)_.

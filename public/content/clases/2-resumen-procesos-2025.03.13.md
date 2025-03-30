@@ -44,16 +44,17 @@ flowchart TD
 ```mermaid
 flowchart TD
     A[Cortar  12 min] --> B[Pulir/Ensamblar  30 min]
-    B --> C[Pulir/Ensamblar  30 min]
+    A[Cortar  12 min] --> C[Pulir/Ensamblar  30 min]
+    B --> D[Barnizar  24 min]
     C --> D[Barnizar  24 min]
 ```
 
 **📊 Nueva Capacidad**  
-| **Operación** | **Capacidad/día** | **Utilización** |  
-|----------------------|-------------------|-----------------|  
-| **Cortar** | 40 sillas | **50%** |  
-| **Pulir/Ensamblar** | 32 sillas | **62.5%** |  
-| **Barnizar** | 20 sillas | **100%** 🚨 |
+| **Operación** | **Tiempo/silla** | **Capacidad/día** | **Utilización** |
+| ------------------- | ---------------- | ----------------- | --------------- |
+| **Cortar** | 0.2 h (12 min) | 40 sillas | **50%** |
+| **Pulir/Ensamblar** | 0.5 h (30 min) | 32 sillas | **62.5%** |
+| **Barnizar** | 0.4 h (24 min) | 20 sillas | **100%** 🚨 |
 
 **📌 Resultado**: **20 sillas/día** (ahora el barnizado es el nuevo cuello de botella).
 
@@ -84,7 +85,7 @@ flowchart TD
 | **Opción 1 (+1 operario)** | 4             | $40,000          | 20 sillas      | **$2,000**      |
 | **Opción 2 (Reasignar)**   | 2             | $20,000          | 13.3 sillas    | **$1,504**      |
 
-**📌 Conclusión**: **La Opción 2 es más económica**, pero reduce producción.
+**📌 Conclusión**: **La Opción 3 es más económica**, pero reduce producción.
 
 ---
 
@@ -95,12 +96,12 @@ flowchart TD
 ```mermaid
 gantt
     title Tiempo de Fabricación (1ª Silla)
-    dateFormat  mm
-    axisFormat %M min
+    dateFormat HH:mm
+    axisFormat %H:%M
     section Operaciones
-    Cortar      :a1, 0, 12
-    Ensamblar   :a2, after a1, 30
-    Barnizar    :a3, after a2, 24
+    Cortar      :active, 00:00, 00:12
+    Ensamblar   :active, 00:12, 00:42
+    Barnizar    :active, 00:42, 01:06
 ```
 
 **Total = 66 min**
@@ -166,9 +167,12 @@ flowchart TD
 ## **📚 Conclusiones**
 
 ✔ **Identificar cuellos de botella** es clave para optimizar procesos.
+
 ✔ **Paralelizar tareas** aumenta capacidad, pero puede subir costos.
+
 ✔ **Reasignar recursos** puede ser más económico, pero reduce producción.
-✔ **McDonald’s** demostró que rediseñar procesos mejora eficiencia.
+
+✔ **McDonald's** demostró que rediseñar procesos mejora eficiencia.
 
 **📌 Fórmula clave**:
 

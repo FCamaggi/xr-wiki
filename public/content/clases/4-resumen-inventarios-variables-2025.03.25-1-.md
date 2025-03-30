@@ -115,14 +115,16 @@ $$
 
 ### **🔹 Solución**
 
-1. **EOQ**:  
-   \[
+1. **EOQ**:
+   $$
    Q^\* = \sqrt{\frac{2 \times 21900 \times 10}{0.5}} = 936 \text{ unidades}
-   \]
-2. **ROP**:  
-   \[
+   $$
+   $$
+2. **ROP**:
+   $$
    ROP = 360 + 28 = 388 \text{ unidades}
-   \]
+   $$
+   $$
 
 ---
 

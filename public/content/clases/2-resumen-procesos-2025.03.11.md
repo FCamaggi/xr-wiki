@@ -81,13 +81,19 @@ $$\text{Capacidad} = \frac{\text{Tiempo Disponible}}{\text{Tiempo por Unidad}}$$
 3. Decorar (5 min/pan).
 
 **Preguntas**:
+
 a) ¿Cuál es el cuello de botella?
+
 b) Capacidad total por hora.
+
 c) Si se añade un horno, ¿cuál es la nueva capacidad?
 
 **Solución**:
+
 a) Hornear (15 min/pan).
+
 b) 4 panes/hora (60/15).
+
 c) 6 panes/hora (ahora limita amasar: 60/10).
 
 ---
@@ -106,9 +112,12 @@ Optimizar procesos es como dirigir tráfico: identificar embotellamientos (cuell
 
 ## 📚 Fórmulas Relevantes
 
-1. **Capacidad**:$$\text{Unidades} = \frac{\text{Tiempo Disponible}}{\text{Tiempo por Unidad}}$$
-2. **TAKT Time**:$$\frac{\text{Tiempo Disponible}}{\text{Demanda}}$$
-3. **Utilización**:$$\frac{\text{Tiempo Activo}}{\text{Tiempo Disponible}} \times 100\%$$
+1. **Capacidad**:
+   $$\text{Unidades} = \frac{\text{Tiempo Disponible}}{\text{Tiempo por Unidad}}$$
+2. **TAKT Time**:
+   $$\frac{\text{Tiempo Disponible}}{\text{Demanda}}$$
+3. **Utilización**:
+   $$\frac{\text{Tiempo Activo}}{\text{Tiempo Disponible}} \times 100\%$$
 
 ## 🔍 Recursos Adicionales
 

@@ -45,7 +45,7 @@ mindmap
 
 ```mermaid
 pie
-    title Tipos de Inventario (% típico en manufactura)
+    title Tipos de Inv (% típico en manufactura)
     "Ciclo" : 45
     "Seguridad" : 30
     "Estacional" : 15
@@ -78,39 +78,6 @@ graph LR
     D --> D1[Plazos Extendidos]
 ```
 
-### **🔹 Caso Real: Retail**
-
-- **Síntoma**: Bodegas llenas de productos obsoletos.
-- **Causa raíz**:
-  - Compras agresivas por descuentos.
-  - Sistema de pronóstico desactualizado.
-- **Solución**: Implementar modelo **JIT (Just-in-Time)**.
-
----
-
-## **💸 Costos Asociados**
-
-### **🔹 Estructura de Costos**
-
-| **Costo**            | **Descripción**                          | **Fórmula**                |
-| -------------------- | ---------------------------------------- | -------------------------- |
-| **Mantención**       | Almacenaje + Obsolescencia               | 25%-35% del valor anual    |
-| **Quiebre de Stock** | Ventas perdidas + Clientes insatisfechos | Costo oportunidad + Multas |
-| **Pedido**           | Emisión y procesamiento de órdenes       | $50-$500 por orden         |
-
-### **🔹 Ejemplo Numérico**
-
-```mermaid
-gantt
-    title Costos Anuales de Inventario (Empresa X)
-    dateFormat  YYYY
-    axisFormat %Y
-    section Costos
-    Mantención      : 2025-01-01, 365d
-    Quiebre Stock   : 2025-01-01, 90d
-    Pedidos         : 2025-01-01, 365d
-```
-
 ---
 
 ## **📌 Conclusiones**
@@ -135,4 +102,6 @@ Una empresa tiene:
 - Costo de mantención: **$2/unidad/año**.
 
 **Pregunta**: Calcule el **EOQ** y el **costo total anual**.  
-(Solución:$\text{EOQ} = \sqrt{\frac{2DS}{H}} = \sqrt{\frac{2 \times 10{,}000 \times 150}{2}} = 1{,}225 \text{ unidades}; \text{Costo} = \$2{,}450$)
+Solución:
+
+$$\text{EOQ} = \sqrt{\frac{2DS}{H}} = \sqrt{\frac{2 \times 10{,}000 \times 150}{2}} = 1{,}225 \text{ unidades}; \text{Costo} = \$2{,}450$$

@@ -22,25 +22,28 @@ Gestionar inventarios es como **conducir un automóvil**: necesitas acelerar (pr
 ```mermaid
 graph LR
     A[Producción a tasa p] --> B[Demanda a tasa d]
-    B --> C[Inventario acumulado: Q₀ = (p-d)·t₁]
-    C --> D[Consumo durante t₂ = Q₀/d]
+    B --> C[Inventario acumulado]
+    C --> D[Consumo durante t2]
 ```
 
 ### **🔹 Fórmulas Clave**
 
-\[
+$$
 Q^\* = \sqrt{\frac{2DS}{H \left(1 - \frac{d}{p}\right)}}
-\]
-\[
+$$
+
+$$
+
 t₁ = \frac{Q}{p}, \quad t₂ = \frac{Q}{d} - \frac{Q}{p}
-\]
+$$
 
 **Ejemplo**:
 
 -$D = 1000 \text{ un/año}$($d = 4 \text{ un/día}$) -$p = 8 \text{ un/día}$,$S = \$100$,$H = \$5$
-\[
+
+$$
 Q^\* = \sqrt{\frac{2 \times 1000 \times 100}{5 \left(1 - \frac{4}{8}\right)}} = 283 \text{ unidades}
-\]
+$$
 
 ---
 
@@ -69,27 +72,32 @@ gantt
 
 ### **🔹 Estructura de Costos**
 
-\[
+$$
+
 C*T = \underbrace{\frac{(Q - Q_f)^2}{2Q}H}*{\text{Mantención}} + \underbrace{\frac{Q*f^2}{2Q}B}*{\text{Faltantes}} + \underbrace{\frac{D}{Q}S}\_{\text{Pedido}}
-\]  
+$$
+
 **Donde**:
 
 -$Q_f$: Unidades faltantes permitidas -$B$: Costo anual por faltante
 
 ### **🔹 Solución Óptima**
 
-\[
+$$
 Q^* = \sqrt{\frac{2DS}{H}} \times \sqrt{\frac{H + B}{B}}
-\]
-\[
-Q*f^\* = Q^\_ \times \frac{H}{H + B}
-\]
+$$
+
+$$
+
+Q\*f^\* = Q^\_ \times \frac{H}{H + B}
+$$
 
 **Ejemplo**:  
-Si$B = \$20$:  
-\[
+Si$B = \$20$:
+
+$$
 Q^_ = 200 \times \sqrt{\frac{5+20}{20}} = 224 \text{ un}, \quad Q_f^_ = 45 \text{ un}
-\]
+$$
 
 ---
 
@@ -108,19 +116,19 @@ Q^_ = 200 \times \sqrt{\frac{5+20}{20}} = 224 \text{ un}, \quad Q_f^_ = 45 \text
 2. Ajustar$Q$si está fuera del rango del tramo.
 3. Evaluar costo total ($C_T$) en cada punto de quiebre.
 
-**Ejemplo (Uniforme)**:  
-| **Tramo** | **Q** | **Costo Unitario** |$C_T$|  
-|-----------|---------|--------------------|-----------------|  
-| 1 (0-99) | 200 → 99 | \$500 | \$501,258 |  
-| 2 (100-299)| 202 | \$490 | **\$490,989** 🏆|  
+**Ejemplo (Uniforme)**:
+| **Tramo** | **Q** | **Costo Unitario** |$C_T$|
+|-----------|---------|--------------------|-----------------|
+| 1 (0-99) | 200 → 99 | \$500 | \$501,258 |
+| 2 (100-299)| 202 | \$490 | **\$490,989** 🏆|
 | 3 (300+) | 203 | \$485 | \$486,061 |
 
 ---
 
 ## **📌 Conclusiones**
 
-✔ El **EOQ de producción** optimiza inventarios cuando la recepción es gradual.  
-✔ Los **faltantes planificados** pueden reducir costos totales si$B$es alto.  
+✔ El **EOQ de producción** optimiza inventarios cuando la recepción es gradual.
+✔ Los **faltantes planificados** pueden reducir costos totales si$B$es alto.
 ✔ Los **descuentos** requieren comparar$C_T$en puntos de quiebre.
 
 **🔍 Recursos Adicionales**:
@@ -130,7 +138,7 @@ Q^_ = 200 \times \sqrt{\frac{5+20}{20}} = 224 \text{ un}, \quad Q_f^_ = 45 \text
 
 ---
 
-**🏆 Ejercicio Propuesto**:  
+**🏆 Ejercicio Propuesto**:
 Una fábrica tiene:
 
 -$D = 2000 \text{ un/año}$,$p = 20 \text{ un/día}$,$d = 8 \text{ un/día}$ -$S = \$50$,$H = \$2$,$B = \$15$
@@ -141,3 +149,6 @@ Una fábrica tiene:
 2. Determine el ROP si$T_s = 5 \text{ días}$.
 
 _(Solución:$Q^* = 224 \text{ un}, Q_f^* = 28 \text{ un}, ROP = 40 \text{ un}$)_.
+
+$$
+$$

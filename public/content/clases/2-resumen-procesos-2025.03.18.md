@@ -61,19 +61,19 @@ graph TD
 
 ```mermaid
 flowchart LR
-    P1["P1 (6 kg/min)"] -->|80%| P2["P2 (4 kg/min)"]
-    P2 -->|20%| P3["P3 (2.5 kg/min) 🚨"]
-    P3 --> P4["P4 (2 kg/min)"]
-    P3 --> P5["P5 (2 kg/min)"]
+    P1["P1 (6 kg/min)"] --> P2["P2 (4 kg/min)"]
+    P2 -->|80%| P3["P3 (2.5 kg/min)"]
+    P3 --> P4["P4 (2 kg/min) 🚨"]
+    P2 -->|20%| P5["P5 (2 kg/min)"]
 ```
 
 **Análisis**:
 
-- **Cuello de botella**: P3 (2.5 kg/min).
+- **Cuello de botella**: P4 (2.5 kg/min).
 - **Acciones**:
-  1. **Proteger**: Añadir buffer antes de P3.
-  2. **Subordinar**: Limitar entrada a 2.5 kg/min.
-  3. **Elevar**: Comprar una máquina adicional para P3.
+  1. **Proteger**: Añadir buffer antes de P4.
+  2. **Subordinar**: Limitar entrada a 2 kg/min.
+  3. **Elevar**: Comprar una máquina adicional para P4.
 
 ---
 
