@@ -40,24 +40,24 @@ La percepción humana es fundamental para el diseño de experiencias XR efectiva
 
 1. **Anatomía y Función**
 
-   - Retina y procesamiento de fotones
-   - Conos (visión en color y detalle)
-   - Bastones (visión en baja iluminación)
-   - Fóvea y visión central
+   - Retina y procesamiento de fotones: La retina es una capa de tejido en la parte posterior del ojo que contiene células fotorreceptoras (conos y bastones). Estas células convierten la luz en señales eléctricas que el cerebro puede interpretar.
+   - Conos: Son responsables de la visión en color y la percepción de detalles finos. Funcionan mejor en condiciones de buena iluminación y se concentran principalmente en la fóvea.
+   - Bastones: Son más sensibles a la luz y permiten la visión en condiciones de baja iluminación. No detectan colores y están distribuidos principalmente en la periferia de la retina.
+   - Fóvea y visión central: La fóvea es una pequeña área en el centro de la retina donde la densidad de conos es máxima, proporcionando la mayor agudeza visual y detalle.
 
 2. **Características Visuales**
 
-   - Campo visual vs campo de atención
-   - Brillo y luminosidad
-   - Percepción del color
-   - Agudeza visual
+   - Campo visual vs campo de atención: El campo visual es el área que podemos ver sin mover los ojos, mientras que el campo de atención es la parte del campo visual en la que estamos enfocando nuestra atención.
+   - Brillo y luminosidad: El brillo se refiere a la intensidad de la luz percibida, mientras que la luminosidad es la percepción subjetiva de la cantidad de luz.
+   - Percepción del color: Es la capacidad de distinguir diferentes colores, basada en la activación de los conos en la retina 2.
+   - Agudeza visual: Es la capacidad de ver detalles finos y distinguir objetos claramente.
 
 3. **Movimientos Oculares**
-   - Sacádicos
-   - Fijaciones
-   - Seguimiento suave
-   - Vergencia
-   - Reflejo vestíbulo-ocular
+   - Sacádicos: Movimientos rápidos y bruscos de los ojos que cambian el punto de fijación de un objeto a otro.
+   - Fijaciones: Periodos en los que los ojos permanecen relativamente quietos y enfocados en un objeto.
+   - Seguimiento suave: Movimientos oculares lentos y continuos que siguen un objeto en movimiento.
+   - Vergencia: Movimientos de los ojos que ajustan la alineación para mantener la visión binocular cuando miramos objetos a diferentes distancias.
+   - Reflejo vestíbulo-ocular: Un reflejo que estabiliza la imagen en la retina durante movimientos rápidos de la cabeza, manteniendo la visión clara.
 
 #### Sistema Auditivo
 
