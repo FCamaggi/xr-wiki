@@ -21,15 +21,15 @@ La percepción humana es fundamental para el diseño de experiencias XR efectiva
 - La realidad es inherentemente subjetiva
 - Las ilusiones perceptuales demuestran la naturaleza interpretativa de la percepción
 - Tipos de ilusiones relevantes para XR:
-  - Ilusión de Jastrow
-  - Ilusión de Hering
-  - Ilusión de Kanisza
-  - Ilusión de Ponzo
+  - Ilusión de Jastrow (ilusión que hace que dos figuras idénticas parezcan de diferente tamaño)
+  - Ilusión de Hering (ilusión donde líneas rectas paralelas parecen curvarse debido a un patrón radiante)
+  - Ilusión de Kanisza (percepción de contornos y formas que físicamente no existen)
+  - Ilusión de Ponzo (ilusión donde líneas del mismo tamaño parecen diferentes debido a líneas convergentes)
 
 #### Estímulos y Procesamiento
 
-- **Estímulos Distales**: Objetos y eventos del mundo real
-- **Estímulos Proximales**: Energía que llega a nuestros sentidos
+- **Estímulos Distales**: Objetos y eventos físicos reales en el entorno antes de ser procesados por nuestros sentidos
+- **Estímulos Proximales**: Señales sensoriales que llegan directamente a nuestros receptores sensoriales
 - **Procesamiento**:
   - Ascendente (bottom-up): Basado en estímulos próximos
   - Descendente (top-down): Basado en conocimiento y expectativas
@@ -68,7 +68,7 @@ La percepción humana es fundamental para el diseño de experiencias XR efectiva
    - Umbrales auditivos
 
 2. **Procesamiento Binaural**
-   - Diferencias interaurales temporales
+   - Diferencias interaurales temporales (diferencias en el tiempo de llegada del sonido a cada oído, crucial para la localización espacial)
    - Localización espacial del sonido
    - Señales monoaurales
 
@@ -151,13 +151,13 @@ La percepción humana es fundamental para el diseño de experiencias XR efectiva
 
    - Capacidad perceptiva
    - Carga perceptiva
-   - Efecto cóctel
+   - Efecto cóctel (capacidad de enfocarse en una conversación específica en un ambiente ruidoso con múltiples fuentes de sonido)
    - Ceguera por falta de atención
 
 2. **Dirección de la Atención**
    - Mirada atencional
    - Captación atencional
-   - Saliencia
+   - Saliencia (característica que hace que un elemento destaque naturalmente sobre otros en la percepción)
    - Búsqueda visual
 
 ## Guías de Diseño para XR

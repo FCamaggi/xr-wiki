@@ -56,7 +56,7 @@ La interacción en XR presenta desafíos únicos debido a su naturaleza tridimen
    - Gestos de agarre
 
 2. **Métodos a Distancia**
-   - Raycasting
+   - Raycasting (técnica de selección que proyecta un rayo virtual desde el controlador o la mano del usuario para apuntar y seleccionar objetos a distancia)
    - Selección por rayo
    - Técnicas de señalamiento
 
@@ -82,8 +82,8 @@ La interacción en XR presenta desafíos únicos debido a su naturaleza tridimen
    - Control por gestos
 
 2. **Técnicas Avanzadas**
-   - Caminata redirigida
-   - "Beaming" (teletransporte)
+   - Caminata redirigida (técnica que permite simular grandes espacios virtuales en áreas físicas limitadas mediante sutiles rotaciones del entorno)
+   - "Beaming" (técnica de telepresencia que permite al usuario proyectarse instantáneamente en un avatar en un entorno remoto)
    - Navegación por mapas
 
 ### Interacción en AR
@@ -105,7 +105,7 @@ La interacción en XR presenta desafíos únicos debido a su naturaleza tridimen
 
 1. **Interfaces de Mano**
 
-   - Handy AR
+   - Handy AR (técnica que utiliza la mano del usuario como superficie de referencia para interactuar con objetos virtuales)
    - Gestos naturales
    - Interacción táctil
 

@@ -64,7 +64,7 @@ La visualización situada y las analíticas inmersivas representan dos enfoques 
 
 #### Técnicas de Transparencia
 
-1. **Ghosting**
+1. **Ghosting** (efecto de transparencia que permite visualizar objetos normalmente ocultos manteniendo el contexto espacial)
 
    - Visualización de objetos ocultos
    - Balance de transparencia
@@ -77,13 +77,13 @@ La visualización situada y las analíticas inmersivas representan dos enfoques 
 
 #### Filtrado Espacial
 
-1. **Lentes Mágicas**
+1. **Lentes Mágicas** (interfaces interactivas que revelan información adicional o alternativa sobre objetos o áreas específicas)
 
    - Visualización selectiva
    - Filtrado contextual
    - Interacción espacial
 
-2. **Túneles de Rayos X**
+2. **Túneles de Rayos X** (técnica de visualización que permite ver a través de objetos opacos creando un túnel visual hacia el interior)
    - Visualización de interiores
    - Manejo de profundidad
    - Pistas de distancia
@@ -173,8 +173,8 @@ La visualización situada y las analíticas inmersivas representan dos enfoques 
 
 ### Herramientas y Frameworks
 
-- Roassal 2D Engine
-- Woden 3D Engine
+- Roassal 2D Engine (motor de visualización 2D para crear gráficos interactivos y visualizaciones de datos)
+- Woden 3D Engine (motor de renderizado 3D para crear visualizaciones inmersivas y entornos interactivos)
 - Sistemas de visualización inmersiva
 
 ## Notas Complementarias

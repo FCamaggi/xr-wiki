@@ -55,7 +55,7 @@ El hardware en XR abarca una amplia gama de dispositivos y tecnologías que perm
   - Campo de visión: 110°H 97°V
   - Tasa de refresco: 120 Hz
   - Peso: 515 gr
-  - Tracking: 6DoF
+  - Tracking: 6DoF (6 Grados de Libertad: capacidad de movimiento en tres ejes de rotación y tres de traslación)
   - Procesador: Snapdragon XR2 Gen 2
   - RAM: 8GB
   - Batería: 4879 mAh (2.2 horas de uso)
@@ -78,11 +78,11 @@ El hardware en XR abarca una amplia gama de dispositivos y tecnologías que perm
    - Necesidades para calidad Retina:
      - 16K x 16K por ojo para FOV completo
      - Soluciones:
-       - Eye tracking y renderizado foveado
+       - Eye tracking (seguimiento del movimiento de los ojos en tiempo real) y renderizado foveado (técnica que optimiza el renderizado proporcionando mayor detalle donde el usuario está mirando)
        - Resolución variable (centro vs periferia)
 
 3. **Distorsión Óptica**
-   - Compensación mediante pre-distorsión
+   - Compensación mediante pre-distorsión (corrección de distorsiones ópticas aplicada a la imagen antes de su visualización)
    - Corrección de aberración cromática
 
 #### Sistemas de AR
@@ -126,7 +126,7 @@ El hardware en XR abarca una amplia gama de dispositivos y tecnologías que perm
 
 - Seguimiento de cabeza
 - Controladores de movimiento
-- Tracking corporal
+- Tracking corporal (tracking esqueletal: seguimiento en tiempo real de las articulaciones y movimientos del cuerpo humano)
 - Eye tracking
 
 #### Dispositivos Hápticos
@@ -134,7 +134,7 @@ El hardware en XR abarca una amplia gama de dispositivos y tecnologías que perm
 - Guantes con feedback
 - Controladores con vibración
 - Exoesqueletos
-- Sistemas de force feedback
+- Sistemas de force feedback (dispositivos que proporcionan retroalimentación física de fuerza al usuario)
 
 #### Interfaces Naturales
 
@@ -146,6 +146,14 @@ El hardware en XR abarca una amplia gama de dispositivos y tecnologías que perm
 ## Conceptos Técnicos
 
 ### Definiciones Clave
+
+#### Términos Oculomotores
+
+- **Sacádicos**: Movimientos rápidos y coordinados de los ojos entre puntos de fijación
+- **Vergencia**: Movimiento coordinado de ambos ojos para enfocar objetos a diferentes distancias
+- **Reflejo vestíbulo-ocular**: Mecanismo que estabiliza la mirada durante los movimientos de la cabeza
+
+#### Términos de Tracking
 
 - **IPD (Distancia Interpupilar)**: Separación entre los centros de las pupilas
 - **FOV (Campo de Visión)**: Ángulo del espacio visible a través del dispositivo

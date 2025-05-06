@@ -115,8 +115,8 @@ El diseño centrado en el humano es fundamental en XR debido a la naturaleza inm
 1. **Baja Fidelidad**
 
    - Sketches
-   - Prototipos Wizard-of-Oz
-   - T-Prototypes
+   - Prototipos Wizard-of-Oz (simulación de funcionalidad donde un operador humano controla la respuesta del sistema en tiempo real)
+   - T-Prototypes (prototipos que evolucionan tanto en complejidad vertical como horizontal, permitiendo explorar funcionalidades y refinamientos)
 
 2. **Alta Fidelidad**
    - Prototipos funcionales
@@ -136,7 +136,7 @@ El diseño centrado en el humano es fundamental en XR debido a la naturaleza inm
 
 - Información en capas
 - Diseño de color
-- Visual popout
+- Visual popout (fenómeno donde un elemento destaca visualmente de forma automática debido a sus características distintivas)
 - Flujo visual
 - Modelos conceptuales vs implementación
 
@@ -144,7 +144,7 @@ El diseño centrado en el humano es fundamental en XR debido a la naturaleza inm
 
 - Metáforas
 - Idiomas visuales
-- Affordances
+- Affordances (características de un objeto o interfaz que sugieren intuitivamente cómo debe ser usado)
 - Feedback natural
 
 ### Evaluación y Pruebas

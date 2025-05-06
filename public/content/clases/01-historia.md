@@ -59,7 +59,7 @@ La historia de la Realidad Extendida (XR) abarca más de 180 años de innovació
   - Primera aplicación de RA basada en conocimiento
   - Instrucciones de mantenimiento de impresora mediante HMD
 
-- **NaviCam (1994-1995)**
+- **NaviCam (1994-1995)** (sistema pionero de RA que usaba marcadores 2D para superponer información digital sobre video en tiempo real)
 
   - Precursor de los navegadores AR en smartphones
   - Innovación en AR móvil
@@ -86,7 +86,7 @@ La historia de la Realidad Extendida (XR) abarca más de 180 años de innovació
   - Primer juego AR al aire libre
   - Demostró el potencial de AR en entretenimiento
 
-- **ARToolKit**
+- **ARToolKit** (biblioteca de software que facilita el desarrollo de aplicaciones de Realidad Aumentada mediante el reconocimiento de marcadores y superposición de objetos 3D)
   - Framework de código abierto para AR
   - Democratizó el desarrollo de aplicaciones AR
 
@@ -141,8 +141,8 @@ La historia de la Realidad Extendida (XR) abarca más de 180 años de innovació
 ### Tecnologías Fundamentales
 
 - **HMD (Head-Mounted Display)**: Dispositivos de visualización montados en la cabeza
-- **Tracking**: Sistemas de seguimiento de movimiento y posición
-- **Renderizado**: Generación de imágenes en tiempo real
+- **Tracking**: Sistemas de seguimiento de movimiento y posición (seguimiento en tiempo real de la posición y orientación de objetos o dispositivos en el espacio)
+- **Renderizado**: Generación de imágenes en tiempo real (proceso de crear una imagen digital a partir de un modelo 3D mediante cálculos computacionales)
 - **Interacción**: Sistemas de entrada y control
 
 ## Recursos Adicionales
