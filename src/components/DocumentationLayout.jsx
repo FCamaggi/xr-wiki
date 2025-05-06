@@ -29,6 +29,9 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
       return;
     }
 
+    // Reset scroll position when changing page
+    window.scrollTo({ top: 0 });
+
     const loadContent = async () => {
       try {
         if (!activePage) {
@@ -177,10 +180,10 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
               fixed inset-y-0 right-0 w-[280px] bg-white border-l border-slate-200
               transform transition-transform duration-300 ease-in-out z-40
               ${isMobileTocOpen ? 'translate-x-0' : 'translate-x-full'}
-              lg:relative lg:translate-x-0 lg:block
+              lg:relative lg:translate-x-0 lg:block lg:sticky lg:top-0 lg:h-screen
             `}
           >
-            <div className="h-full overflow-y-auto p-6 pt-20 lg:pt-6">
+            <div className="h-full overflow-y-auto p-6 pt-20 lg:pt-6 lg:max-h-screen">
               <button
                 onClick={() => setIsMobileTocOpen(false)}
                 className="lg:hidden absolute top-4 right-4 p-2 text-slate-500 hover:text-slate-700"

@@ -1,6 +1,8 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { ChevronRight, Download } from 'lucide-react';
+import { AiOutlineFilePdf, AiOutlineFileMarkdown } from 'react-icons/ai';
 import { convertMarkdownToPDF, downloadPDF } from '../utils/pdfUtils';
+import PropTypes from 'prop-types';
 
 const Navigation = ({
   activeSection,
@@ -91,15 +93,24 @@ const Navigation = ({
                }
               `}
             >
-              <ChevronRight
-                size={16}
-                className={`
-                  transition-transform duration-200
-                 ${activePage?.slug === item.slug ? 'rotate-90' : ''}
-                  text-slate-400 group-hover:text-slate-600
-                `}
-              />
-              <span className="text-sm">{item.title}</span>
+              {item.children?.length > 0 && (
+                <ChevronRight
+                  size={16}
+                  className={`
+                    transition-transform duration-200
+                    ${activePage?.slug === item.slug ? 'rotate-90' : ''}
+                    text-slate-400 group-hover:text-slate-600
+                  `}
+                />
+              )}
+              <span className="text-sm flex items-center gap-2">
+                {item.isPdf ? (
+                  <AiOutlineFilePdf className="text-red-600 text-lg" />
+                ) : (
+                  <AiOutlineFileMarkdown className="text-blue-600 text-lg" />
+                )}
+                {item.title}
+              </span>
             </button>
 
             <button
@@ -114,6 +125,18 @@ const Navigation = ({
       </div>
     </div>
   );
+};
+
+Navigation.propTypes = {
+  activeSection: PropTypes.string.isRequired,
+  setActiveSection: PropTypes.func.isRequired,
+  activePage: PropTypes.shape({
+    slug: PropTypes.string,
+    isPdf: PropTypes.bool,
+    title: PropTypes.string,
+  }),
+  onPageChange: PropTypes.func.isRequired,
+  tableOfContents: PropTypes.object.isRequired,
 };
 
 export default Navigation;
