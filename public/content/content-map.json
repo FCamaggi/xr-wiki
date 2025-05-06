@@ -1,354 +1,96 @@
 {
-  "ayudantias": [
-    {
-      "originalName": "ayudantia-1.pdf",
-      "slug": "ayudantia-1",
-      "title": "ayudantia 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "ayudantia-2-enunciado.pdf",
-      "slug": "ayudantia-2-enunciado",
-      "title": "ayudantia 2 enunciado",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "ayudantia-2-solucion.pdf",
-      "slug": "ayudantia-2-solucion",
-      "title": "ayudantia 2 solucion",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "ayudantia-3-enunciado.pdf",
-      "slug": "ayudantia-3-enunciado",
-      "title": "ayudantia 3 enunciado",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "ayudantia-3-solucion.pdf",
-      "slug": "ayudantia-3-solucion",
-      "title": "ayudantia 3 solucion",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "pauta-ayudantia-1.pdf",
-      "slug": "pauta-ayudantia-1",
-      "title": "pauta ayudantia 1",
-      "order": 0,
-      "isPdf": true
-    }
-  ],
-  "casos": [
-    {
-      "originalName": "caso_1_morrison.pdf",
-      "slug": "caso_1_morrison",
-      "title": "caso_1_morrison",
-      "order": 0,
-      "isPdf": true
-    }
-  ],
+  "ayudantias": [],
+  "casos": [],
   "clases": [
     {
-      "originalName": "1-introduccion-y-estrategia-2025.03.06.pdf",
-      "slug": "1-introduccion-y-estrategia-2025.03.06",
-      "title": "1 introduccion y estrategia 2025.03.06",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "1-resumen-introduccion-y-estrategia-2025.03.06.md",
-      "slug": "1-resumen-introduccion-y-estrategia-2025.03.06",
-      "title": "1 resumen introduccion y estrategia 2025.03.06",
+      "originalName": "01-historia.md",
+      "slug": "01-historia",
+      "title": "01 historia",
       "order": 0,
       "isPdf": false
     },
     {
-      "originalName": "2-procesos-2025.03.11.pdf",
-      "slug": "2-procesos-2025.03.11",
-      "title": "2 procesos 2025.03.11",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "2-procesos-2025.03.13.pdf",
-      "slug": "2-procesos-2025.03.13",
-      "title": "2 procesos 2025.03.13",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "2-procesos-2025.03.18.pdf",
-      "slug": "2-procesos-2025.03.18",
-      "title": "2 procesos 2025.03.18",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "2-resumen-procesos-2025.03.11.md",
-      "slug": "2-resumen-procesos-2025.03.11",
-      "title": "2 resumen procesos 2025.03.11",
+      "originalName": "02-hardware.md",
+      "slug": "02-hardware",
+      "title": "02 hardware",
       "order": 0,
       "isPdf": false
     },
     {
-      "originalName": "2-resumen-procesos-2025.03.13.md",
-      "slug": "2-resumen-procesos-2025.03.13",
-      "title": "2 resumen procesos 2025.03.13",
+      "originalName": "03-percepcion.md",
+      "slug": "03-percepcion",
+      "title": "03 percepcion",
       "order": 0,
       "isPdf": false
     },
     {
-      "originalName": "2-resumen-procesos-2025.03.18.md",
-      "slug": "2-resumen-procesos-2025.03.18",
-      "title": "2 resumen procesos 2025.03.18",
+      "originalName": "04-interaccion.md",
+      "slug": "04-interaccion",
+      "title": "04 interaccion",
       "order": 0,
       "isPdf": false
     },
     {
-      "originalName": "3-inventarios-deterministicos-2025.03.18.pdf",
-      "slug": "3-inventarios-deterministicos-2025.03.18",
-      "title": "3 inventarios deterministicos 2025.03.18",
+      "originalName": "07a-diseno-centrado-en-humano.md",
+      "slug": "07a-diseno-centrado-en-humano",
+      "title": "07a diseno centrado en humano",
       "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "07b-ia-y-sv.md",
+      "slug": "07b-ia-y-sv",
+      "title": "07b ia y sv",
+      "order": 0,
+      "isPdf": false
+    },
+    {
+      "originalName": "clase-1-historia-.pdf",
+      "slug": "clase-1-historia-",
+      "title": "Clase 1: historia ",
+      "order": 1,
       "isPdf": true
     },
     {
-      "originalName": "3-inventarios-deterministicos-2025.03.20.pdf",
-      "slug": "3-inventarios-deterministicos-2025.03.20",
-      "title": "3 inventarios deterministicos 2025.03.20",
-      "order": 0,
+      "originalName": "clase-2-hardware.pdf",
+      "slug": "clase-2-hardware",
+      "title": "Clase 2: hardware",
+      "order": 2,
       "isPdf": true
     },
     {
-      "originalName": "3-inventarios-deterministicos-2025.03.25.pdf",
-      "slug": "3-inventarios-deterministicos-2025.03.25",
-      "title": "3 inventarios deterministicos 2025.03.25",
-      "order": 0,
+      "originalName": "clase-3-percepcion.pdf",
+      "slug": "clase-3-percepcion",
+      "title": "Clase 3: percepcion",
+      "order": 3,
       "isPdf": true
     },
     {
-      "originalName": "3-resumen-inventarios-deterministicos-2025.03.18.md",
-      "slug": "3-resumen-inventarios-deterministicos-2025.03.18",
-      "title": "3 resumen inventarios deterministicos 2025.03.18",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "originalName": "3-resumen-inventarios-deterministicos-2025.03.20.md",
-      "slug": "3-resumen-inventarios-deterministicos-2025.03.20",
-      "title": "3 resumen inventarios deterministicos 2025.03.20",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "originalName": "3-resumen-inventarios-deterministicos-2025.03.25.md",
-      "slug": "3-resumen-inventarios-deterministicos-2025.03.25",
-      "title": "3 resumen inventarios deterministicos 2025.03.25",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "originalName": "4-inventarios-variables-2025.03.25-1-.pdf",
-      "slug": "4-inventarios-variables-2025.03.25-1-",
-      "title": "4 inventarios variables 2025.03.25 1 ",
-      "order": 0,
+      "originalName": "clase-4-interaccion.pdf",
+      "slug": "clase-4-interaccion",
+      "title": "Clase 4: interaccion",
+      "order": 4,
       "isPdf": true
     },
     {
-      "originalName": "4-inventarios-variables-2025.03.27.pdf",
-      "slug": "4-inventarios-variables-2025.03.27",
-      "title": "4 inventarios variables 2025.03.27",
-      "order": 0,
+      "originalName": "clase-7-a-diseno-centrado-en-el-humano.pdf",
+      "slug": "clase-7-a-diseno-centrado-en-el-humano",
+      "title": "Clase 7: a diseno centrado en el humano",
+      "order": 7,
       "isPdf": true
     },
     {
-      "originalName": "4-resumen-inventarios-variables-2025.03.25-1-.md",
-      "slug": "4-resumen-inventarios-variables-2025.03.25-1-",
-      "title": "4 resumen inventarios variables 2025.03.25 1 ",
-      "order": 0,
-      "isPdf": false
-    },
-    {
-      "originalName": "4-resumen-inventarios-variables-2025.03.27.md",
-      "slug": "4-resumen-inventarios-variables-2025.03.27",
-      "title": "4 resumen inventarios variables 2025.03.27",
-      "order": 0,
-      "isPdf": false
-    }
-  ],
-  "documentos": [
-    {
-      "originalName": "formulario-i1-2025.pdf",
-      "slug": "formulario-i1-2025",
-      "title": "formulario i1 2025",
-      "order": 0,
+      "originalName": "clase-7-b-ia-sv.pdf",
+      "slug": "clase-7-b-ia-sv",
+      "title": "Clase 7: b ia sv",
+      "order": 7,
       "isPdf": true
     }
   ],
-  "evaluaciones": [
-    {
-      "originalName": "i1-ics3213_pauta-2014.pdf",
-      "slug": "i1-ics3213_pauta-2014",
-      "title": "i1 ics3213_pauta 2014",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "i1_2017_pauta-gop-2017.pdf",
-      "slug": "i1_2017_pauta-gop-2017",
-      "title": "i1_2017_pauta gop 2017",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "i1_2018_vfinal_pauta.pdf",
-      "slug": "i1_2018_vfinal_pauta",
-      "title": "i1_2018_vfinal_pauta",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "i1_2019_-pauta.pdf",
-      "slug": "i1_2019_-pauta",
-      "title": "i1_2019_ pauta",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "i1_2020_pauta.pdf",
-      "slug": "i1_2020_pauta",
-      "title": "i1_2020_pauta",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "i1_pauta_2016.pdf",
-      "slug": "i1_pauta_2016",
-      "title": "i1_pauta_2016",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "pauta-2015.pdf",
-      "slug": "pauta-2015",
-      "title": "pauta 2015",
-      "order": 0,
-      "isPdf": true
-    }
-  ],
-  "guias": [
-    {
-      "originalName": "gu_a_calidad__lean__bodegas_y_cd.pdf",
-      "slug": "gu_a_calidad__lean__bodegas_y_cd",
-      "title": "gu_a_calidad__lean__bodegas_y_cd",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "gui_a-calidad.pdf",
-      "slug": "gui_a-calidad",
-      "title": "gui_a calidad",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia-bodegas-v2-2-.pdf",
-      "slug": "guia-bodegas-v2-2-",
-      "title": "guia bodegas v2 2 ",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia-pert-localizacion.pdf",
-      "slug": "guia-pert-localizacion",
-      "title": "guia pert localizacion",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia-variabilidad-y-calidad.pdf",
-      "slug": "guia-variabilidad-y-calidad",
-      "title": "guia variabilidad y calidad",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia_1_procesos_pronstico.pdf",
-      "slug": "guia_1_procesos_pronstico",
-      "title": "guia_1_procesos_pronstico",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia_2_inventario.pdf",
-      "slug": "guia_2_inventario",
-      "title": "guia_2_inventario",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia_localizacion.pdf",
-      "slug": "guia_localizacion",
-      "title": "guia_localizacion",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia_pert.pdf",
-      "slug": "guia_pert",
-      "title": "guia_pert",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia_planificacion_2018.pdf",
-      "slug": "guia_planificacion_2018",
-      "title": "guia_planificacion_2018",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "guia_variabilidad.pdf",
-      "slug": "guia_variabilidad",
-      "title": "guia_variabilidad",
-      "order": 0,
-      "isPdf": true
-    }
-  ],
-  "otros": [
-    {
-      "originalName": "otros-notas-la-meta-by-ivan-.pdf",
-      "slug": "otros-notas-la-meta-by-ivan-",
-      "title": "otros notas la meta by ivan ",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "otros-resumen-casos-gop-1.pdf",
-      "slug": "otros-resumen-casos-gop-1",
-      "title": "otros resumen casos gop 1",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "otros-resumen-casos-gop-2.pdf",
-      "slug": "otros-resumen-casos-gop-2",
-      "title": "otros resumen casos gop 2",
-      "order": 0,
-      "isPdf": true
-    },
-    {
-      "originalName": "otros-resumen-la-meta.pdf",
-      "slug": "otros-resumen-la-meta",
-      "title": "otros resumen la meta",
-      "order": 0,
-      "isPdf": true
-    }
-  ],
+  "documentos": [],
+  "evaluaciones": [],
+  "guias": [],
+  "otros": [],
   "anuncios": [
     {
       "originalName": "2025-03-29-temario-i1.md",

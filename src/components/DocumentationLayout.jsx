@@ -75,7 +75,7 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
         >
           <AlignLeft size={24} />
         </button>
-        <h1 className="text-xl font-bold text-slate-900">GOP Wiki</h1>
+        <h1 className="text-xl font-bold text-slate-900">XR Wiki</h1>
         {!activePage?.isPdf && currentContent && (
           <button
             onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
@@ -120,9 +120,7 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
                   <Home size={20} />
                 </Link>
                 <div>
-                  <h1 className="text-2xl font-bold text-slate-900">
-                    GOP Wiki
-                  </h1>
+                  <h1 className="text-2xl font-bold text-slate-900">XR Wiki</h1>
                   <p className="text-sm text-slate-500 mt-1">
                     {activeSection === 'ayudantias' &&
                       'Ayudantías y material práctico'}
