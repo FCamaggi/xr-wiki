@@ -63,35 +63,127 @@ La percepción humana es fundamental para el diseño de experiencias XR efectiva
 
 1. **Propiedades del Sonido**
 
-   - Frecuencia y amplitud
-   - Volumen y tono
-   - Umbrales auditivos
+   - **Frecuencia y amplitud**:
+
+     - La frecuencia (medida en Hz) determina el tono del sonido: frecuencias altas producen sonidos agudos, frecuencias bajas producen sonidos graves
+     - La amplitud representa la magnitud de las variaciones de presión en una onda sonora, medida en decibelios (dB), y determina la intensidad del sonido
+     - El rango de audición humana típicamente abarca frecuencias entre 20 Hz y 20,000 Hz
+
+   - **Volumen y tono**:
+
+     - El volumen es la percepción subjetiva de la intensidad del sonido, influenciada principalmente por la amplitud
+     - El tono es la percepción de la altura del sonido determinada por su frecuencia
+     - La percepción de volumen no es lineal respecto a la amplitud física (sigue una escala logarítmica)
+
+   - **Umbrales auditivos**:
+     - Umbral de audición: nivel mínimo detectable (aproximadamente 0 dB)
+     - Umbral de dolor: nivel donde el sonido causa dolor (120-140 dB)
+     - Umbral diferencial: mínima diferencia perceptible entre dos estímulos auditivos
 
 2. **Procesamiento Binaural**
-   - Diferencias interaurales temporales (diferencias en el tiempo de llegada del sonido a cada oído, crucial para la localización espacial)
-   - Localización espacial del sonido
-   - Señales monoaurales
 
-#### Sistema Táctil
+   - **Diferencias interaurales temporales (ITD)**:
 
-1. **Tipos de Tacto**
+     - Son las diferencias en el tiempo de llegada del sonido a cada oído
+     - Particularmente efectivas para frecuencias bajas (menos de 1,500 Hz)
+     - Las diferencias pueden ser tan pequeñas como 10 microsegundos pero aún detectables
 
-   - Tacto pasivo
-   - Tacto activo
-   - Vibración
-   - Textura
+   - **Localización espacial del sonido**:
 
-2. **Sistemas Involucrados**
-   - Sistema sensorial
-   - Sistema motor
-   - Sistema cognitivo
+     - Diferencias interaurales de intensidad (IID): variaciones en la intensidad del sonido entre ambos oídos
+     - Efecto de sombra de la cabeza: la cabeza bloquea parcialmente las ondas sonoras creando diferencias de intensidad
+     - Conos de confusión: áreas donde la localización espacial es ambigua debido a ITDs e IIDs similares
 
-#### Propiocepción y Equilibrio
+   - **Señales monoaurales**:
+     - Filtrado del pabellón auricular que modifica el espectro según la dirección
+     - Efectos HRTF (Head-Related Transfer Function): transformaciones acústicas específicas basadas en la anatomía individual
+     - Claves espectrales que ayudan a discriminar entre fuentes delante/detrás y arriba/abajo
 
-- Sistema vestibular
-- Detección de movimiento físico
-- Orientación espacial
-- Aceleración lineal y angular
+   #### Sistema Táctil
+
+   1. **Tipos de Tacto**
+
+      - **Tacto pasivo**:
+
+        - Percepción táctil sin movimiento exploratorio voluntario
+        - Ocurre cuando los estímulos entran en contacto con la piel estática
+        - Menor precisión discriminativa que el tacto activo
+        - Ejemplos: sentir una brisa en la piel o que alguien coloque un objeto en tu mano
+
+      - **Tacto activo**:
+
+        - Implica movimientos exploratorios intencionales
+        - Integra información sensorial y motora
+        - Permite una mejor discriminación de propiedades como contornos y texturas
+        - Procedimientos exploratorios específicos para diferentes propiedades (presión para dureza, movimiento lateral para textura)
+
+      - **Vibración**:
+
+        - Detectada principalmente por los corpúsculos de Pacini y Meissner
+        - Sensibilidad a diferentes frecuencias: 40-400 Hz (óptima alrededor de 250 Hz)
+        - La amplitud mínima detectable varía según la frecuencia y ubicación corporal
+        - Fundamental para el feedback háptico en dispositivos XR
+
+      - **Textura**:
+        - Percepción de patrones microscópicos y macroscópicos en superficies
+        - Discriminación de rugosidad, dureza, pegajosidad y temperatura
+        - Contribución dual de mecanorreceptores y termorreceptores
+        - Las texturas percibidas influyen en respuestas emocionales y preferencias
+
+   2. **Sistemas Involucrados**
+
+      - **Sistema sensorial**:
+
+        - Mecanorreceptores en la piel: Corpúsculos de Meissner (presión ligera), células de Merkel (presión sostenida), corpúsculos de Pacini (vibración), terminaciones de Ruffini (estiramiento)
+        - Termorreceptores: detectan calor y frío
+        - Nociceptores: responsables de la percepción del dolor
+        - Densidad variable de receptores (mayor en dedos y labios, menor en espalda)
+
+      - **Sistema motor**:
+
+        - Controla movimientos exploratorios durante el tacto activo
+        - Coordina la fuerza y precisión de manipulación
+        - Ajusta movimientos basados en retroalimentación táctil
+        - Bucle sensoriomotor que permite ajustes continuos durante la exploración
+
+      - **Sistema cognitivo**:
+        - Integración e interpretación de señales táctiles
+        - Memoria háptica para reconocimiento de objetos
+        - Atención selectiva a estímulos táctiles relevantes
+        - Procesamiento multimodal que combina tacto con visión y audición
+
+   #### Propiocepción y Equilibrio
+
+   1. **Sistema vestibular**
+
+      - Ubicado en el laberinto del oído interno, contiene:
+        - Canales semicirculares (3 por oído): detectan aceleración angular y rotacional
+        - Otolitos (utrículo y sáculo): detectan aceleración lineal y gravedad
+      - Genera señales neuronales que se integran con información visual y propioceptiva
+      - Fundamental para la estabilización de la mirada (reflejo vestíbulo-ocular)
+      - Las discrepancias entre información vestibular y visual en XR pueden causar cinetosis
+
+   2. **Detección de movimiento físico**
+
+      - Receptores musculares (husos musculares): detectan estiramiento y longitud muscular
+      - Órganos tendinosos de Golgi: monitorean tensión muscular
+      - Receptores articulares: informan sobre posición y movimiento de articulaciones
+      - Integración central de múltiples señales para construir un modelo del movimiento corporal
+
+   3. **Orientación espacial**
+
+      - Mapa corporal interno (esquema corporal)
+      - Integración multimodal de información visual, vestibular y propioceptiva
+      - Sistemas de referencia egocéntricos (centrados en el cuerpo) y alocéntricos (centrados en el entorno)
+      - Actualización constante durante el movimiento (actualización de ruta)
+      - Crucial para la navegación efectiva en entornos XR
+
+   4. **Aceleración lineal y angular**
+      - Aceleración lineal: detectada principalmente por los otolitos
+      - Aceleración angular: detectada principalmente por los canales semicirculares
+      - Umbrales de detección: aproximadamente 0.01 m/s² para aceleración lineal y 0.1°/s² para aceleración angular
+      - El cerebro utiliza estas señales para distinguir movimiento propio vs. movimiento del entorno
+      - En XR, la simulación inadecuada de estas aceleraciones puede causar discrepancias sensoriales
 
 ### Percepción del Espacio y Tiempo
 
