@@ -7,6 +7,7 @@ import TableOfContents from './TableOfContents';
 import MarkdownContent from './MarkdownContent';
 import useNavigation from '../hooks/useNavigation';
 import PDFViewer from './PDFViewer';
+import { ThemeToggle } from './ThemeToggle';
 
 const DocumentationLayout = ({ defaultSection = 'clases' }) => {
   const [activeSection, setActiveSection] = useState(defaultSection);
@@ -64,9 +65,10 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
   }, [activePage, activeSection]);
 
   return (
-    <div className="relative min-h-screen bg-white">
+    <div className="relative min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+      <ThemeToggle />
       {/* Header móvil */}
-      <header className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-slate-200 z-50 px-4 flex items-center justify-between">
+      <header className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white dark:bg-gray-900 border-b border-slate-200 dark:border-gray-700 z-50 px-4 flex items-center justify-between">
         <button
           onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
           className={`p-2 transition-colors ${
@@ -78,7 +80,9 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
         >
           <AlignLeft size={24} />
         </button>
-        <h1 className="text-xl font-bold text-slate-900">XR Wiki</h1>
+        <h1 className="text-xl font-bold text-slate-900 dark:text-white">
+          XR Wiki
+        </h1>
         {!activePage?.isPdf && currentContent && (
           <button
             onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
@@ -102,12 +106,12 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
             fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out
             ${isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'}
             lg:relative lg:translate-x-0 lg:block
-            bg-white border-r border-slate-200 
+            bg-white dark:bg-gray-900 border-r border-slate-200 dark:border-gray-700
             lg:sticky lg:top-0 lg:h-screen
           `}
         >
           <div className="h-full overflow-y-auto p-6">
-            <div className="mb-8 lg:sticky lg:top-0 bg-white z-10 pb-4">
+            <div className="mb-8 lg:sticky lg:top-0 bg-white dark:bg-gray-900 z-10 pb-4">
               <button
                 onClick={() => setIsMobileNavOpen(false)}
                 className="lg:hidden absolute top-4 right-4 p-2 text-slate-500 hover:text-slate-700"
@@ -123,8 +127,10 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
                   <Home size={20} />
                 </Link>
                 <div>
-                  <h1 className="text-2xl font-bold text-slate-900">XR Wiki</h1>
-                  <p className="text-sm text-slate-500 mt-1">
+                  <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    XR Wiki
+                  </h1>
+                  <p className="text-sm text-slate-500 dark:text-gray-400 mt-1">
                     {activeSection === 'ayudantias' &&
                       'Ayudantías y material práctico'}
                     {activeSection === 'casos' && 'Casos de estudio'}
@@ -177,7 +183,7 @@ const DocumentationLayout = ({ defaultSection = 'clases' }) => {
         {!activePage?.isPdf && currentContent && (
           <aside
             className={`
-              fixed inset-y-0 right-0 w-[280px] bg-white border-l border-slate-200
+              fixed inset-y-0 right-0 w-[280px] bg-white dark:bg-gray-900 border-l border-slate-200 dark:border-gray-700
               transform transition-transform duration-300 ease-in-out z-40
               ${isMobileTocOpen ? 'translate-x-0' : 'translate-x-full'}
               lg:relative lg:translate-x-0 lg:block lg:sticky lg:top-0 lg:h-screen

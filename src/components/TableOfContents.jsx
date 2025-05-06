@@ -4,17 +4,17 @@ import useTableOfContents from '../hooks/useTableOfContents';
 const getHeadingStyles = (level) => {
   switch (level) {
     case 1:
-      return 'text-lg font-bold';
+      return 'text-lg font-bold text-slate-900 dark:text-white';
     case 2:
-      return 'text-base font-bold';
+      return 'text-base font-semibold text-slate-800 dark:text-gray-100';
     case 3:
-      return 'text-sm font-normal';
+      return 'text-sm font-medium text-slate-700 dark:text-gray-200';
     case 4:
-      return 'text-xs italic';
+      return 'text-xs font-medium text-slate-600 dark:text-gray-300';
     case 5:
-      return 'text-xs italic';
+      return 'text-xs font-normal text-slate-600 dark:text-gray-300';
     default:
-      return 'text-xs italic text-slate-500';
+      return 'text-xs font-normal text-slate-500 dark:text-gray-400';
   }
 };
 
@@ -60,8 +60,8 @@ const TableOfContents = ({ content, activeHeading }) => {
           ${getHeadingStyles(heading.level)}
           ${
             activeHeading === heading.id
-              ? 'bg-slate-100 text-slate-900'
-              : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+              ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 font-medium'
+              : 'hover:bg-slate-50 dark:hover:bg-gray-800/50 hover:text-blue-600 dark:hover:text-blue-400'
           }
         `}
         style={{ paddingLeft: `${depth * 0.75 + 0.75}rem` }}
@@ -70,7 +70,7 @@ const TableOfContents = ({ content, activeHeading }) => {
       </button>
 
       {heading.children.length > 0 && (
-        <div className="mt-1">
+        <div className="mt-1 border-l-2 border-slate-200 dark:border-gray-700">
           {heading.children.map((child) => renderHeading(child, depth + 1))}
         </div>
       )}
@@ -80,11 +80,11 @@ const TableOfContents = ({ content, activeHeading }) => {
   if (!headings.length) return null;
 
   return (
-    <div className="py-4 h-full">
-      <h4 className="font-medium text-sm text-slate-900 mb-4 px-3">
+    <div className="py-4 h-full px-2">
+      <h4 className="font-semibold text-sm text-slate-900 dark:text-white mb-4 px-3 uppercase tracking-wide">
         En esta página
       </h4>
-      <nav className="space-y-1">
+      <nav className="space-y-1 overflow-y-auto max-h-[calc(100vh-12rem)] scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-gray-700 scrollbar-track-transparent">
         {headings.map((heading) => renderHeading(heading))}
       </nav>
     </div>

@@ -4,32 +4,32 @@
 
 /* Headings */
 .markdown-content h1 {
-  @apply text-4xl font-bold text-slate-900 mb-8 pb-2 border-b;
+  @apply text-4xl font-bold text-slate-900 dark:text-white mb-8 pb-2 border-b border-slate-200 dark:border-gray-700;
 }
 
 .markdown-content h2 {
-  @apply text-2xl font-semibold text-slate-800 mt-12 mb-4;
+  @apply text-2xl font-semibold text-slate-800 dark:text-gray-100 mt-12 mb-4;
 }
 
 .markdown-content h3 {
-  @apply text-xl font-medium text-slate-800 mt-8 mb-3;
+  @apply text-xl font-medium text-slate-800 dark:text-gray-200 mt-8 mb-3;
 }
 
 .markdown-content h4 {
-  @apply text-lg font-medium text-slate-700 mt-6 mb-2;
+  @apply text-lg font-medium text-slate-700 dark:text-gray-300 mt-6 mb-2;
 }
 
 /* Paragraphs and lists */
 .markdown-content p {
-  @apply text-slate-600 leading-relaxed mb-4;
+  @apply text-slate-600 dark:text-gray-300 leading-relaxed mb-4;
 }
 
 .markdown-content ul {
-  @apply list-disc pl-6 mb-4 text-slate-600;
+  @apply list-disc pl-6 mb-4 text-slate-600 dark:text-gray-300;
 }
 
 .markdown-content ol {
-  @apply list-decimal pl-6 mb-4 text-slate-600;
+  @apply list-decimal pl-6 mb-4 text-slate-600 dark:text-gray-300;
 }
 
 .markdown-content li {
@@ -38,7 +38,7 @@
 
 /* Code blocks */
 .markdown-content pre {
-  @apply p-4 rounded-lg bg-slate-900 text-slate-50 overflow-x-auto mb-4;
+  @apply p-4 rounded-lg bg-slate-900 dark:bg-gray-900 text-slate-50 overflow-x-auto mb-4 border border-slate-200 dark:border-gray-700;
 }
 
 .markdown-content code {
@@ -46,12 +46,12 @@
 }
 
 .markdown-content :not(pre) > code {
-  @apply bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded font-mono text-sm;
+  @apply bg-slate-100 dark:bg-gray-800 text-slate-700 dark:text-gray-300 px-1.5 py-0.5 rounded font-mono text-sm;
 }
 
 /* Blockquotes */
 .markdown-content blockquote {
-  @apply border-l-4 border-slate-200 pl-4 italic my-6 text-slate-600;
+  @apply border-l-4 border-slate-200 dark:border-gray-700 pl-4 italic my-6 text-slate-600 dark:text-gray-400;
 }
 
 /* Tables */
@@ -60,11 +60,11 @@
 }
 
 .markdown-content th {
-  @apply bg-slate-50 border border-slate-200 px-4 py-2 text-left font-semibold text-slate-700;
+  @apply bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 px-4 py-2 text-left font-semibold text-slate-700 dark:text-gray-200;
 }
 
 .markdown-content td {
-  @apply border border-slate-200 px-4 py-2 text-slate-600;
+  @apply border border-slate-200 dark:border-gray-700 px-4 py-2 text-slate-600 dark:text-gray-300;
 }
 
 /* Admonitions (notas especiales) */
@@ -73,18 +73,18 @@
 }
 
 .markdown-content .admonition-note {
-  @apply bg-blue-50 border-l-4 border-blue-500;
+  @apply bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 dark:border-blue-400;
 }
 
 .markdown-content .admonition-warning {
-  @apply bg-yellow-50 border-l-4 border-yellow-500;
+  @apply bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 dark:border-yellow-400;
 }
 
 .markdown-content .admonition-tip {
-  @apply bg-green-50 border-l-4 border-green-500;
+  @apply bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 dark:border-green-400;
 }
 
 /* Links */
 .markdown-content a {
-  @apply text-blue-600 hover:text-blue-700 underline;
+  @apply text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-colors;
 }
