@@ -19,23 +19,24 @@ El hardware en XR abarca una amplia gama de dispositivos y tecnologías que perm
 
 - **Señales de Profundidad 2D (Monoculares)**
 
-  - Motion parallax
-  - Oclusión
-  - Perspectiva
-  - Tamaño de objetos
-  - Perspectiva aérea
+  - Motion parallax (cambio aparente en la posición relativa de objetos cuando el observador se mueve)
+  - Oclusión (cuando un objeto bloquea parcialmente la vista de otro, indicando que está más cerca)
+  - Perspectiva (convergencia de líneas paralelas en el horizonte)
+  - Tamaño de objetos (objetos similares parecen más pequeños a mayor distancia)
+  - Perspectiva aérea (objetos distantes parecen más difusos y azulados)
 
 - **Señales de Profundidad 3D (Binoculares)**
-  - Estereopsis (disparidad retinal)
-  - Convergencia
+  - Estereopsis (percepción de profundidad basada en las diferencias entre las imágenes que recibe cada ojo)
+  - Convergencia (movimiento coordinado de los ojos hacia adentro para enfocar objetos cercanos)
+  - Acomodación (ajuste del cristalino para enfocar objetos a diferentes distancias)
 
 #### Técnicas de Renderizado
 
 - **Parallax**
-  - Parallax cero (objeto en el plano de proyección)
-  - Parallax positivo (objeto detrás del plano)
-  - Parallax negativo (objeto frente al plano)
-  - Parallax divergente (evitar - antinatural)
+  - Parallax cero (objeto aparece exactamente en el plano de la pantalla o proyección)
+  - Parallax positivo (objeto aparece detrás del plano, creando sensación de profundidad)
+  - Parallax negativo (objeto aparece flotando frente al plano de proyección)
+  - Parallax divergente (separación excesiva entre imágenes que causa incomodidad visual - debe evitarse)
 
 #### Parámetros Críticos
 

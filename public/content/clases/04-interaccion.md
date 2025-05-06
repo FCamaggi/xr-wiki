@@ -17,14 +17,14 @@ La interacción en XR presenta desafíos únicos debido a su naturaleza tridimen
 
 #### Desafíos Específicos
 
-- Entrada espacial compleja
-- Ausencia de límites físicos
-- Falta de estándares establecidos
-- Escasez de herramientas de desarrollo
-- Problemas de precisión
-- Fatiga del usuario
-- Distribución espacial compleja
-- Desafíos perceptuales
+- Entrada espacial compleja (necesidad de manejar movimientos y gestos en tres dimensiones)
+- Ausencia de límites físicos (falta de restricciones naturales que guíen la interacción)
+- Falta de estándares establecidos (diversidad de métodos de interacción sin convenciones claras)
+- Escasez de herramientas de desarrollo (limitación en frameworks y herramientas especializadas)
+- Problemas de precisión (dificultad para realizar acciones precisas en el espacio 3D)
+- Fatiga del usuario (cansancio físico por mantener posturas o realizar gestos repetitivos)
+- Distribución espacial compleja (organización y acceso a elementos en un espacio 3D)
+- Desafíos perceptuales (problemas de profundidad, orientación y escala en entornos virtuales)
 
 #### Tareas Fundamentales
 
@@ -120,9 +120,9 @@ La interacción en XR presenta desafíos únicos debido a su naturaleza tridimen
 
 1. **Interfaces de Usuario**
 
-   - Menús 3D
-   - Paneles virtuales
-   - Controles gestuales
+   - Menús 3D (interfaces flotantes que permiten la interacción en el espacio tridimensional)
+   - Paneles virtuales (superficies interactivas que muestran controles y información)
+   - Controles gestuales (comandos activados mediante movimientos específicos de manos o cuerpo)
 
 2. **Entrada Multimodal**
    - Seguimiento ocular
@@ -133,9 +133,9 @@ La interacción en XR presenta desafíos únicos debido a su naturaleza tridimen
 
 1. **Visual**
 
-   - Indicadores espaciales
-   - Resaltado de objetos
-   - Efectos visuales
+   - Indicadores espaciales (señales visuales que ayudan a la orientación y navegación)
+   - Resaltado de objetos (cambios visuales que indican interactividad o selección)
+   - Efectos visuales (feedback visual que confirma acciones o estados del sistema)
 
 2. **Táctil y Háptica**
    - Vibración

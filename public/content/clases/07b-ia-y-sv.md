@@ -19,9 +19,9 @@ La visualización situada y las analíticas inmersivas representan dos enfoques 
 
 1. **Definición**
 
-   - Visualización contextualizada en el espacio físico
-   - Relación semántica con objetos reales
-   - Integración con el entorno
+   - Visualización contextualizada en el espacio físico (presentación de información digital directamente en relación con objetos y espacios del mundo real)
+   - Relación semántica con objetos reales (conexión significativa entre los datos visualizados y los elementos físicos del entorno)
+   - Integración con el entorno (fusión natural de la información digital con el espacio físico)
 
 2. **Características Clave**
    - Referencia a objetos del mundo real
@@ -94,9 +94,9 @@ La visualización situada y las analíticas inmersivas representan dos enfoques 
 
 1. **Definición**
 
-   - Uso de herramientas inmersivas para análisis
-   - Soporte para toma de decisiones
-   - Integración de visualización y análisis
+   - Uso de herramientas inmersivas para análisis (aplicación de tecnologías XR para explorar y comprender datos complejos)
+   - Soporte para toma de decisiones (herramientas y técnicas que facilitan el análisis y la comprensión para mejorar la toma de decisiones)
+   - Integración de visualización y análisis (combinación de representación visual y capacidades analíticas en un entorno inmersivo)
 
 2. **Objetivos**
    - Eliminación de barreras entre usuarios y datos
@@ -141,9 +141,9 @@ La visualización situada y las analíticas inmersivas representan dos enfoques 
 
 1. **Expresividad**
 
-   - Integración con motores de visualización
-   - Variedad de técnicas disponibles
-   - Flexibilidad en la representación
+   - Integración con motores de visualización (capacidad de conectarse con diferentes sistemas de renderizado y visualización)
+   - Variedad de técnicas disponibles (amplio conjunto de herramientas y métodos para representar datos)
+   - Flexibilidad en la representación (adaptabilidad para mostrar diferentes tipos de datos y relaciones)
 
 2. **Comprehensividad**
 

@@ -134,18 +134,18 @@ El diseño centrado en el humano es fundamental en XR debido a la naturaleza inm
 
 #### Consideraciones Generales
 
-- Información en capas
-- Diseño de color
-- Visual popout (fenómeno donde un elemento destaca visualmente de forma automática debido a sus características distintivas)
-- Flujo visual
-- Modelos conceptuales vs implementación
+- Información en capas (organización jerárquica de la información que permite acceder a diferentes niveles de detalle según sea necesario)
+- Diseño de color (uso estratégico del color para comunicar información, jerarquía y estados del sistema)
+- Visual popout (fenómeno donde un elemento destaca visualmente de forma automática debido a sus características distintivas como color, forma o movimiento)
+- Flujo visual (organización de elementos que guía naturalmente la atención del usuario a través de la interfaz)
+- Modelos conceptuales vs implementación (diferencia entre cómo el usuario entiende el sistema y cómo funciona técnicamente)
 
 #### Interacción
 
-- Metáforas
-- Idiomas visuales
+- Metáforas (uso de conceptos familiares para explicar o representar funcionalidades nuevas o complejas)
+- Idiomas visuales (sistemas coherentes de símbolos y elementos visuales que comunican significado)
 - Affordances (características de un objeto o interfaz que sugieren intuitivamente cómo debe ser usado)
-- Feedback natural
+- Feedback natural (respuestas inmediatas y apropiadas del sistema que confirman las acciones del usuario)
 
 ### Evaluación y Pruebas
 
@@ -169,11 +169,11 @@ El diseño centrado en el humano es fundamental en XR debido a la naturaleza inm
 
 #### Dimensiones de Evaluación
 
-- Con vs sin usuarios
-- Formativo vs sumativo
-- Cuantitativo vs cualitativo
-- Campo vs laboratorio
-- Timing en el ciclo de desarrollo
+- Con vs sin usuarios (evaluación directa con usuarios finales vs análisis por expertos)
+- Formativo vs sumativo (evaluación durante el desarrollo para mejorar vs evaluación final para validar)
+- Cuantitativo vs cualitativo (mediciones numéricas y métricas vs observaciones y feedback descriptivo)
+- Campo vs laboratorio (pruebas en el entorno real de uso vs pruebas en ambiente controlado)
+- Timing en el ciclo de desarrollo (momento óptimo para realizar diferentes tipos de evaluación)
 
 ### Trabajo en Equipo
 

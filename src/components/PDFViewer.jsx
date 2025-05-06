@@ -1,6 +1,18 @@
+import { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 const PDFViewer = ({ url, title = 'PDF Document' }) => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  }, [url]); // Se ejecuta cuando cambia la URL del PDF
+
   // Verificar que la URL sea válida
   if (!url) {
     return (
@@ -11,7 +23,10 @@ const PDFViewer = ({ url, title = 'PDF Document' }) => {
   }
 
   return (
-    <div className="w-full bg-slate-100 rounded-lg p-4">
+    <div
+      className="w-full bg-slate-100 rounded-lg p-4 transition-all duration-300 ease-in-out"
+      ref={containerRef}
+    >
       <div className="aspect-[4/3] w-full h-full relative">
         <object
           data={url}

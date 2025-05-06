@@ -127,23 +127,23 @@ La percepción humana es fundamental para el diseño de experiencias XR efectiva
 
 #### Constancias Perceptuales
 
-- Constancia de tamaño
-- Constancia de forma
-- Constancia de posición
-- Constancia de luminosidad y color
+- Constancia de tamaño (capacidad de percibir un objeto como del mismo tamaño independientemente de su distancia)
+- Constancia de forma (habilidad de reconocer objetos como la misma forma desde diferentes ángulos)
+- Constancia de posición (capacidad de mantener la orientación percibida de objetos a pesar del movimiento)
+- Constancia de luminosidad y color (habilidad de percibir colores y brillos como constantes bajo diferentes condiciones de iluminación)
 
 #### Adaptación
 
 1. **Adaptación Sensorial**
 
-   - Adaptación a la luz/oscuridad
-   - Adaptación táctil
-   - Adaptación auditiva
+   - Adaptación a la luz/oscuridad (ajuste de la sensibilidad visual a diferentes niveles de iluminación)
+   - Adaptación táctil (disminución gradual de la sensibilidad al estímulo táctil continuo)
+   - Adaptación auditiva (ajuste de la sensibilidad auditiva a diferentes niveles de sonido)
 
 2. **Adaptación Perceptiva**
-   - Adaptación dual
-   - Adaptación de posición
-   - Adaptación temporal
+   - Adaptación dual (capacidad de mantener dos marcos de referencia perceptual simultáneos)
+   - Adaptación de posición (ajuste a cambios en la orientación espacial)
+   - Adaptación temporal (ajuste a diferentes patrones temporales de estímulos)
 
 #### Atención
 

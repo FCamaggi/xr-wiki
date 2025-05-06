@@ -140,10 +140,12 @@ La historia de la Realidad Extendida (XR) abarca más de 180 años de innovació
 
 ### Tecnologías Fundamentales
 
-- **HMD (Head-Mounted Display)**: Dispositivos de visualización montados en la cabeza
-- **Tracking**: Sistemas de seguimiento de movimiento y posición (seguimiento en tiempo real de la posición y orientación de objetos o dispositivos en el espacio)
-- **Renderizado**: Generación de imágenes en tiempo real (proceso de crear una imagen digital a partir de un modelo 3D mediante cálculos computacionales)
-- **Interacción**: Sistemas de entrada y control
+- **HMD (Head-Mounted Display)**: Dispositivos de visualización montados en la cabeza que proporcionan imágenes directamente frente a los ojos del usuario para crear experiencias inmersivas
+- **Tracking**: Sistemas de seguimiento de movimiento y posición en tiempo real de objetos o dispositivos en el espacio 3D, utilizando sensores y algoritmos especializados
+- **Renderizado**: Proceso de crear imágenes digitales en tiempo real a partir de modelos 3D mediante cálculos computacionales, considerando iluminación, texturas y perspectiva
+- **Interacción**: Sistemas de entrada y control que permiten al usuario manipular y comunicarse con el entorno virtual de manera natural e intuitiva
+- **Estereoscopio**: Dispositivo óptico que permite crear una ilusión de profundidad mediante la presentación de dos imágenes ligeramente diferentes a cada ojo
+- **Sensorama**: Sistema multisensorial pionero que combinaba video 3D, audio, vibración y aromas para crear una experiencia inmersiva completa
 
 ## Recursos Adicionales
 
