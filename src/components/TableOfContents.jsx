@@ -12,9 +12,11 @@ const getHeadingStyles = (level) => {
     case 4:
       return 'text-xs font-medium text-slate-600 dark:text-gray-300';
     case 5:
-      return 'text-xs font-normal text-slate-600 dark:text-gray-300';
+      return 'text-xs font-medium text-slate-600 dark:text-gray-400';
+    case 6:
+      return 'text-xs font-normal text-slate-500 dark:text-gray-500';
     default:
-      return 'text-xs font-normal text-slate-500 dark:text-gray-400';
+      return 'text-xs font-normal text-slate-500 dark:text-gray-500';
   }
 };
 

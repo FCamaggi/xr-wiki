@@ -19,6 +19,14 @@
   @apply text-lg font-medium text-slate-700 dark:text-gray-300 mt-6 mb-2;
 }
 
+.markdown-content h5 {
+  @apply text-base font-medium text-slate-600 dark:text-gray-400 mt-4 mb-2;
+}
+
+.markdown-content h6 {
+  @apply text-sm font-normal text-slate-500 dark:text-gray-500 mt-4 mb-2;
+}
+
 /* Paragraphs and lists */
 .markdown-content p {
   @apply text-slate-600 dark:text-gray-300 leading-relaxed mb-4;
