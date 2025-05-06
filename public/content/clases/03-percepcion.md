@@ -191,29 +191,41 @@ La percepción humana es fundamental para el diseño de experiencias XR efectiva
 
 1. **Marcos de Referencia**
 
-   - Criterios exocéntricos
-   - Criterios egocéntricos
-   - Espacio personal vs espacio de acción
+   - **Criterios exocéntricos**: Sistemas de referencia basados en el entorno exterior, independientes del observador. Utilizan coordenadas absolutas u objetos externos como puntos de referencia. Son fundamentales para la navegación en entornos virtuales amplios.
+
+   - **Criterios egocéntricos**: Sistemas de referencia centrados en el cuerpo del observador (delante/detrás, arriba/abajo). Son cruciales para interacciones inmediatas y manipulación de objetos cercanos en XR. El cerebro cambia flexiblemente entre estos y los marcos exocéntricos.
+
+   - **Espacio personal vs espacio de acción**: El espacio personal es la zona inmediata alrededor del cuerpo (~1m) donde sentimos mayor control e intimidad. El espacio de acción es el área donde podemos interactuar físicamente sin desplazarnos. En XR, estos espacios pueden expandirse o contraerse virtualmente.
 
 2. **Señales de Profundidad**
-   - Pictóricas (oclusión, perspectiva, etc.)
-   - De movimiento (parallax)
-   - Binoculares (estereopsis)
-   - Oculomotoras (vergencia, acomodación)
+
+   - **Pictóricas**: Claves monoculares como la oclusión (objetos que bloquean la vista de otros), perspectiva (líneas convergentes), gradiente de textura (detalles más pequeños a mayor distancia), tamaño relativo, familiaridad y sombras. Fundamentales en pantallas 2D.
+
+   - **De movimiento**: El parallax de movimiento ocurre cuando objetos cercanos parecen moverse más rápidamente que los lejanos durante el desplazamiento del observador. La acumulación de perspectiva durante el movimiento proporciona información rica sobre distancias relativas.
+
+   - **Binoculares**: La estereopsis surge de las pequeñas diferencias entre las imágenes captadas por cada ojo (disparidad binocular), permitiendo percepción de profundidad precisa hasta ~20m. Es clave en la mayoría de headsets VR a través de pantallas duales.
+
+   - **Oculomotoras**: La vergencia (convergencia o divergencia de los ojos) y la acomodación (enfoque del cristalino) proporcionan información de profundidad. El conflicto entre estos mecanismos en actuales dispositivos VR puede causar fatiga visual.
 
 #### Percepción Temporal
 
 1. **Aspectos Temporales**
 
-   - Presente subjetivo
-   - Momentos perceptuales
-   - Eventos y secuencias
+   - **Presente subjetivo**: Ventana temporal de 2-3 segundos donde experimentamos eventos como ocurriendo "ahora". Crucial para la sincronización multisensorial y la sensación de inmediatez en XR.
+
+   - **Momentos perceptuales**: Unidades básicas de procesamiento temporal (~80-100ms) durante las cuales el cerebro integra información sensorial como un evento único. Afectan la percepción de simultaneidad en sistemas XR.
+
+   - **Eventos y secuencias**: Agrupación cognitiva de información en unidades significativas basadas en patrones temporales. Fundamentales para la narrativa, interacción y coreografía de experiencias XR.
 
 2. **Factores que Afectan la Percepción Temporal**
-   - Relojes biológicos
-   - Relojes cognitivos
-   - Atención y esfuerzo
-   - Edad y experiencia
+
+   - **Relojes biológicos**: Ritmos circadianos y osciladores neuronales que regulan nuestra percepción del paso del tiempo a nivel fisiológico. Pueden influir en la efectividad de sesiones XR prolongadas.
+
+   - **Relojes cognitivos**: Mecanismos atencionales que modulan la percepción temporal. Más atención dedicada a intervalos temporales resulta en percepción de mayor duración (efecto reloj interno).
+
+   - **Atención y esfuerzo**: Estados de "flow" o alta inmersión pueden distorsionar la percepción temporal, haciendo que el tiempo parezca pasar más rápidamente. El aburrimiento o esfuerzo excesivo tiene el efecto contrario.
+
+   - **Edad y experiencia**: La percepción temporal se modifica con la edad y experiencia previa. Los niños perciben el tiempo como más lento, mientras que los adultos mayores lo perciben como más rápido. La familiaridad con entornos XR también altera la percepción temporal.
 
 ### Estabilidad Perceptiva y Atención
 
